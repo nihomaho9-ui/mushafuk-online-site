@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap");
+
+@font-face{font-family:Kitab;src:url(yazi-fonts/Kitab-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Kitab;src:url(yazi-fonts/Kitab-Bold.ttf) format("truetype");font-weight:700;font-style:normal;font-display:swap}
+
+/* Tafsir / Ulum prose body: OFL Kitab (classical Naskh). Shamela.ws declares paragraph body as local "Naskh"=UthmanTN1.otf; that file is not clearly redistributable here, so Kitab (SIL OFL, also used by Shamela for .special) is the verified licensed closest traditional Naskh. */
+:root{--tf-body:Kitab,"Noto Naskh Arabic","Amiri","Scheherazade New","Traditional Arabic",serif}
+
+/* KFGQPC Uthmanic Hafs (Uthman Taha), shipped with the site. Google naskh faces are the fallback. */
+@font-face{font-family:UthmanTaha;src:url(yazi-fonts/uthmanic-hafs.woff2) format("woff2");font-display:swap}
+@font-face{font-family:QMHafs;src:url(yazi-fonts/uthmanic-hafs.woff2) format("woff2");font-display:swap}
+@font-face{font-family:QMJuz;src:url(yazi-fonts/uthmanic-hafs.woff2) format("woff2");font-display:swap}
+
+:root{--ar:"Noto Naskh Arabic","Amiri","Scheherazade New",UthmanTaha,"Traditional Arabic","Segoe UI",serif}
+
+.ar,.item .n{font-family:var(--ar)}
+html[dir="rtl"] body{font-family:var(--ar)}
+
+.qm-ar,.qm-cmp-ar,.qm-wb,.qm-w-ar,.qm-nl-ar,.qm-hz-ay,.ahit p.s-ar,.qm-gh-q,.qrow p{
+  font-family:QMHafs,UthmanTaha,"Scheherazade New","Noto Naskh Arabic","Amiri","Traditional Arabic",serif
+}
+/* Tafsir and i'rab are prose. The mushaf font draws the Arabic comma as a black ring
+   and throws fully-vocalised quotations out of the line. Naskh keeps both intact. */
+.qm-body[lang="ar"],.qm-tx2[lang="ar"],.qm-cmp-tx[lang="ar"],.qm-gh,.qm-gh-notes,.tx[lang="ar"],.ulum-book .body p{
+  font-family:var(--tf-body);font-feature-settings:"locl" 1;line-height:2.2
+}
+@import url("quote-color.css?v=1");

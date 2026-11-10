@@ -1,0 +1,90 @@
+@import url("fonts.css?v=1");
+@font-face{font-family:QCF1;src:url(./yazi-fonts/qcf/p1.woff2) format("woff2");font-display:swap}
+@font-face{font-family:QCF283;src:url(./yazi-fonts/qcf/p283.woff2) format("woff2");font-display:swap}
+.h{--g:#0f3d2a;--g2:#1c5a3d;--gold:#b8913f;--cr:#f8f3e7;margin:0;background:var(--cr);color:#1d2a22;font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic","Amiri",sans-serif}
+html[dir="rtl"] .h{font-family:"Noto Naskh Arabic","Amiri","Scheherazade New",UthmanTaha,"Traditional Arabic","Segoe UI",serif}
+.h a{color:inherit;text-decoration:none}
+.h .top{max-width:1100px;margin:14px auto 0;padding:0 14px;position:relative;z-index:3}
+.h .bar{background:#fffdf8;border-radius:26px;box-shadow:0 6px 24px #0f3d2a14;padding:14px 18px}
+.h .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.h .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.5rem;color:var(--g);font-family:Georgia,serif}
+.h .logo img{width:46px;height:46px;border-radius:50%;background:var(--g);box-shadow:0 0 0 2px var(--gold)}
+.h .logo span{color:var(--gold);font-weight:600}
+.h .langs{position:relative}.h .lbtn{border:0;background:#fff;border-radius:20px;padding:8px 14px;box-shadow:0 2px 10px #0002;font-weight:700;cursor:pointer;color:#1d2a22}
+.h .lmenu{display:none;position:absolute;top:110%;inset-inline-end:0;background:#fff;border-radius:12px;box-shadow:0 6px 20px #0003;padding:6px;min-width:80px;z-index:9}
+.h .langs.open .lmenu{display:block}.h .lmenu a{display:block;padding:7px 12px;border-radius:8px}.h .lmenu a.on{background:var(--g);color:#fff}
+.h nav{display:flex;gap:6px;justify-content:space-between;margin-top:12px;flex-wrap:wrap}
+.h nav a{padding:9px 16px;border-radius:22px;font-size:.95rem;display:flex;gap:6px;align-items:center}
+.h nav a.on{background:var(--g);color:#fff;font-weight:700}.h nav a:hover:not(.on){background:#0f3d2a10}
+.h .hero{position:relative;text-align:center;padding:40px 16px 0;margin-top:-60px;padding-top:110px;overflow:hidden;
+background:radial-gradient(ellipse at 50% 30%,#fffaf0 0,#f4ecdb 60%,#efe5d0 100%)}
+.h .hero:before{content:"";position:absolute;inset:70px 8% 120px;border:1px solid #d9c9a3;border-bottom:0;border-radius:50% 50% 0 0/28% 28% 0 0;background:#fffdf622;pointer-events:none}
+.h .bism{font-family:QCF1,serif;font-size:2.8rem;color:var(--gold);direction:rtl;position:relative;display:flex;align-items:center;justify-content:center;gap:14px}
+.h .bism:before,.h .bism:after{content:"";height:1px;width:90px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.h h1{font-size:3.3rem;color:var(--g);margin:6px 0 10px;position:relative}
+.h h1.readable{font-family:"Amiri","Noto Naskh Arabic","Scheherazade New",serif;font-weight:400;font-size:clamp(1.65rem,4.2vw,2.45rem);line-height:1.75;max-width:18em;margin:8px auto 12px;text-align:center}
+.h h1.ayah{font-family:QCF283,serif;font-weight:400;display:flex;flex-wrap:wrap;justify-content:center;gap:.14em;direction:rtl;font-size:clamp(1.85rem,4.6vw,2.85rem);line-height:1.7;max-width:16em;margin:8px auto 12px}
+.h h1.verse{font-size:clamp(1.35rem,3.1vw,2.05rem);line-height:1.45;max-width:16em;margin:8px auto 14px;font-weight:600}
+.h .hero p{max-width:520px;margin:0 auto 24px;font-size:1.12rem;line-height:1.8;color:#3c4a40;position:relative}
+.h .cta{display:inline-flex;gap:10px;align-items:center;background:linear-gradient(#1c5a3d,#0f3d2a);color:#fff!important;padding:14px 30px;border-radius:30px;font-weight:700;font-size:1.05rem;box-shadow:0 8px 22px #0f3d2a44;position:relative}
+.h .cta.resume{display:flex;width:fit-content;margin:12px auto 0;background:#fff;color:#0f3d2a!important;border:1px solid #c4a56e;box-shadow:none}
+.h .cta.resume[hidden]{display:none}
+.h .rehal{display:block;width:min(440px,86%);margin:26px auto 0;position:relative;mix-blend-mode:multiply}
+.h .lamp{position:absolute;top:60px;inset-inline-end:4%;width:44px;height:120px;font-size:3rem;opacity:.85}
+.h .cards{max-width:1000px;margin:-10px auto 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0 14px;position:relative}
+.h .known{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;max-width:860px;margin:0 auto 42px;padding:0 14px}
+.h .known a{background:#fff;border:1px solid #ead9b0;border-radius:999px;padding:.4rem .8rem;color:#0f3d2a;font-size:.88rem;font-weight:650}
+.h .card{background:linear-gradient(#fffdf8,#f7f0e1);border:1px solid #e3d3ac;border-radius:22px;padding:26px 16px 20px;text-align:center;box-shadow:0 8px 24px #0f3d2a12;transition:.2s}
+.h .card:hover{transform:translateY(-4px)}
+.h .ic{width:60px;height:60px;border-radius:50%;background:var(--g);color:#e9cf8f;display:grid;place-items:center;margin:0 auto 14px;font-size:1.6rem;box-shadow:0 0 0 3px #e9dcb8}
+.h .card h3{color:var(--g);margin:0 0 10px;font-size:1.4rem}.h .card p{color:#4a564e;line-height:1.7;margin:0 0 18px;min-height:3.4em}
+.h .go{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#fff;color:var(--gold);font-size:1.3rem;box-shadow:0 2px 8px #0002}
+.h footer{position:relative;background:linear-gradient(#174d35,#0c3323);color:#f1e6c8;text-align:center;padding:60px 16px 110px;margin-top:20px;clip-path:polygon(0 30px,40% 30px,50% 0,60% 30px,100% 30px,100% 100%,0 100%)}
+.h footer img{width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 2px var(--gold)}
+.h footer .c{font-size:1.1rem;margin:12px 0}.h footer .l a{margin:0 10px;opacity:.85;font-size:.9rem}
+.h footer svg{position:absolute;bottom:0;left:0;width:100%;height:90px;opacity:.35}
+@media(max-width:640px){.h .cards{grid-template-columns:1fr}.h h1{font-size:2.5rem}.h h1.ayah{font-size:1.7rem}.h h1.verse{font-size:1.25rem}.h nav a{padding:8px 10px;font-size:.85rem}.h .bism{font-size:2.1rem}.h .bism:before,.h .bism:after{width:40px}}
+.h nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.h nav a{white-space:nowrap}
+.h .rehal{width:min(380px,80%);border-radius:0 0 40px 40px;}
+.h .cards{margin-top:16px}
+.h .cards > a[href$="quran/"]{order:-1}
+@media(max-width:640px){.h .cards{grid-template-columns:repeat(3,1fr);gap:8px;padding:0 8px}.h .card{padding:16px 6px 14px}.h .card h3{font-size:1.05rem}.h .card p{font-size:.8rem}.h .ic{width:46px;height:46px;font-size:1.2rem}.h nav a{padding:7px 8px;font-size:.78rem}.h .lamp{font-size:2rem}}
+/* v3 premium */
+.h .si{width:1.15em;height:1.15em;flex:none}.h .ic .si{width:28px;height:28px}
+.h .hero{background:#f6efdf url(home-hero.jpg) center top/cover no-repeat;min-height:620px}
+.h .hero:before{display:none}
+.h .rehal{width:min(400px,78%);border-radius:0;mix-blend-mode:normal;filter:drop-shadow(0 18px 18px #5a3c1a33);margin:22px auto -6px}
+.h .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(transparent,#f8f3e7);pointer-events:none}
+.h .rehal{z-index:1}
+.h footer{padding:46px 16px 96px}
+.h footer svg{bottom:22px;height:70px;opacity:.45}
+.h footer .gb{position:absolute;left:0;right:0;bottom:0;height:22px;background:#0c3323 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22'%3E%3Cg fill='none' stroke='%23c9a24f' stroke-width='1.4'%3E%3Cpath d='M0 11h44M22 1l10 10-10 10-10-10zM0 1l10 10L0 21M44 1 34 11l10 10'/%3E%3Ccircle cx='22' cy='11' r='3'/%3E%3C/g%3E%3C/svg%3E") repeat-x center;border-top:2px solid #c9a24f;border-bottom:2px solid #c9a24f}
+@media(max-width:640px){.h .hero{min-height:0;background-size:auto 100%}}
+.h .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;justify-content:stretch}
+.h .card{min-width:0;width:auto;flex:none}
+@media(max-width:640px){
+  .h .cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .h .card{padding:12px 5px 12px}
+  .h .card h3{font-size:.9rem;line-height:1.25}
+  .h .card p{font-size:.68rem;line-height:1.35;min-height:0;margin-bottom:8px}
+  .h .ic{width:38px;height:38px;margin-bottom:8px}
+  .h .ic .si{width:18px;height:18px}
+  .h .go{width:30px;height:30px;font-size:.95rem}
+}
+
+/* .known chips sit inside the .cards grid: span full row and allow shrinking so they never widen the page */
+.h .cards>.known{grid-column:1/-1;min-width:0;max-width:none;width:auto;margin:6px 0 42px;padding:0}
+.h .known a{max-width:100%;overflow-wrap:anywhere}
+.h .card.readmode{padding:0}
+.h .rm-face{display:block;width:100%;margin:0;background:none;border:0;font:inherit;color:inherit;cursor:pointer;padding:26px 16px 20px;text-align:center}
+.h .readmode.open{grid-column:1/-1}
+.h .readmode.open .rm-face{padding-bottom:6px}
+.h .rm-body{padding:0 16px 16px;text-align:start}
+.h .rm-empty{margin:0;color:#4a564e}
+.h .rm-row{display:flex;align-items:center;gap:6px;margin:8px 0}
+.h .rm-item{flex:1;min-width:0;display:flex;justify-content:space-between;gap:10px;align-items:baseline;background:#fff;border:1px solid #ead9b0;border-radius:14px;padding:10px 12px;color:#0f3d2a}
+.h .rm-item b{font-weight:650;overflow-wrap:anywhere}
+.h .rm-item span{color:#6b5a3e;white-space:nowrap;font-size:.85rem}
+.h .rm-x{border:1px solid #ead9b0;background:#fff;border-radius:10px;width:36px;height:36px;font-size:1.3rem;line-height:1;cursor:pointer;color:#6b5a3e}
+@media(max-width:640px){.h .rm-face{padding:12px 5px 12px}.h .rm-body{padding:0 8px 12px}}
+

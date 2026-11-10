@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found — Mushafuk.online</title>
+<script>
+(function(){
+  var p = location.pathname || '';
+  var m;
+  if ((m = p.match(/^\/tafsir\/all\/(.*)$/))) {
+    location.replace('https://tafsir.mushafuk.online/all/' + m[1] + location.search + location.hash);
+    return;
+  }
+  if ((m = p.match(/^\/tafsir\/tercume\/([^\/]+)\/([^\/]+)\/(.*)$/))) {
+    var book=m[1], lang=m[2], rest=m[3];
+    var t1 = { 'mukhtasar/bn':1,'mukhtasar/fa':1,'mukhtasar/id':1,'saadi/fa':1,'saadi/id':1,'saadi/ur':1,'ibnkathir/bn':1,'ibnkathir/ur':1 };
+    var host = t1[book+'/'+lang] ? 'https://t1.mushafuk.online' : 'https://t.mushafuk.online';
+    location.replace(host + '/tafsir/tercume/' + book + '/' + lang + '/' + rest + location.search + location.hash);
+    return;
+  }
+  if ((m = p.match(/^\/tafsir\/tercume\/([^\/]+)\/?$/))) {
+    location.replace('https://t.mushafuk.online/tafsir/tercume/' + m[1] + '/' + location.search + location.hash);
+    return;
+  }
+  if ((m = p.match(/^\/tafsir\/(aysar|baghawi|ibnkathir|mukhtasar|muyassar|saadi|samani|tabari|jawzi|qasimi|qayyim|shawkani|shinqiti|uthaymeen|zamanin|ibnhatim|thawri)\/(.*)$/))) {
+    location.replace('https://tafsir.mushafuk.online/' + m[1] + '/' + m[2] + location.search + location.hash);
+    return;
+  }
+})();
+</script>
+</head><body><p>Page not found. If this was a tafsir URL, you should be redirected automatically.</p><p><a href="/">Home</a></p></body></html>

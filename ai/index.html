@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mushafuk AI</title>
+<meta name="description" content="Mushafuk AI: Quran, təfsir və tərcümədə axtarış.">
+<link rel="canonical" href="https://mushafuk.online/ai/">
+<link rel="icon" href="../icon.png">
+<meta property="og:title" content="Mushafuk AI">
+<meta property="og:description" content="Quran, təfsir və tərcümədə axtarış.">
+<meta property="og:image" content="https://mushafuk.online/share.jpg">
+<meta property="og:url" content="https://mushafuk.online/ai/">
+<link rel="stylesheet" href="../site.css?v=8">
+<style>
+body{background:#fff!important}
+.nav{background:#fff!important;border-bottom:1px solid #f2f2f2!important;box-shadow:none!important}
+.nav.ai-top .in{flex-direction:row!important;justify-content:center!important;padding:.65rem 1rem!important}
+.nav nav a{font-size:.82rem}
+.ai{max-width:720px;margin:0 auto;padding:.4rem 1rem 7.2rem}
+.brand{text-align:center;padding:.6rem 0 .2rem}
+.brand img{width:148px;height:auto}
+.brand h1{margin:.15rem 0 .35rem;color:#0e3d2c;font-size:1.85rem;font-weight:800;letter-spacing:-.03em}
+.orn{display:flex;align-items:center;justify-content:center;gap:.7rem;color:#c6a24e;margin:0 auto .7rem;max-width:220px}
+.orn i{flex:1;height:1px;background:#e4e4e4}
+.lead{text-align:center;color:#6a746e;margin:0 auto .9rem;max-width:34rem;line-height:1.55;font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin:0 0 1rem}
+.chips button{border:1px solid #ead9b0;background:#fff;color:#0e3d2c;border-radius:999px;padding:.35rem .75rem;font:inherit;cursor:pointer}
+.hit{display:block;background:#fff;border:1px solid #eee4cf;border-radius:16px;padding:.9rem 1rem .7rem;margin:.55rem 0;color:inherit;cursor:pointer}
+.hit.on{border-color:#0e3d2c;box-shadow:0 0 0 2px #0e3d2c22}
+.hit .ay{margin:0;font-family:"Amiri","Noto Naskh Arabic",serif;font-size:1.35rem;line-height:2;text-align:right;color:#14261e}
+.hit mark,.answer mark{background:#f6e7c1;color:inherit;border-radius:4px;padding:0 .1rem}
+.hit .tr{margin:.45rem 0 0;line-height:1.6;color:#2c332f}
+.answer{background:#fff;border:1px solid #ead9b0;border-radius:18px;padding:1rem 1rem .85rem;margin:0 0 .9rem;box-shadow:0 8px 24px #0e3d2c0d}
+.answer .kicker{margin:0 0 .45rem;color:#8a6a2e;font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.answer .said{margin:0 0 .55rem;line-height:1.65;color:#14261e;font-size:1.05rem}
+.answer .who{margin:.75rem 0 .2rem;color:#0e3d2c;font-weight:700;font-size:.85rem}
+.anal{background:#f7f3ea;border:1px solid #ead9b0;border-radius:14px;padding:.7rem .9rem;color:#0e3d2c;margin:0 0 .7rem;line-height:1.5}
+.count{text-align:center;color:#0e3d2c;font-weight:700;margin:.2rem 0 .8rem}
+.addr{display:inline-block;margin-top:.55rem;color:#8a6a2e;font-size:.8rem;text-decoration:none}
+.addr:hover{text-decoration:underline}
+.more{display:block;margin:.8rem auto 0;border:1px solid #ead9b0;background:#fff;color:#0e3d2c;border-radius:999px;padding:.45rem 1rem;font:inherit;cursor:pointer}
+.wait{text-align:center;color:#6a746e}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;background:linear-gradient(#ffffff00,#fff 22%);padding:.35rem .75rem calc(.65rem + env(safe-area-inset-bottom))}
+.dock form{max-width:720px;margin:0 auto;display:flex;gap:.35rem;align-items:center;background:#fff;border:1px solid #ead9b0;border-radius:999px;padding:.35rem .35rem .35rem .95rem;box-shadow:0 8px 28px #0e3d2c14}
+.dock input{flex:1;border:0;background:transparent;font:inherit;font-size:1.02rem;outline:none;min-width:0;color:#1d2a22}
+.dock #go{border:0;background:#0e3d2c;color:#fff;width:46px;height:46px;border-radius:50%;padding:0;display:grid;place-items:center;cursor:pointer;flex:none}
+.dock #go svg{width:20px;height:20px}
+.scope{position:relative;flex:none}
+.scope-btn{border:0;background:#f6f1e4;color:#0e3d2c;border-radius:999px;padding:.55rem .7rem;font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.scope-menu{position:absolute;bottom:calc(100% + 8px);top:auto;inset-inline-end:0;z-index:30;background:#fff;border:1px solid #ead9b0;border-radius:14px;padding:.3rem;min-width:168px;max-height:min(62vh,440px);overflow:auto;box-shadow:0 10px 24px #0e3d2c18;display:flex;flex-direction:column}
+.scope-menu[hidden]{display:none}
+.scope-menu .cap{padding:.45rem .7rem .15rem;color:#8a6a2e;font-size:.72rem;font-weight:800;letter-spacing:.04em}
+.scope-menu button{border:0;background:transparent;text-align:start;padding:.5rem .7rem;border-radius:10px;font:inherit;color:#0e3d2c;cursor:pointer;width:auto;height:auto}
+.scope-menu button.on,.scope-menu button:hover{background:#f6f1e4}
+html[dir=rtl] .dock form{padding:.35rem .95rem .35rem .35rem}
+#splash{position:fixed;inset:0;z-index:80;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;transition:opacity .4s ease}
+#splash.off{opacity:0;pointer-events:none}
+#splash img{width:min(280px,72vw);height:auto}
+#splash h1{margin:.2rem 0 .15rem;color:#0e3d2c;font-size:2rem;font-weight:800;letter-spacing:-.03em}
+#splash .orn{margin:.35rem auto 1.6rem}
+.spin{width:46px;height:46px;border-radius:50%;background:conic-gradient(#0e3d2c 0 80deg,#e6e6e6 80deg 360deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div id="splash">
+<img src="mark.png" alt="">
+<h1>Mushafuk AI</h1>
+<div class="orn"><i></i><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path fill="#c6a24e" d="M9 0l1.6 5.4L16 4.2 12.2 8 18 9l-5.8 1 3.8 3.8-5.4-1.6L9 18l-1.6-5.8L2 13.8 5.8 10 0 9l5.8-1L2 4.2l5.4 1.6z"/></svg><i></i></div>
+<div class="spin" role="status" aria-label="Loading"></div>
+</div>
+<header class="nav ai-top"><div class="in">
+<a class="logo" href="../" dir="ltr"><img src="../icon.png" alt="">Mushafuk<span>.online</span></a>
+</div></header>
+<main class="ai">
+<div class="brand">
+<img src="mark.png" alt="">
+<h1>Mushafuk AI</h1>
+<div class="orn"><i></i><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path fill="#c6a24e" d="M9 0l1.6 5.4L16 4.2 12.2 8 18 9l-5.8 1 3.8 3.8-5.4-1.6L9 18l-1.6-5.8L2 13.8 5.8 10 0 9l5.8-1L2 4.2l5.4 1.6z"/></svg><i></i></div>
+</div>
+<p class="lead" id="lead"></p>
+<div class="chips" id="chips"></div>
+<p class="note" id="note"></p>
+<div id="out"></div>
+</main>
+<div class="dock"><form id="form"><input id="q" type="search" autocomplete="off" enterkeyhint="search"><div class="scope" id="scope"><button type="button" class="scope-btn" id="scopeBtn" aria-expanded="false">Sürətli</button><div class="scope-menu" id="scopeMenu" hidden></div></div><button id="go" type="submit" aria-label="Göndər"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg></button></form></div>
+<script src="../site.js?v=8"></script>
+<script src="engine.js?v=3"></script>
+<script src="app.js?v=19"></script>
+<script>
+setTimeout(function () {
+  var s = document.getElementById("splash");
+  if (!s) return;
+  s.classList.add("off");
+  setTimeout(function () { s.remove(); var q = document.getElementById("q"); if (q) q.focus(); }, 420);
+}, 2000);
+</script>
+</body>
+</html>

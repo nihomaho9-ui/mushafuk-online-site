@@ -1,0 +1,33 @@
+/* ulum book reader — extends site palette; body uses Kitab Naskh stack */
+.ulum-hero{background:linear-gradient(165deg,#0f4d3a 0%,#0b3a2c 58%,#16382c 100%);color:#fbf7ee;text-align:center;padding:2.6rem 1.2rem 2rem;border-bottom:4px solid #b8923a}
+.ulum-hero h1{color:#fff;margin:0 0 .5rem;font-size:clamp(1.7rem,4vw,2.5rem);font-family:var(--tf-body,Kitab,"Noto Naskh Arabic",Amiri,serif)}
+.ulum-hero p{max-width:40rem;margin:.4rem auto;color:#e6dcc4}
+.ulum-topics{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin:1rem 0 0}
+.ulum-topics a{background:rgba(255,255,255,.12);color:#fbf7ee;border:1px solid rgba(184,146,58,.55);padding:.35rem .75rem;border-radius:999px;font-size:.88rem}
+.ulum-wrap{max-width:860px;margin:0 auto;padding:1.2rem 1rem 3.5rem}
+.ulum-card{display:block;background:#fff;border:1px solid #ece3cd;border-radius:16px;padding:1.1rem 1.2rem;margin:0 0 .85rem;box-shadow:0 10px 26px rgba(15,77,58,.05)}
+.ulum-card h2{margin:0 0 .35rem;color:#0b3a2c;font-size:1.25rem;font-family:var(--tf-body,Kitab,"Noto Naskh Arabic",Amiri,serif)}
+.ulum-card p{margin:.25rem 0;color:#3e352b}
+.ulum-card .tag{display:inline-block;margin-top:.25rem;color:#8a6a2e;font-size:.82rem}
+.ulum-card .go{display:inline-block;margin-top:.45rem;color:#0f4d3a;font-weight:650}
+.ulum-toc a{display:flex;gap:.75rem;align-items:flex-start;padding:.7rem .85rem;border-bottom:1px solid #efe7d4;color:#1f1a14}
+.ulum-toc a:hover{background:#f6f1e4}
+.ulum-toc .n{min-width:2rem;color:#b8923a;font-weight:700}
+.ulum-toc .t{flex:1;font-family:var(--tf-body,Kitab,"Noto Naskh Arabic",Amiri,serif);font-size:1.12rem;line-height:1.55}
+.ulum-book h1{font-family:var(--tf-body,Kitab,"Noto Naskh Arabic",Amiri,serif);color:#0b3a2c;font-size:clamp(1.45rem,3.5vw,2rem);margin:0 0 .4rem}
+.ulum-book .meta{color:#6b6253;margin:0 0 1.1rem;font-size:.95rem}
+.ulum-book .body{background:transparent;border:0;border-radius:0;padding:.35rem 0 1.4rem;box-shadow:none;overflow:visible}
+.ulum-book .body p{font-family:var(--tf-body,Kitab,"Noto Naskh Arabic",Amiri,"Scheherazade New",serif);font-size:clamp(1.22rem,3.8vw,1.42rem);line-height:2.25;margin:0 0 .95rem;color:#111;overflow-wrap:anywhere}
+.ulum-book .body p.subh{color:#0f4d3a;font-weight:700;margin-top:1.2rem;border-inline-start:3px solid #b8923a;padding-inline-start:.65rem}
+.ulum-pn{display:flex;justify-content:space-between;gap:1rem;margin:1.2rem 0 0;flex-wrap:wrap}
+.ulum-pn a{background:#0f4d3a;color:#fbf7ee;padding:.55rem 1rem;border-radius:999px;font-weight:600}
+.ulum-pn a:hover{background:#0b3a2c}
+.ulum-pn span{visibility:hidden;padding:.55rem 1rem}
+.ulum-credit{margin-top:1.2rem;font-size:.88rem;color:#6b6253;line-height:1.55}
+.nav .logo img{border-radius:6px}
+@media (max-width:640px){
+  .ulum-book .body p{font-size:1.28rem;line-height:2.3}
+  .nav nav a{margin-left:1rem}
+}
+
+.ulum-credit a{color:inherit;text-decoration:underline}
