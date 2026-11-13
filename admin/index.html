@@ -127,7 +127,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     <h1>Mushafuk</h1>
     <p>İdarə paneli — yalnız sahibi üçün</p>
     <form id="lf" novalidate>
-      <input id="email" class="in-t" type="email" value="nihomaho9@gmail.com" autocomplete="username" inputmode="email" aria-label="E-poçt" placeholder="E-poçt">
+      <input id="email" class="in-t" type="email" autocomplete="username" inputmode="email" aria-label="E-poçt" placeholder="E-poçt">
       <div class="pw"><input id="pass" class="in-t" type="password" autocomplete="current-password" aria-label="Şifrə" placeholder="Şifrə"><button type="button" id="eye" class="eye" aria-label="Şifrəni göstər" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
       <button id="send" class="pri" type="submit">Daxil ol</button>
       <div id="lmsg" class="msg" role="alert"></div>
@@ -219,7 +219,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 <script>
 (function(){
 'use strict';
-var URL_='https://isvqwafixlmusmuqqnyk.supabase.co',KEY='sb_publishable_UnQ35pj_GatInq-7lhFGgQ_DnRoUnDC',ADMIN='nihomaho9@gmail.com',REDIR='https://mushafuk.online/admin/';
+var URL_='https://isvqwafixlmusmuqqnyk.supabase.co',KEY='sb_publishable_UnQ35pj_GatInq-7lhFGgQ_DnRoUnDC',AH='aa6062cc5f24b0a40b24d380bfd1554a65b7b4f2d94425acf98067994c6c3cb2',REDIR='https://mushafuk.online/admin/';
 var SITES=[
  {h:'mushafuk.online',n:'Əsas sayt',r:'mushafuk-online-site',d:'Quran, tərcümə və oxu'},
  {h:'tafsir.mushafuk.online',n:'Təfsir',r:'mushafuk-tafsir',d:'Təfsir kitabxanası'},
@@ -239,13 +239,14 @@ function fmt(n){n=Number(n)||0;return n.toLocaleString('az')}
 function show(login){$('login').classList.toggle('hide',!login);$('app').classList.toggle('hide',login)}
 
 /* ---------- auth ---------- */
+async function isAdmin(e){try{var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(e));return Array.prototype.map.call(new Uint8Array(b),function(x){return ('0'+x.toString(16)).slice(-2)}).join('')===AH}catch(x){return false}}
 function setMsg(t,c){var m=$('lmsg');m.textContent=t||'';m.className='msg '+(c||'')}
 $('eye').onclick=function(){var p=$('pass'),h=p.type==='password';p.type=h?'text':'password';this.setAttribute('aria-pressed',h);this.setAttribute('aria-label',h?'Şifrəni gizlət':'Şifrəni göstər')};
 $('lf').onsubmit=async function(e){
   e.preventDefault();
   var em=$('email').value.trim().toLowerCase(),pw=$('pass').value,btn=$('send');
   if(!em||!pw){setMsg('E-poçt və şifrəni daxil edin.','err');return}
-  if(em!==ADMIN){setMsg('Bu panel yalnız sahibi üçündür.','err');return}
+  if(!(await isAdmin(em))){setMsg('Bu panel yalnız sahibi üçündür.','err');return}
   btn.disabled=true;btn.textContent='Yoxlanılır…';setMsg('');
   var r;try{r=await sb.auth.signInWithPassword({email:em,password:pw})}catch(x){r={error:{message:'network',status:0}}}
   btn.disabled=false;btn.textContent='Daxil ol';
@@ -263,7 +264,7 @@ $('out').onclick=async function(){await sb.auth.signOut();setMsg('Çıxış edil
 async function gate(session){
   if(!session){show(true);return}
   var em=(session.user&&session.user.email||'').toLowerCase();
-  if(em!==ADMIN){await sb.auth.signOut();show(true);setMsg('Bu hesabın icazəsi yoxdur.','err');return}
+  if(!(await isAdmin(em))){await sb.auth.signOut();show(true);setMsg('Bu hesabın icazəsi yoxdur.','err');return}
   $('me').textContent=em;show(false);
   buildChips();buildSites();load();loadLive();
   [st.timer,st.t2,st.t3].forEach(clearInterval);
