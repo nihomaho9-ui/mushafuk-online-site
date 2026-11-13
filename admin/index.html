@@ -42,9 +42,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .pri{width:100%;height:48px;border-radius:999px;border:1px solid var(--gold);background:linear-gradient(180deg,#145a43,var(--em2));color:#fff;font-weight:600;box-shadow:0 10px 26px #0f4d3a66}
 .pri:disabled{opacity:.55;cursor:wait}
 .msg{margin-top:14px;font-size:.88rem;min-height:1.3em}.msg.ok{color:var(--em)}.msg.err{color:var(--red)}
-.alt{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
-.alt summary{color:var(--mut);cursor:pointer;font-size:.85rem}
-.alt .in-t{margin-top:12px;letter-spacing:.4em}
+.pw{position:relative}.pw .in-t{padding-inline:46px}
+.eye{position:absolute;right:6px;top:4px;width:40px;height:40px;border:0;background:none;color:var(--mut);border-radius:10px;display:grid;place-items:center}.eye:hover,.eye[aria-pressed=true]{color:var(--gold2)}
+.eye svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 /* controls */
 .ctl{display:flex;flex-direction:column;gap:10px;margin:16px 0 6px}
 .seg{display:flex;background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:4px;gap:2px}
@@ -115,14 +115,12 @@ button{font:inherit;color:inherit;cursor:pointer}
     <img src="/icon.png" alt="">
     <h1>Mushafuk</h1>
     <p>İdarə paneli — yalnız sahibi üçün</p>
-    <input id="email" class="in-t" type="email" value="nihomaho9@gmail.com" autocomplete="email" inputmode="email" aria-label="E-poçt">
-    <button id="send" class="pri">Giriş linki göndər</button>
-    <div id="lmsg" class="msg" role="status"></div>
-    <details class="alt">
-      <summary>Linkin əvəzinə 6 rəqəmli kod</summary>
-      <input id="code" class="in-t" inputmode="numeric" maxlength="8" placeholder="······" autocomplete="one-time-code" aria-label="Kod">
-      <button id="verify" class="pri">Kodu təsdiqlə</button>
-    </details>
+    <form id="lf" novalidate>
+      <input id="email" class="in-t" type="email" value="nihomaho9@gmail.com" autocomplete="username" inputmode="email" aria-label="E-poçt" placeholder="E-poçt">
+      <div class="pw"><input id="pass" class="in-t" type="password" autocomplete="current-password" aria-label="Şifrə" placeholder="Şifrə"><button type="button" id="eye" class="eye" aria-label="Şifrəni göstər" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+      <button id="send" class="pri" type="submit">Daxil ol</button>
+      <div id="lmsg" class="msg" role="alert"></div>
+    </form>
   </div>
 </section>
 
@@ -188,7 +186,7 @@ var SITES=[
 ];
 var NAME={};SITES.forEach(function(s){NAME[s.h]=s.n});
 var $=function(i){return document.getElementById(i)};
-var sb=supabase.createClient(URL_,KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+var sb=supabase.createClient(URL_,KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}});
 var st={p:'week',h:null,chart:null,busy:false,timer:null};
 var AZM=['Yan','Fev','Mar','Apr','May','İyn','İyl','Avq','Sen','Okt','Noy','Dek'];
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -197,27 +195,31 @@ function show(login){$('login').classList.toggle('hide',!login);$('app').classLi
 
 /* ---------- auth ---------- */
 function setMsg(t,c){var m=$('lmsg');m.textContent=t||'';m.className='msg '+(c||'')}
-$('send').onclick=async function(){
-  var em=$('email').value.trim().toLowerCase();
+$('eye').onclick=function(){var p=$('pass'),h=p.type==='password';p.type=h?'text':'password';this.setAttribute('aria-pressed',h);this.setAttribute('aria-label',h?'Şifrəni gizlət':'Şifrəni göstər')};
+$('lf').onsubmit=async function(e){
+  e.preventDefault();
+  var em=$('email').value.trim().toLowerCase(),pw=$('pass').value,btn=$('send');
+  if(!em||!pw){setMsg('E-poçt və şifrəni daxil edin.','err');return}
   if(em!==ADMIN){setMsg('Bu panel yalnız sahibi üçündür.','err');return}
-  this.disabled=true;setMsg('Göndərilir…');
-  var r=await sb.auth.signInWithOtp({email:em,options:{emailRedirectTo:REDIR,shouldCreateUser:true}});
-  this.disabled=false;
-  if(r.error){setMsg(/rate|seconds|limit/i.test(r.error.message)?'Çox tez-tez sorğu. Bir az gözləyib yenidən cəhd edin.':'Göndərmək alınmadı: '+r.error.message,'err')}
-  else setMsg('Giriş linki '+em+' ünvanına göndərildi. Məktubdakı linkə basın.','ok');
+  btn.disabled=true;btn.textContent='Yoxlanılır…';setMsg('');
+  var r;try{r=await sb.auth.signInWithPassword({email:em,password:pw})}catch(x){r={error:{message:'network',status:0}}}
+  btn.disabled=false;btn.textContent='Daxil ol';
+  if(r.error){
+    var m=String(r.error.message||''),c=r.error.code||'';
+    setMsg(/invalid login|invalid_credentials/i.test(m+c)?'E-poçt və ya şifrə yanlışdır.':
+      /not confirmed|email_not_confirmed/i.test(m+c)?'E-poçt hələ təsdiqlənməyib.':
+      /rate|too many|over_request/i.test(m+c)?'Çox sayda cəhd edildi. Bir az gözləyib yenidən cəhd edin.':
+      /network|fetch|Failed/i.test(m)||r.error.status===0?'Şəbəkə xətası. İnternet bağlantısını yoxlayın.':
+      'Giriş alınmadı: '+m,'err');
+    $('pass').value='';$('pass').focus();return}
+  $('pass').value='';
 };
-$('verify').onclick=async function(){
-  var c=$('code').value.trim();if(!c)return;this.disabled=true;
-  var r=await sb.auth.verifyOtp({email:ADMIN,token:c,type:'email'});this.disabled=false;
-  if(r.error)setMsg('Kod yanlışdır və ya vaxtı keçib.','err');
-};
-$('out').onclick=async function(){await sb.auth.signOut();location.replace(REDIR)};
+$('out').onclick=async function(){await sb.auth.signOut();setMsg('Çıxış edildi.','ok')};
 async function gate(session){
   if(!session){show(true);return}
   var em=(session.user&&session.user.email||'').toLowerCase();
   if(em!==ADMIN){await sb.auth.signOut();show(true);setMsg('Bu hesabın icazəsi yoxdur.','err');return}
   $('me').textContent=em;show(false);
-  if(location.hash.indexOf('access_token')>-1||location.search.indexOf('code=')>-1)history.replaceState(null,'',REDIR.replace(/^https?:\/\/[^/]+/,''));
   buildChips();buildSites();load();
   clearInterval(st.timer);st.timer=setInterval(function(){if(!document.hidden)load(true)},60000);
 }
