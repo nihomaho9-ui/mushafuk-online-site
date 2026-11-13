@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#06120d">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://isvqwafixlmusmuqqnyk.supabase.co https://api.github.com https://mushafuk.online https://*.mushafuk.online; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://isvqwafixlmusmuqqnyk.supabase.co https://vjkyjcbefekflqpnqnen.supabase.co https://sunan.online https://api.github.com https://mushafuk.online https://*.mushafuk.online; base-uri 'none'; form-action 'none'">
 <link rel="icon" href="/icon.png">
 <style>
 :root{--bg:#06120d;--s1:#0b1d15;--s2:#10281d;--line:#1c382a;--gold:#c9a24a;--gold2:#e6c878;--em:#34b183;--em2:#0f4d3a;--txt:#f2ede1;--mut:#8da598;--red:#e0735f;--r:16px}
@@ -185,6 +185,7 @@ button{font:inherit;color:inherit;cursor:pointer}
       </div>
     </div>
 
+    <div id="quranSec">
     <div class="sec"><h2>Quran və təfsir üzrə oxunma</h2><small>seçilmiş dövr</small></div>
     <div class="grid2">
       <div class="card"><h3>Surələr</h3><div id="surahs"></div></div>
@@ -193,6 +194,7 @@ button{font:inherit;color:inherit;cursor:pointer}
       <div class="card"><h3>Elm kitabları (t3)</h3><div id="books"></div></div>
     </div>
     <p class="note">Surə: Quran oxu səhifəsindən (səhifə nömrəsinə görə təxmini) və təfsir səhifələrindən hesablanır.</p>
+    </div>
 
     <div class="sec"><h2>Ölkələr</h2><small>IP saxlanmır, yalnız ölkə kodu</small></div>
     <div class="card" id="ctry"></div>
@@ -202,7 +204,7 @@ button{font:inherit;color:inherit;cursor:pointer}
       <div class="card"><h3>Ən çox axtarılanlar</h3><div class="pl" id="qs"></div></div>
       <div class="card"><h3>Nəticə tapılmayanlar</h3><div class="pl" id="zq"></div></div>
     </div>
-    <p class="note">Axtarış yalnız Mushafuk AI (/ai/) səhifəsində var və orada qeydə alınır. Başqa saytlarda axtarış qutusu yoxdur.</p>
+    <p class="note">Axtarış Mushafuk AI (/ai/) və Sunan (/axtar/) səhifələrində qeydə alınır.</p>
 
     <div class="sec"><h2>Qırıq keçidlər (404)</h2><small id="nf-t"></small></div>
     <div class="card"><div class="pl" id="nf"></div></div>
@@ -219,7 +221,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 <script>
 (function(){
 'use strict';
-var URL_='https://isvqwafixlmusmuqqnyk.supabase.co',KEY='sb_publishable_UnQ35pj_GatInq-7lhFGgQ_DnRoUnDC',AH='f8ecf8b0b925141f82336383233c2f0521984efb5c208c1a9a4acde981a65700',REDIR='https://mushafuk.online/admin/';
+var AH='f8ecf8b0b925141f82336383233c2f0521984efb5c208c1a9a4acde981a65700';
+var PM={url:'https://isvqwafixlmusmuqqnyk.supabase.co',key:'sb_publishable_UnQ35pj_GatInq-7lhFGgQ_DnRoUnDC'},PS={url:'https://vjkyjcbefekflqpnqnen.supabase.co',key:'sb_publishable_O2Ci6QlcINYOBIAaG7_bng_NpR-AevE'};
+var HOME=/(^|\.)sunan\.online$/.test(location.hostname)?'s':'m';
 var SITES=[
  {h:'mushafuk.online',n:'Əsas sayt',r:'mushafuk-online-site',d:'Quran, tərcümə və oxu'},
  {h:'tafsir.mushafuk.online',n:'Təfsir',r:'mushafuk-tafsir',d:'Təfsir kitabxanası'},
@@ -227,12 +231,16 @@ var SITES=[
  {h:'t3.mushafuk.online',n:'Elmlər',r:'mushafuk-ulum',d:'Üsul və elm kitabları'},
  {h:'t.mushafuk.online',n:'Tərcümələr',r:'mushafuk-translations',d:'Quran tərcümələri'},
  {h:'t1.mushafuk.online',n:'Tərcümələr 2',r:'mushafuk-translations-extra',d:'Əlavə tərcümələr'},
- {h:'quran.mushafuk.online',n:'Quran (təcvid)',r:'tecvidtest',d:'Təcvid tətbiqi',track:false}
+ {h:'quran.mushafuk.online',n:'Quran (təcvid)',r:'tecvidtest',d:'Təcvid tətbiqi',track:false},
+ {h:'sunan.online',n:'Sunan (hədis)',r:'sahih-bukhari',d:'Hədis kitabxanası',o:'muhadisonline'}
 ];
 var NAME={};SITES.forEach(function(s){NAME[s.h]=s.n});
 var $=function(i){return document.getElementById(i)};
-var sb=supabase.createClient(URL_,KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}});
-var st={p:'week',h:null,chart:null,busy:false,timer:null};
+var AO={auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}};
+var CM=supabase.createClient(PM.url,PM.key,AO),CS=supabase.createClient(PS.url,PS.key,AO);
+var sb=HOME==='s'?CS:CM,sb2=HOME==='s'?CM:CS; /* sb = bu saytın layihəsi (giriş qapısı), sb2 = digər sayt */
+function cl(h){return h==='sunan.online'?CS:CM}
+var st={p:'week',h:HOME==='s'?'sunan.online':null,chart:null,busy:false,timer:null};
 var AZM=['Yan','Fev','Mar','Apr','May','İyn','İyl','Avq','Sen','Okt','Noy','Dek'];
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function fmt(n){n=Number(n)||0;return n.toLocaleString('az')}
@@ -248,6 +256,7 @@ $('lf').onsubmit=async function(e){
   if(!em||!pw){setMsg('E-poçt və şifrəni daxil edin.','err');return}
   if(!(await isAdmin(em))){setMsg('Bu panel yalnız sahibi üçündür.','err');return}
   btn.disabled=true;btn.textContent='Yoxlanılır…';setMsg('');
+  try{await sb2.auth.signInWithPassword({email:em,password:pw})}catch(x){}
   var r;try{r=await sb.auth.signInWithPassword({email:em,password:pw})}catch(x){r={error:{message:'network',status:0}}}
   btn.disabled=false;btn.textContent='Daxil ol';
   if(r.error){
@@ -260,7 +269,7 @@ $('lf').onsubmit=async function(e){
     $('pass').value='';$('pass').focus();return}
   $('pass').value='';
 };
-$('out').onclick=async function(){await sb.auth.signOut();setMsg('Çıxış edildi.','ok')};
+$('out').onclick=async function(){try{await sb2.auth.signOut()}catch(x){}await sb.auth.signOut();setMsg('Çıxış edildi.','ok')};
 async function gate(session){
   if(!session){show(true);return}
   var em=(session.user&&session.user.email||'').toLowerCase();
@@ -278,7 +287,7 @@ sb.auth.onAuthStateChange(function(ev,s){if(ev==='SIGNED_OUT'){show(true)}else i
 /* ---------- controls ---------- */
 $('seg').onclick=function(e){var b=e.target.closest('button');if(!b)return;st.p=b.dataset.p;[].forEach.call($('seg').children,function(x){x.classList.toggle('on',x===b)});load()};
 function buildChips(extra){
-  var list=[{h:null,n:'Ümumi'}].concat(SITES.filter(function(x){return x.track!==false}));
+  var list=[{h:null,n:'Mushafuk · ümumi'}].concat(SITES.filter(function(x){return x.track!==false}));
   (extra||[]).forEach(function(h){if(!NAME[h])list.push({h:h,n:h})});
   $('chips').innerHTML=list.map(function(s){return '<button class="chip'+(s.h===st.h?' on':'')+'" data-h="'+esc(s.h||'')+'">'+esc(s.n)+'</button>'}).join('');
 }
@@ -304,10 +313,15 @@ async function load(quiet){
   if(st.busy)return;st.busy=true;$('refresh').classList.add('spin');
   if(!quiet)skeleton();
   var a={p_period:st.p,p_host:st.h};
-  var r=await Promise.all([sb.rpc('admin_dashboard',a),sb.rpc('admin_content',a),sb.rpc('admin_events',a)]);
+  var c=cl(st.h),oc=c===CM?CS:CM;
+  var r=await Promise.all([c.rpc('admin_dashboard',a),c.rpc('admin_content',a),c.rpc('admin_events',a),oc.rpc('admin_dashboard',{p_period:st.p,p_host:null})]);
   st.busy=false;$('refresh').classList.remove('spin');
-  for(var i=0;i<r.length;i++){var e=r[i].error;if(e&&(e.code==='42501'||/forbidden|JWT/i.test(e.message))){await sb.auth.signOut();show(true);setMsg('Giriş icazəsi yoxdur.','err');return}}
+  for(var i=0;i<3;i++){var e=r[i].error;if(e&&(e.code==='42501'||/forbidden|JWT|permission/i.test(e.message))){
+    if(c===sb){await sb2.auth.signOut().catch(function(){});await sb.auth.signOut();show(true);setMsg('Giriş icazəsi yoxdur.','err');return}
+    $('kpis').innerHTML='<div class="empty" style="grid-column:1/-1">Bu saytın layihəsinə giriş yoxdur. Çıxıb eyni e-poçt və şifrə ilə yenidən daxil olun.</div>';return}}
   if(r[0].error){$('kpis').innerHTML='<div class="empty" style="grid-column:1/-1">Məlumat yüklənmədi: '+esc(r[0].error.message)+'</div>';return}
+  var od=r[3]&&!r[3].error&&r[3].data&&r[3].data.hosts;
+  if(od){var have={};(r[0].data.hosts||[]).forEach(function(h){have[h.host]=1});r[0].data.hosts=(r[0].data.hosts||[]).concat(od.filter(function(h){return !have[h.host]}))}
   st.dash=r[0].data;render(st.dash);
   st.content=r[1].error?null:r[1].data;renderContent(st.content,r[1].error);
   st.events=r[2].error?null:r[2].data;renderEvents(st.events,r[2].error);
@@ -318,7 +332,8 @@ function skeleton(){
 }
 function render(d){
   var K=d.kpis,names=[['today','Bu gün'],['week','Bu həftə'],['month','Bu ay'],['year','Bu il'],['total','Ümumi']];
-  $('kt').textContent=st.h?(NAME[st.h]||st.h):'Ümumi';
+  $('kt').textContent=st.h?(NAME[st.h]||st.h):'Mushafuk · ümumi';
+  var q=$('quranSec');if(q)q.style.display=st.h==='sunan.online'?'none':'';
   $('kpis').innerHTML=names.map(function(n,i){var x=K[n[0]],t=n[0]==='total';
     return '<div class="kpi'+(t?' tot':'')+'"'+(t?'':' title="Əvvəlki müqayisə dövrü: '+fmt(x.pviews)+' baxış, '+fmt(x.pvisitors)+' ziyarətçi"')+'><label>'+n[1]+(t?'':' '+delta(x.views,x.pviews))+'</label><div class="v">'+fmt(x.views)+' <small style="font:500 .8rem system-ui;color:var(--mut)">baxış</small></div><div class="s"><b>'+fmt(x.visitors)+'</b> ziyarətçi'+(t?'':' · '+delta(x.visitors,x.pvisitors))+'</div></div>'}).join('');
   $('upd').textContent='yeniləndi '+new Date().toLocaleTimeString('az',{hour:'2-digit',minute:'2-digit'});
@@ -374,7 +389,14 @@ function drawChart(d){
 
 /* ---------- live ---------- */
 async function loadLive(){
-  var r=await sb.rpc('admin_live');if(r.error)return;var d=r.data;
+  var rs=await Promise.all([CM.rpc('admin_live'),CS.rpc('admin_live')]),ds=rs.filter(function(x){return !x.error&&x.data}).map(function(x){return x.data});
+  if(!ds.length)return;
+  var d={active:0,views5:0,by_host:[],countries:[],pages:[],spark:[]},cm={},sp={};
+  ds.forEach(function(x){d.active+=x.active||0;d.views5+=x.views5||0;d.by_host=d.by_host.concat(x.by_host||[]);d.pages=d.pages.concat(x.pages||[]);
+    (x.countries||[]).forEach(function(c){cm[c.c]=(cm[c.c]||0)+c.n});(x.spark||[]).forEach(function(q){sp[q.m]=(sp[q.m]||0)+q.n})});
+  d.by_host.sort(function(a,b){return b.n-a.n});d.pages.sort(function(a,b){return b.n-a.n});d.pages=d.pages.slice(0,8);
+  d.countries=Object.keys(cm).map(function(k){return{c:k,n:cm[k]}}).sort(function(a,b){return b.n-a.n}).slice(0,8);
+  d.spark=Object.keys(sp).map(function(k){return{m:+k,n:sp[k]}}).sort(function(a,b){return b.m-a.m});
   $('lv-n').textContent=fmt(d.active);$('lv-v').textContent=fmt(d.views5);
   $('lv-hosts').innerHTML=d.by_host.map(function(h){return '<span class="chip on" style="cursor:default">'+esc(NAME[h.host]||h.host)+' <b>'+h.n+'</b></span>'}).join('')+d.countries.map(function(c){return '<span class="chip" style="cursor:default">'+flag(c.c)+' '+esc(c.c)+' <b>'+c.n+'</b></span>'}).join('');
   $('lv-pages').innerHTML=d.pages.length?d.pages.map(function(p){return '<div class="pg"><div><div class="p">'+esc(p.path)+'</div><div class="h">'+esc(NAME[p.host]||p.host)+'</div></div><b>'+p.n+'</b></div>'}).join(''):'<div class="empty">Hazırda aktiv ziyarətçi yoxdur</div>';
@@ -386,14 +408,14 @@ async function loadLive(){
 /* ---------- site cards + health ---------- */
 var HEALTH={},DEPLOY={};
 function buildSites(){
-  $('sites').innerHTML=SITES.map(function(s){return '<div class="site"><h3><span>'+esc(s.n)+'</span><span class="st" id="st-'+esc(s.r)+'">\u2026</span></h3><div class="u">'+esc(s.h)+' \u2014 '+esc(s.d)+'</div><div class="hl"><span class="st" id="hs-'+esc(s.r)+'">\u2026</span>'+(s.track===false?'<span class="st">sayğac yoxdur</span>':'')+'</div><div class="row"><a href="https://'+esc(s.h)+'/" target="_blank" rel="noopener">Saytı aç</a><a href="https://github.com/nihomaho9-ui/'+esc(s.r)+'" target="_blank" rel="noopener">GitHub</a></div><div class="n" id="nt-'+esc(s.r)+'"></div></div>'}).join('');
+  $('sites').innerHTML=SITES.map(function(s){return '<div class="site"><h3><span>'+esc(s.n)+'</span><span class="st" id="st-'+esc(s.r)+'">\u2026</span></h3><div class="u">'+esc(s.h)+' \u2014 '+esc(s.d)+'</div><div class="hl"><span class="st" id="hs-'+esc(s.r)+'">\u2026</span>'+(s.track===false?'<span class="st">sayğac yoxdur</span>':'')+'</div><div class="row"><a href="https://'+esc(s.h)+'/" target="_blank" rel="noopener">Saytı aç</a><a href="https://github.com/'+esc(s.o||'nihomaho9-ui')+'/'+esc(s.r)+'" target="_blank" rel="noopener">GitHub</a></div><div class="n" id="nt-'+esc(s.r)+'"></div></div>'}).join('');
   SITES.forEach(function(s){deploy(s)});checkHealth();
 }
 async function deploy(s){
   var k='mfk-dep-'+s.r,c=null;
   try{c=JSON.parse(sessionStorage.getItem(k)||'null')}catch(e){}
   if(!c||Date.now()-c.t>300000){
-    try{var x=await fetch('https://api.github.com/repos/nihomaho9-ui/'+s.r+'/pages/builds/latest');if(x.ok){var j=await x.json();c={t:Date.now(),s:j.status,u:j.updated_at,c:(j.commit||'').slice(0,7)};sessionStorage.setItem(k,JSON.stringify(c))}}catch(e){}
+    try{var x=await fetch('https://api.github.com/repos/'+(s.o||'nihomaho9-ui')+'/'+s.r+'/pages/builds/latest');if(x.ok){var j=await x.json();c={t:Date.now(),s:j.status,u:j.updated_at,c:(j.commit||'').slice(0,7)};sessionStorage.setItem(k,JSON.stringify(c))}}catch(e){}
   }
   DEPLOY[s.r]=c;paintSite(s);paintAlert();
 }
@@ -435,7 +457,7 @@ $('csv').onclick=function(){
   var d=st.dash;if(!d)return;var R=[];
   function add(a){R.push(a.map(cell).join(','))}
   function sec(t,h){R.push('');add(['# '+t]);if(h)add(h)}
-  add(['Mushafuk statistika']);add(['Sayt',st.h||'Ümumi']);add(['Dövr',st.p,'Başlanğıc (UTC)',d.since,'Qurşaq',d.tz,'Yaradıldı',new Date().toISOString()]);
+  add(['Statistika']);add(['Sayt',st.h||'Ümumi']);add(['Dövr',st.p,'Başlanğıc (UTC)',d.since,'Qurşaq',d.tz,'Yaradıldı',new Date().toISOString()]);
   sec('KPI',['Dövr','Baxış','Ziyarətçi','Əvvəlki baxış','Əvvəlki ziyarətçi']);
   ['today','week','month','year'].forEach(function(k){var x=d.kpis[k];add([{today:'Bu gün',week:'Bu həftə',month:'Bu ay',year:'Bu il'}[k],x.views,x.visitors,x.pviews,x.pvisitors])});
   add(['Ümumi',d.kpis.total.views,d.kpis.total.visitors,'','']);
@@ -458,7 +480,7 @@ $('csv').onclick=function(){
     sec('Nəticəsiz sorğular',['Sorğu','Say']);e.zero.forEach(function(x){add([x.q,x.n])});
   }
   var blob=new Blob(['\uFEFF'+R.join('\r\n')],{type:'text/csv;charset=utf-8'}),a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);a.download='mushafuk-'+(st.h?st.h.split('.')[0]:'umumi')+'-'+st.p+'-'+new Date().toISOString().slice(0,10)+'.csv';
+  a.href=URL.createObjectURL(blob);a.download='stats-'+(st.h?st.h.replace(/\./g,'-'):'mushafuk-umumi')+'-'+st.p+'-'+new Date().toISOString().slice(0,10)+'.csv';
   document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2000);
 };
 
