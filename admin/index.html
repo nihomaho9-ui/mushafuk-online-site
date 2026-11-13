@@ -251,7 +251,7 @@ function skeleton(){
 function render(d){
   var K=d.kpis,names=[['today','Bu gün'],['week','Bu həftə'],['month','Bu ay'],['year','Bu il'],['total','Ümumi']];
   $('kt').textContent=st.h?(NAME[st.h]||st.h):'Ümumi';
-  $('kpis').innerHTML=names.map(function(n,i){var x=K[n[0]];return '<div class="kpi'+(i==4?' tot':'')+'"><label>'+n[1]+'</label><div class="v">'+fmt(x.views)+'</div><div class="s"><b>'+fmt(x.visitors)+'</b> ziyarətçi · baxış</div></div>'}).join('');
+  $('kpis').innerHTML=names.map(function(n,i){var x=K[n[0]];return '<div class="kpi'+(i==4?' tot':'')+'"><label>'+n[1]+'</label><div class="v">'+fmt(x.views)+' <small style="font:500 .8rem system-ui;color:var(--mut)">baxış</small></div><div class="s"><b>'+fmt(x.visitors)+'</b> ziyarətçi</div></div>'}).join('');
   var now=new Date();$('upd').textContent='yeniləndi '+now.toLocaleTimeString('az',{hour:'2-digit',minute:'2-digit'});
   $('rng').textContent={day:'son 24 saat',week:'son 7 gün',month:'son 30 gün',year:'son 12 ay'}[d.period];
   drawChart(d);
