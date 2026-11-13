@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mushafuk · İdarə paneli</title>
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#06120d">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://isvqwafixlmusmuqqnyk.supabase.co https://api.github.com; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="/icon.png">
+<style>
+:root{--bg:#06120d;--s1:#0b1d15;--s2:#10281d;--line:#1c382a;--gold:#c9a24a;--gold2:#e6c878;--em:#34b183;--em2:#0f4d3a;--txt:#f2ede1;--mut:#8da598;--red:#e0735f;--r:16px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;color:var(--txt);font:15px/1.5 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif;background:radial-gradient(900px 500px at 85% -10%,#12402e55,transparent 60%),radial-gradient(700px 400px at -10% 10%,#b8923a1c,transparent 60%),var(--bg);padding-bottom:env(safe-area-inset-bottom)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;margin:0}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+.hide{display:none!important}
+.wrap{max-width:1180px;margin:0 auto;padding:0 14px 48px}
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:#06120dd9;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .in{max-width:1180px;margin:0 auto;padding:10px 14px;display:flex;align-items:center;gap:10px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{width:34px;height:34px;border-radius:50%;box-shadow:0 0 0 2px var(--gold);background:var(--em2)}
+.brand b{font-family:Georgia,serif;font-size:1.15rem;letter-spacing:.2px;white-space:nowrap}.brand b i{font-style:normal;color:var(--gold)}
+.brand small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;margin-top:-3px}
+.who{display:flex;align-items:center;gap:8px}
+.who span{color:var(--mut);font-size:.8rem;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ib{border:1px solid var(--line);background:var(--s1);border-radius:12px;height:38px;min-width:38px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:var(--txt);transition:.15s}
+.ib:hover{border-color:var(--gold);color:var(--gold2)}
+.ib svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.spin svg{animation:sp .8s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+/* login */
+.login{min-height:100vh;display:grid;place-items:center;padding:20px}
+.lcard{width:100%;max-width:420px;background:linear-gradient(180deg,var(--s2),var(--s1));border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:22px;padding:30px 24px;box-shadow:0 30px 80px #0008;text-align:center}
+.lcard img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px var(--gold);background:var(--em2)}
+.lcard h1{font-size:1.7rem;margin:14px 0 4px}.lcard p{color:var(--mut);margin:0 0 20px;font-size:.92rem}
+.in-t{width:100%;height:48px;border-radius:12px;border:1px solid var(--line);background:#06120d;color:var(--txt);padding:0 14px;font:inherit;font-size:1rem;text-align:center;margin-bottom:10px}
+.in-t:focus{outline:none;border-color:var(--gold)}
+.pri{width:100%;height:48px;border-radius:999px;border:1px solid var(--gold);background:linear-gradient(180deg,#145a43,var(--em2));color:#fff;font-weight:600;box-shadow:0 10px 26px #0f4d3a66}
+.pri:disabled{opacity:.55;cursor:wait}
+.msg{margin-top:14px;font-size:.88rem;min-height:1.3em}.msg.ok{color:var(--em)}.msg.err{color:var(--red)}
+.alt{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
+.alt summary{color:var(--mut);cursor:pointer;font-size:.85rem}
+.alt .in-t{margin-top:12px;letter-spacing:.4em}
+/* controls */
+.ctl{display:flex;flex-direction:column;gap:10px;margin:16px 0 6px}
+.seg{display:flex;background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:4px;gap:2px}
+.seg button{flex:1;border:0;background:transparent;border-radius:10px;height:38px;color:var(--mut);font-weight:600;transition:.15s}
+.seg button.on{background:linear-gradient(180deg,#1a4b39,var(--em2));color:#fff;box-shadow:0 0 0 1px var(--gold) inset}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:none;margin:0 -14px;padding-inline:14px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--s1);border-radius:999px;padding:7px 14px;color:var(--mut);font-size:.88rem;white-space:nowrap}
+.chip.on{border-color:var(--gold);color:var(--gold2);background:#c9a24a14}
+.sec{display:flex;align-items:baseline;justify-content:space-between;margin:26px 0 10px}
+.sec h2{font-size:1.15rem}.sec small{color:var(--mut)}
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.kpi{background:linear-gradient(180deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 12px;position:relative;overflow:hidden}
+.kpi:before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.kpi.tot{grid-column:1/-1}
+.kpi label{color:var(--mut);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.kpi .v{font-family:Georgia,serif;font-size:1.9rem;line-height:1.15;margin:4px 0 2px;color:var(--txt)}
+.kpi .s{color:var(--mut);font-size:.82rem}.kpi .s b{color:var(--em);font-weight:600}
+/* cards */
+.card{background:linear-gradient(180deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.card h3{font-size:1rem;margin-bottom:10px}
+.grid2{display:grid;gap:12px;grid-template-columns:1fr}
+.chartbox{position:relative;height:260px}
+.legend{display:flex;gap:14px;color:var(--mut);font-size:.8rem;margin-bottom:6px}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+/* bars */
+.bar{display:block;width:100%;text-align:left;background:none;border:0;padding:8px 0;border-bottom:1px solid #ffffff0d}
+.bar:last-child{border:0}
+.bar .t{display:flex;justify-content:space-between;gap:10px;font-size:.9rem}
+.bar .t span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .t span:last-child{color:var(--gold2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar .tr{height:6px;border-radius:99px;background:#ffffff0f;margin-top:6px;overflow:hidden}
+.bar .tr i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--em2),var(--em))}
+.bar.on .t span:first-child{color:var(--gold2)}
+.bar small{color:var(--mut)}
+.empty{color:var(--mut);text-align:center;padding:22px 0;font-size:.9rem}
+.dev{display:flex;height:14px;border-radius:99px;overflow:hidden;background:#ffffff0f;margin:6px 0 12px}
+.dev i{display:block;height:100%}
+.dl{display:flex;gap:20px;flex-wrap:wrap;font-size:.9rem}.dl span i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px}
+.pl{display:grid;gap:8px}
+.pg{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:7px 0;border-bottom:1px solid #ffffff0d}
+.pg:last-child{border:0}.pg div{min-width:0}
+.pg .p{font-size:.88rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;direction:ltr;text-align:left}
+.pg .h{color:var(--mut);font-size:.74rem}
+.pg b{color:var(--gold2);font-variant-numeric:tabular-nums;font-weight:600}
+/* sites */
+.sites{display:grid;grid-template-columns:1fr;gap:10px}
+.site{background:linear-gradient(180deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:8px}
+.site h3{font-size:1.02rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.site .u{color:var(--mut);font-size:.82rem;direction:ltr;overflow:hidden;text-overflow:ellipsis}
+.st{font:600 .7rem/1 system-ui;padding:5px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}
+.st.ok{color:var(--em);border-color:#34b18355;background:#34b18312}.st.run{color:var(--gold2);border-color:#c9a24a55}.st.bad{color:var(--red);border-color:#e0735f55}
+.site .row{display:flex;gap:8px}
+.site .row a{flex:1;text-align:center;border:1px solid var(--line);border-radius:10px;padding:8px 6px;font-size:.84rem;color:var(--txt);background:#ffffff06}
+.site .row a:hover{border-color:var(--gold);color:var(--gold2)}
+.site .n{color:var(--mut);font-size:.78rem}
+.foot{margin-top:30px;color:var(--mut);font-size:.78rem;text-align:center;line-height:1.7}
+.sk{background:linear-gradient(90deg,#ffffff08,#ffffff14,#ffffff08);background-size:200% 100%;animation:sh 1.2s infinite;border-radius:8px;color:transparent!important}@keyframes sh{to{background-position:-200% 0}}
+@media(min-width:700px){.wrap{padding:0 24px 64px}.kpis{grid-template-columns:repeat(5,1fr)}.kpi.tot{grid-column:auto}.kpi .v{font-size:1.7rem}.ctl{flex-direction:row;align-items:center;justify-content:space-between}.seg{width:380px}.chips{margin:0;padding:0;flex-wrap:wrap;overflow:visible}.grid2{grid-template-columns:1fr 1fr}.sites{grid-template-columns:repeat(2,1fr)}.chartbox{height:320px}}
+@media(min-width:1000px){.sites{grid-template-columns:repeat(3,1fr)}.grid2.w{grid-template-columns:1.4fr 1fr}}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="login" class="login hide">
+  <div class="lcard">
+    <img src="/icon.png" alt="">
+    <h1>Mushafuk</h1>
+    <p>İdarə paneli — yalnız sahibi üçün</p>
+    <input id="email" class="in-t" type="email" value="nihomaho9@gmail.com" autocomplete="email" inputmode="email" aria-label="E-poçt">
+    <button id="send" class="pri">Giriş linki göndər</button>
+    <div id="lmsg" class="msg" role="status"></div>
+    <details class="alt">
+      <summary>Linkin əvəzinə 6 rəqəmli kod</summary>
+      <input id="code" class="in-t" inputmode="numeric" maxlength="8" placeholder="······" autocomplete="one-time-code" aria-label="Kod">
+      <button id="verify" class="pri">Kodu təsdiqlə</button>
+    </details>
+  </div>
+</section>
+
+<!-- APP -->
+<div id="app" class="hide">
+  <header class="top"><div class="in">
+    <div class="brand"><img src="/icon.png" alt=""><div><b>Mushafuk<i>.</i></b><small>İdarə paneli</small></div></div>
+    <div class="who">
+      <span id="me"></span>
+      <button class="ib" id="refresh" title="Yenilə" aria-label="Yenilə"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></button>
+      <button class="ib" id="out" title="Çıxış" aria-label="Çıxış"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg></button>
+    </div>
+  </div></header>
+
+  <main class="wrap">
+    <div class="ctl">
+      <div class="seg" id="seg" role="tablist">
+        <button data-p="day">Günlük</button><button data-p="week" class="on">Həftəlik</button><button data-p="month">Aylıq</button><button data-p="year">İllik</button>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+
+    <div class="sec"><h2 id="kt">Ümumi</h2><small id="upd"></small></div>
+    <div class="kpis" id="kpis"></div>
+
+    <div class="sec"><h2>Trafik</h2><small id="rng"></small></div>
+    <div class="card">
+      <div class="legend"><span><i style="background:#c9a24a"></i>Baxışlar</span><span><i style="background:#34b183"></i>Ziyarətçilər</span></div>
+      <div class="chartbox"><canvas id="chart"></canvas></div>
+    </div>
+
+    <div class="sec"><h2>Saytlar üzrə müqayisə</h2><small>seçilmiş dövr</small></div>
+    <div class="card" id="hosts"></div>
+
+    <div class="grid2" style="margin-top:12px">
+      <div><div class="sec" style="margin-top:14px"><h2>Ən çox oxunan səhifələr</h2></div><div class="card"><div class="pl" id="pages"></div></div></div>
+      <div>
+        <div class="sec" style="margin-top:14px"><h2>Mənbələr</h2></div><div class="card" id="refs"></div>
+        <div class="sec"><h2>Cihazlar</h2></div><div class="card" id="devs"></div>
+      </div>
+    </div>
+
+    <div class="sec"><h2>Saytlar</h2><small>keçid · GitHub · yayım statusu</small></div>
+    <div class="sites" id="sites"></div>
+
+    <p class="foot">Ziyarətçi = gündəlik unikal (IP və brauzerdən təkrar bərpa olunmayan gizli hash; IP saxlanmır).<br>Vaxt qurşağı: Asia/Riyadh (GMT+3). Botlar sayılmır.</p>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.6.1/dist/chart.umd.js"></script>
+<script>
+(function(){
+'use strict';
+var URL_='https://isvqwafixlmusmuqqnyk.supabase.co',KEY='sb_publishable_UnQ35pj_GatInq-7lhFGgQ_DnRoUnDC',ADMIN='nihomaho9@gmail.com',REDIR='https://mushafuk.online/admin/';
+var SITES=[
+ {h:'mushafuk.online',n:'Əsas sayt',r:'mushafuk-online-site',d:'Quran, tərcümə və oxu'},
+ {h:'tafsir.mushafuk.online',n:'Təfsir',r:'mushafuk-tafsir',d:'Təfsir kitabxanası'},
+ {h:'t2.mushafuk.online',n:'Təfsir 2',r:'mushafuk-tafsir-2',d:'Əlavə təfsirlər'},
+ {h:'t3.mushafuk.online',n:'Elmlər',r:'mushafuk-ulum',d:'Üsul və elm kitabları'},
+ {h:'t.mushafuk.online',n:'Tərcümələr',r:'mushafuk-translations',d:'Quran tərcümələri'},
+ {h:'t1.mushafuk.online',n:'Tərcümələr 2',r:'mushafuk-translations-extra',d:'Əlavə tərcümələr'},
+ {h:'quran.mushafuk.online',n:'Quran (təcvid)',r:'tecvidtest',d:'Təcvid tətbiqi'}
+];
+var NAME={};SITES.forEach(function(s){NAME[s.h]=s.n});
+var $=function(i){return document.getElementById(i)};
+var sb=supabase.createClient(URL_,KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+var st={p:'week',h:null,chart:null,busy:false,timer:null};
+var AZM=['Yan','Fev','Mar','Apr','May','İyn','İyl','Avq','Sen','Okt','Noy','Dek'];
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function fmt(n){n=Number(n)||0;return n.toLocaleString('az')}
+function show(login){$('login').classList.toggle('hide',!login);$('app').classList.toggle('hide',login)}
+
+/* ---------- auth ---------- */
+function setMsg(t,c){var m=$('lmsg');m.textContent=t||'';m.className='msg '+(c||'')}
+$('send').onclick=async function(){
+  var em=$('email').value.trim().toLowerCase();
+  if(em!==ADMIN){setMsg('Bu panel yalnız sahibi üçündür.','err');return}
+  this.disabled=true;setMsg('Göndərilir…');
+  var r=await sb.auth.signInWithOtp({email:em,options:{emailRedirectTo:REDIR,shouldCreateUser:true}});
+  this.disabled=false;
+  if(r.error){setMsg(/rate|seconds|limit/i.test(r.error.message)?'Çox tez-tez sorğu. Bir az gözləyib yenidən cəhd edin.':'Göndərmək alınmadı: '+r.error.message,'err')}
+  else setMsg('Giriş linki '+em+' ünvanına göndərildi. Məktubdakı linkə basın.','ok');
+};
+$('verify').onclick=async function(){
+  var c=$('code').value.trim();if(!c)return;this.disabled=true;
+  var r=await sb.auth.verifyOtp({email:ADMIN,token:c,type:'email'});this.disabled=false;
+  if(r.error)setMsg('Kod yanlışdır və ya vaxtı keçib.','err');
+};
+$('out').onclick=async function(){await sb.auth.signOut();location.replace(REDIR)};
+async function gate(session){
+  if(!session){show(true);return}
+  var em=(session.user&&session.user.email||'').toLowerCase();
+  if(em!==ADMIN){await sb.auth.signOut();show(true);setMsg('Bu hesabın icazəsi yoxdur.','err');return}
+  $('me').textContent=em;show(false);
+  if(location.hash.indexOf('access_token')>-1||location.search.indexOf('code=')>-1)history.replaceState(null,'',REDIR.replace(/^https?:\/\/[^/]+/,''));
+  buildChips();buildSites();load();
+  clearInterval(st.timer);st.timer=setInterval(function(){if(!document.hidden)load(true)},60000);
+}
+sb.auth.onAuthStateChange(function(ev,s){if(ev==='SIGNED_OUT'){show(true)}else if(ev==='SIGNED_IN'||ev==='INITIAL_SESSION'){gate(s)}});
+
+/* ---------- controls ---------- */
+$('seg').onclick=function(e){var b=e.target.closest('button');if(!b)return;st.p=b.dataset.p;[].forEach.call($('seg').children,function(x){x.classList.toggle('on',x===b)});load()};
+function buildChips(extra){
+  var list=[{h:null,n:'Ümumi'}].concat(SITES);
+  (extra||[]).forEach(function(h){if(!NAME[h])list.push({h:h,n:h})});
+  $('chips').innerHTML=list.map(function(s){return '<button class="chip'+(s.h===st.h?' on':'')+'" data-h="'+esc(s.h||'')+'">'+esc(s.n)+'</button>'}).join('');
+}
+$('chips').onclick=function(e){var b=e.target.closest('.chip');if(!b)return;st.h=b.dataset.h||null;[].forEach.call($('chips').children,function(x){x.classList.toggle('on',(x.dataset.h||null)===st.h)});load()};
+$('refresh').onclick=function(){load()};
+
+/* ---------- data ---------- */
+async function load(quiet){
+  if(st.busy)return;st.busy=true;$('refresh').classList.add('spin');
+  if(!quiet)skeleton();
+  var r=await sb.rpc('admin_dashboard',{p_period:st.p,p_host:st.h});
+  st.busy=false;$('refresh').classList.remove('spin');
+  if(r.error){
+    if(r.error.code==='42501'||/forbidden|JWT/i.test(r.error.message)){await sb.auth.signOut();show(true);setMsg('Giriş icazəsi yoxdur.','err');return}
+    $('kpis').innerHTML='<div class="empty" style="grid-column:1/-1">Məlumat yüklənmədi: '+esc(r.error.message)+'</div>';return}
+  render(r.data);
+}
+function skeleton(){
+  var k=['Bu gün','Bu həftə','Bu ay','Bu il','Ümumi'];
+  $('kpis').innerHTML=k.map(function(l,i){return '<div class="kpi'+(i==4?' tot':'')+'"><label>'+l+'</label><div class="v sk">0000</div><div class="s sk">…</div></div>'}).join('');
+}
+function render(d){
+  var K=d.kpis,names=[['today','Bu gün'],['week','Bu həftə'],['month','Bu ay'],['year','Bu il'],['total','Ümumi']];
+  $('kt').textContent=st.h?(NAME[st.h]||st.h):'Ümumi';
+  $('kpis').innerHTML=names.map(function(n,i){var x=K[n[0]];return '<div class="kpi'+(i==4?' tot':'')+'"><label>'+n[1]+'</label><div class="v">'+fmt(x.views)+'</div><div class="s"><b>'+fmt(x.visitors)+'</b> ziyarətçi · baxış</div></div>'}).join('');
+  var now=new Date();$('upd').textContent='yeniləndi '+now.toLocaleTimeString('az',{hour:'2-digit',minute:'2-digit'});
+  $('rng').textContent={day:'son 24 saat',week:'son 7 gün',month:'son 30 gün',year:'son 12 ay'}[d.period];
+  drawChart(d);
+  var hs=d.hosts||[],mx=Math.max.apply(null,[1].concat(hs.map(function(h){return h.views})));
+  var seen={};hs.forEach(function(h){seen[h.host]=1});
+  var rows=SITES.map(function(s){return hs.filter(function(h){return h.host===s.h})[0]||{host:s.h,views:0,visitors:0}});
+  hs.forEach(function(h){if(!NAME[h.host])rows.push(h)});
+  rows.sort(function(a,b){return b.views-a.views});
+  $('hosts').innerHTML=rows.map(function(h){return '<button class="bar'+(st.h===h.host?' on':'')+'" data-h="'+esc(h.host)+'"><div class="t"><span>'+esc(NAME[h.host]||h.host)+' <small>'+esc(h.host)+'</small></span><span>'+fmt(h.views)+' <small>· '+fmt(h.visitors)+' z.</small></span></div><div class="tr"><i style="width:'+Math.max(h.views?2:0,Math.round(h.views/mx*100))+'%"></i></div></button>'}).join('');
+  var extra=[];(d.host_totals||[]).forEach(function(h){if(!NAME[h.host])extra.push(h.host)});
+  if(extra.length&&$('chips').children.length<SITES.length+2+extra.length)buildChips(extra);
+  var P=d.pages||[];
+  $('pages').innerHTML=P.length?P.map(function(p){return '<div class="pg"><div><div class="p">'+esc(p.path)+'</div><div class="h">'+esc(NAME[p.host]||p.host)+'</div></div><b>'+fmt(p.views)+'</b></div>'}).join(''):'<div class="empty">Hələ məlumat yoxdur</div>';
+  var R=d.referrers||[],rm=Math.max.apply(null,[1,d.direct||0].concat(R.map(function(x){return x.views})));
+  var rr=R.map(function(x){return [esc(x.ref),x.views]});if(d.direct)rr.unshift(['Birbaşa / bilinmir',d.direct]);
+  $('refs').innerHTML=rr.length?rr.map(function(x){return '<div class="bar" style="cursor:default"><div class="t"><span>'+x[0]+'</span><span>'+fmt(x[1])+'</span></div><div class="tr"><i style="width:'+Math.round(x[1]/rm*100)+'%"></i></div></div>'}).join(''):'<div class="empty">Hələ məlumat yoxdur</div>';
+  var D=d.devices||[],tot=D.reduce(function(a,x){return a+x.views},0),dm={mobile:['Mobil','#c9a24a'],desktop:['Kompüter','#34b183']};
+  $('devs').innerHTML=tot?'<div class="dev">'+D.map(function(x){return '<i style="width:'+(x.views/tot*100)+'%;background:'+(dm[x.device]||['','#888'])[1]+'"></i>'}).join('')+'</div><div class="dl">'+D.map(function(x){var m=dm[x.device]||[x.device,'#888'];return '<span><i style="background:'+m[1]+'"></i>'+esc(m[0])+' <b>'+Math.round(x.views/tot*100)+'%</b> <small style="color:var(--mut)">('+fmt(x.views)+')</small></span>'}).join('')+'</div>':'<div class="empty">Hələ məlumat yoxdur</div>';
+}
+$('hosts').onclick=function(e){var b=e.target.closest('.bar');if(!b)return;st.h=b.dataset.h;[].forEach.call($('chips').children,function(x){x.classList.toggle('on',(x.dataset.h||null)===st.h)});load();window.scrollTo({top:0,behavior:'smooth'})};
+
+function lbl(t,per){var m=t.match(/(\d+)-(\d+)-(\d+)T(\d+):/);if(!m)return t;
+  if(per==='day')return m[4]+':00';if(per==='year')return AZM[+m[2]-1]+' '+m[1].slice(2);return +m[3]+' '+AZM[+m[2]-1]}
+function drawChart(d){
+  var L=d.series.map(function(x){return lbl(x.t,d.period)}),V=d.series.map(function(x){return x.views}),U=d.series.map(function(x){return x.visitors});
+  var ctx=$('chart').getContext('2d'),g=ctx.createLinearGradient(0,0,0,300);g.addColorStop(0,'rgba(201,162,74,.38)');g.addColorStop(1,'rgba(201,162,74,0)');
+  if(st.chart)st.chart.destroy();
+  st.chart=new Chart(ctx,{type:'line',data:{labels:L,datasets:[
+    {label:'Baxışlar',data:V,borderColor:'#c9a24a',backgroundColor:g,fill:true,tension:.35,borderWidth:2.5,pointRadius:L.length>14?0:3,pointHoverRadius:5,pointBackgroundColor:'#c9a24a'},
+    {label:'Ziyarətçilər',data:U,borderColor:'#34b183',backgroundColor:'transparent',tension:.35,borderWidth:2,pointRadius:L.length>14?0:3,pointHoverRadius:5,pointBackgroundColor:'#34b183'}]},
+   options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+    plugins:{legend:{display:false},tooltip:{backgroundColor:'#0b1d15',borderColor:'#c9a24a',borderWidth:1,titleColor:'#e6c878',bodyColor:'#f2ede1',padding:10}},
+    scales:{x:{grid:{display:false},ticks:{color:'#8da598',maxRotation:0,autoSkip:true,maxTicksLimit:7}},y:{beginAtZero:true,grid:{color:'rgba(255,255,255,.06)'},ticks:{color:'#8da598',precision:0,maxTicksLimit:5}}}}});
+}
+
+/* ---------- site cards ---------- */
+function buildSites(){
+  $('sites').innerHTML=SITES.map(function(s){return '<div class="site"><h3><span>'+esc(s.n)+'</span><span class="st" id="st-'+esc(s.r)+'">…</span></h3><div class="u">'+esc(s.h)+' — '+esc(s.d)+'</div><div class="row"><a href="https://'+esc(s.h)+'/" target="_blank" rel="noopener">Saytı aç</a><a href="https://github.com/nihomaho9-ui/'+esc(s.r)+'" target="_blank" rel="noopener">GitHub</a></div><div class="n" id="nt-'+esc(s.r)+'"></div></div>'}).join('');
+  SITES.forEach(function(s){deploy(s.r)});
+}
+async function deploy(r){
+  var el=$('st-'+r),nt=$('nt-'+r),k='mfk-dep-'+r,c=null;
+  try{c=JSON.parse(sessionStorage.getItem(k)||'null')}catch(e){}
+  if(!c||Date.now()-c.t>300000){
+    try{var x=await fetch('https://api.github.com/repos/nihomaho9-ui/'+r+'/pages/builds/latest');if(x.ok){var j=await x.json();c={t:Date.now(),s:j.status,u:j.updated_at,c:(j.commit||'').slice(0,7)};sessionStorage.setItem(k,JSON.stringify(c))}}catch(e){}
+  }
+  if(!c){el.textContent='—';return}
+  var m={built:['Canlı','ok'],building:['Yenilənir','run'],queued:['Növbədə','run'],errored:['Xəta','bad']}[c.s]||[c.s,''];
+  el.textContent=m[0];el.className='st '+m[1];
+  if(c.u)nt.textContent='Son yayım: '+new Date(c.u).toLocaleString('az',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})+(c.c?' · '+c.c:'');
+}
+
+/* ---------- boot ---------- */
+sb.auth.getSession().then(function(r){if(!r.data.session)show(true)});
+})();
+</script>
+</body>
+</html>
