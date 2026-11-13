@@ -927,6 +927,7 @@
       }
     }
     shown = direct.concat(rest);
+    try { if (window.mfkS) window.mfkS(raw, shown.length + (answerPlan ? 1 : 0)); } catch (e) {}
     const needTr = (answerPlan && answerPlan.mode === "tr") || shown.some((h) => sources[h.src] && sources[h.src].k === "tr");
     const needAr = (answerPlan && answerPlan.mode === "tf") || shown.some((h) => sources[h.src] && sources[h.src].k !== "tr");
     if (needAr) await loadVerses("ar");
