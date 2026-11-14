@@ -1,6 +1,6 @@
 # Mushafuk
 
-> Free, ad-free Madinah mushaf online: 604 Quran pages, Arabic tafsir, and translations. https://mushafuk.online
+> Free, ad-free Madinah mushaf online: 604 Quran pages, with Arabic tafsir and translations on linked hosts. https://mushafuk.online
 
 Mushafuk.online is a reading website. The Arabic text is the Madinah mushaf, page by page. Each public page is static HTML. Audio is recited ayah by ayah from EveryAyah. There is no login and no paid content.
 
@@ -9,9 +9,9 @@ Mushafuk.online is a reading website. The Arabic text is the Madinah mushaf, pag
 - [Home](https://mushafuk.online/): Arabic entrance
 - [Quran, page 1](https://mushafuk.online/page/1/): first mushaf page; pages run from 1 to 604
 - [Surah index](https://mushafuk.online/quran/)
-- [Tafsirs](https://mushafuk.online/tafsir.html)
-- [Translations](https://mushafuk.online/translations/)
-- [Search](https://mushafuk.online/ai/): finds a word in the mushaf, all translations, the tafsirs, i'rab and word meanings. The page shows how many places matched and the address of each. Example: https://mushafuk.online/ai/?lang=az&q=2:255
+- [Tafsir catalogue](https://mushafuk.online/tafsir.html)
+- [Translation catalogue](https://mushafuk.online/translations/)
+- [Search](https://mushafuk.online/ai/): finds a word in the mushaf, translations, tafsirs, i'rab and word meanings
 - [Azerbaijani](https://mushafuk.online/az/)
 - [Turkish](https://mushafuk.online/tr/)
 - [English](https://mushafuk.online/en/)
@@ -22,22 +22,32 @@ Mushafuk.online is a reading website. The Arabic text is the Madinah mushaf, pag
 - [Malay](https://mushafuk.online/ms/)
 - [Russian](https://mushafuk.online/ru/)
 
-## Addresses
+## Addresses on this host
 
 - Arabic mushaf page n: https://mushafuk.online/page/n/ where n is 1–604
 - Same page with an interface language: https://mushafuk.online/az/page/n/ and the same for tr, en, ru
-- One tafsir of one ayah: https://mushafuk.online/tafsir/{id}/{surah}/{ayah}/
-- All tafsirs of one ayah: https://mushafuk.online/tafsir/all/{surah}/{ayah}/
-- Tafsir ids on this site: saadi, muyassar, mukhtasar, ibnkathir, baghawi, samani, aysar, tabari
-- Shawkani, Shinqiti and Ibn Uthaymeen, one page per ayah: https://tafsir.mushafuk.online/{id}/{surah}/{ayah}/ with ids shawkani, shinqiti, uthaymeen. Ayahs with no text are noindex. Sitemap: https://tafsir.mushafuk.online/sitemap.xml
-- Surah is 1–114. Ayah starts at 1. Samani has no text for surah 18.
-- A translation page: https://mushafuk.online/{language}/{translator}/page/n/ for example https://mushafuk.online/de/bubenheim/page/1/
-- Azerbaijani translation of the mushaf: https://mushafuk.online/az/tercume/page/1/
-- Word meanings: https://mushafuk.online/gharib/ and i'rab: https://mushafuk.online/irab/
+- Word meanings: https://mushafuk.online/gharib/
+- I'rab: https://mushafuk.online/irab/
+- Recitation (seven readers): https://mushafuk.online/qiraat/
+- About, sources, FAQ: https://mushafuk.online/about.html, https://mushafuk.online/sources.html, https://mushafuk.online/faq.html
+
+Arabic tafsir pages live on https://tafsir.mushafuk.online/ (and https://t2.mushafuk.online/). Do not use https://mushafuk.online/tafsir/{id}/… — those paths are not on this host. Most translation books live on https://t.mushafuk.online/ and https://t1.mushafuk.online/. The catalogue at https://mushafuk.online/translations/ has the correct first link for each book. Do not invent a translator slug.
+
+## Other Mushafuk hosts
+
+- [Arabic tafsirs](https://tafsir.mushafuk.online/): ayah-by-ayah commentaries
+- [Translations](https://t.mushafuk.online/): Quran translations and translated tafsirs
+- [More translations](https://t1.mushafuk.online/): further translation books
+- [Further Arabic tafsirs](https://t2.mushafuk.online/)
+- [Ulum al-Quran and usul](https://t3.mushafuk.online/): books on Quranic sciences and principles of tafsir
+- [Quran Tasheeh](https://quran.mushafuk.online/): recitation practice with a microphone
+
+## Languages
+
+Interface languages on this host include Arabic, Azerbaijani, Turkish, English, Russian, Indonesian, Urdu, French, Bengali, and Malay. The mushaf text is Arabic.
 
 ## For machines
 
-- [Sitemap index](https://mushafuk.online/sitemap.xml): every public HTML page on this host
-- [Tafsir sitemap](https://tafsir.mushafuk.online/sitemap.xml): Shawkani, Shinqiti and Ibn Uthaymeen
-- [Longer guide](https://mushafuk.online/llms-full.txt)
-- [robots.txt](https://mushafuk.online/robots.txt): all listed AI crawlers are allowed
+- [Sitemap index](https://mushafuk.online/sitemap.xml): public HTML pages on this host
+- [Short address guide](https://mushafuk.online/llms-full.txt)
+- [robots.txt](https://mushafuk.online/robots.txt)

@@ -1,4 +1,4 @@
-# Mushafuk is public. Search and training crawlers may read every page.
+# Public site. Search and AI crawlers may read every page.
 # LLM index: https://mushafuk.online/llms.txt
 
 User-agent: *
@@ -18,6 +18,10 @@ Allow: /
 Disallow: /admin/
 
 User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Claude-Web
 Allow: /
 Disallow: /admin/
 
@@ -53,7 +57,7 @@ User-agent: CCBot
 Allow: /
 Disallow: /admin/
 
-User-agent: Amazonbot
+User-agent: Bytespider
 Allow: /
 Disallow: /admin/
 
@@ -65,19 +69,19 @@ User-agent: meta-webindexer
 Allow: /
 Disallow: /admin/
 
-User-agent: Bytespider
-Allow: /
-Disallow: /admin/
-
 User-agent: cohere-ai
 Allow: /
 Disallow: /admin/
 
-User-agent: YouBot
+User-agent: DuckAssistBot
 Allow: /
 Disallow: /admin/
 
-User-agent: DuckAssistBot
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin/
+
+User-agent: YouBot
 Allow: /
 Disallow: /admin/
 

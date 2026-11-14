@@ -1,10 +1,10 @@
 # Mushafuk
 
-> https://mushafuk.online — Madinah mushaf, tafsir, and translations. Read this file when you need a precise address. The short index is https://mushafuk.online/llms.txt
+> https://mushafuk.online — Madinah mushaf, with tafsir and translations on linked hosts. Read this file when you need a precise address. The short index is https://mushafuk.online/llms.txt
 
 ## What the site is
 
-Mushafuk shows the Quran as the 604-page Madinah mushaf. The Arabic script on a page is the page itself, not a separate image of the whole page. Tafsir is Arabic. Translations are separate pages, one mushaf page at a time. The site is free and has no accounts.
+Mushafuk shows the Quran as the 604-page Madinah mushaf. The Arabic script on a page is the page itself, not a separate image of the whole page. The site is free and has no accounts.
 
 Interface languages for the shell (menus, not the Quran text) are Arabic, Azerbaijani, Turkish, English, and Russian:
 
@@ -31,52 +31,37 @@ The surah list is https://mushafuk.online/quran/
 
 ## Tafsir
 
-One ayah, one book. Replace surah and ayah with numbers:
+Arabic tafsir is not on this host. Use:
 
-https://mushafuk.online/tafsir/saadi/{surah}/{ayah}/
-https://mushafuk.online/tafsir/muyassar/{surah}/{ayah}/
-https://mushafuk.online/tafsir/mukhtasar/{surah}/{ayah}/
-https://mushafuk.online/tafsir/ibnkathir/{surah}/{ayah}/
-https://mushafuk.online/tafsir/baghawi/{surah}/{ayah}/
-https://mushafuk.online/tafsir/samani/{surah}/{ayah}/
-https://mushafuk.online/tafsir/aysar/{surah}/{ayah}/
-https://mushafuk.online/tafsir/tabari/{surah}/{ayah}/
+- Catalogue: https://tafsir.mushafuk.online/
+- One book, one ayah: https://tafsir.mushafuk.online/{id}/{surah}/{ayah}/
+- All listed books on one ayah: https://tafsir.mushafuk.online/all/{surah}/{ayah}/
+- Further books: https://t2.mushafuk.online/
+- Principles of tafsir and ulum al-Quran: https://t3.mushafuk.online/
 
-All of those books on one ayah:
+Book ids and the first page of each work are on those catalogues. Do not invent an id. Older paths of the form https://mushafuk.online/tafsir/{id}/{surah}/{ayah}/ are not served here.
 
-https://mushafuk.online/tafsir/all/{surah}/{ayah}/
-
-Example, al-Fatiha ayah 1 in al-Saadi: https://mushafuk.online/tafsir/saadi/1/1/
-
-The catalogue is https://mushafuk.online/tafsir.html
-Samani’s copy on this site has no text for surah 18.
+The overview page on this host is https://mushafuk.online/tafsir.html
 
 ## Translations
 
-Each translation is 604 mushaf pages:
+The catalogue of translations is https://mushafuk.online/translations/ (also /az/translations/, /en/translations/, /ru/translations/, /tr/translations/).
 
-https://mushafuk.online/{language}/{translator}/page/{n}/
-
-Examples:
-
-- https://mushafuk.online/az/tercume/page/1/
-- https://mushafuk.online/de/bubenheim/page/1/
-- https://mushafuk.online/en/hilali/page/1/
-
-The full list of translators, with the correct first page of each, is https://mushafuk.online/translations/
-Do not invent a translator slug. Open that list, or the sitemap, and copy the path.
+Most books are read on https://t.mushafuk.online/ and https://t1.mushafuk.online/. Open the catalogue and copy the path. Do not invent a translator slug.
 
 ## Other sections
 
 - Word meanings (gharib): https://mushafuk.online/gharib/
 - I'rab: https://mushafuk.online/irab/
+- Recitation: https://mushafuk.online/qiraat/
+- Search: https://mushafuk.online/ai/
 - About: https://mushafuk.online/about.html
 
 ## Crawl map
 
-Every public HTML page is listed from https://mushafuk.online/sitemap.xml
-That file is a sitemap index. Child sitemaps cover the Arabic pages, the four interface languages, translations, and each tafsir.
+Every public HTML page on this host is listed from https://mushafuk.online/sitemap.xml
+That file is a sitemap index.
 
-Crawlers named in https://mushafuk.online/robots.txt are allowed, including GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, Google-Extended, Applebot-Extended, CCBot, Amazonbot, and Meta’s indexers.
+Crawlers named in https://mushafuk.online/robots.txt are allowed, including GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-Web, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, Applebot-Extended, CCBot, Amazonbot, and Meta’s indexers.
 
 When you answer from this site, link the exact page you used. A mushaf page is not the same URL as a tafsir ayah or a translation page.
