@@ -88,3 +88,19 @@ background:radial-gradient(ellipse at 50% 30%,#fffaf0 0,#f4ecdb 60%,#efe5d0 100%
 .h .rm-x{border:1px solid #ead9b0;background:#fff;border-radius:10px;width:36px;height:36px;font-size:1.3rem;line-height:1;cursor:pointer;color:#6b5a3e}
 @media(max-width:640px){.h .rm-face{padding:12px 5px 12px}.h .rm-body{padding:0 8px 12px}}
 
+/* Tasheeh homepage banner (v13) */
+.h .tsh-banner{position:relative;z-index:2;max-width:640px;width:100%;margin:22px auto 0;padding:0 10px;box-sizing:border-box;text-align:start}
+.h .tsh-banner a{display:flex;align-items:center;gap:16px;background:linear-gradient(#fffdf8,#f7f0e1);border:1px solid #e3d3ac;border-radius:22px;padding:16px 20px;box-shadow:0 8px 24px #0f3d2a22;min-width:0;max-width:100%;box-sizing:border-box}
+.h .tsh-banner img.tsh-ico{display:block;width:72px;height:72px;border-radius:18px;object-fit:cover;flex:none;background:#f7f3ea;box-shadow:0 0 0 2px var(--gold),0 6px 14px #0f3d2a22}
+.h .tsh-banner .tsh-txt{flex:1;min-width:0}
+.h .tsh-banner h3{color:var(--g);margin:0 0 4px;font-size:1.35rem;font-weight:800;letter-spacing:.01em}
+.h .tsh-banner p{margin:0;color:#4a564e;line-height:1.5;font-size:.95rem;font-weight:400;overflow-wrap:anywhere}
+.h .tsh-banner .go{margin-inline-start:4px;flex:none}
+@media(max-width:640px){
+  .h .tsh-banner{margin-top:18px;padding:0 8px}
+  .h .tsh-banner a{gap:12px;padding:12px 14px;border-radius:18px}
+  .h .tsh-banner img.tsh-ico{width:56px;height:56px;border-radius:14px}
+  .h .tsh-banner h3{font-size:1.15rem}
+  .h .tsh-banner p{font-size:.8rem;line-height:1.4}
+  .h .tsh-banner .go{width:32px;height:32px;font-size:1rem}
+}

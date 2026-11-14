@@ -104,6 +104,7 @@ DATA = {
         ],
         "cta": "Ouvrir le mushaf",
         "resume": "Continuer",
+        "tasheeh": "Lisez le Coran au micro, avec contrôle des erreurs et du tajwid.",
         "nav": [
             ("Coran", "../en/quran/"),
             ("Tafsir", "../en/tafsir.html"),
@@ -172,6 +173,7 @@ DATA = {
         ],
         "cta": "Buka Mushaf",
         "resume": "Lanjutkan",
+        "tasheeh": "Baca Al-Qur'an dengan mikrofon, pemeriksaan kesalahan dan tajwid.",
         "nav": [
             ("Quran", "../en/quran/"),
             ("Tafsir", "../en/tafsir.html"),
@@ -240,6 +242,7 @@ DATA = {
         ],
         "cta": "মুশহাফ খুলুন",
         "resume": "চালিয়ে যান",
+        "tasheeh": "মাইক্রোফোন দিয়ে কুরআন পড়ুন, ভুল ও তাজবিদ যাচাই।",
         "nav": [
             ("কুরআন", "../en/quran/"),
             ("তাফসির", "../en/tafsir.html"),
@@ -307,6 +310,7 @@ DATA = {
         ],
         "cta": "Buka Mushaf",
         "resume": "Teruskan",
+        "tasheeh": "Baca Al-Quran dengan mikrofon, semakan kesilapan dan tajwid.",
         "nav": [
             ("Quran", "../en/quran/"),
             ("Tafsir", "../en/tafsir.html"),
@@ -371,6 +375,7 @@ DATA = {
         ],
         "cta": "مصحف کھولیں",
         "resume": "جاری رکھیں",
+        "tasheeh": "قرآن مائیکروفون سے پڑھیں، غلطی اور تجوید کی پڑتال۔",
         "nav": [
             ("قرآن", "../en/quran/"),
             ("تفسیر", "../en/tafsir.html"),
@@ -508,7 +513,7 @@ def build(lang: str, d: dict) -> str:
         f'<meta name="twitter:card" content="summary_large_image">'
         f'<meta name="description" content="{esc_attr(d["desc"])}">'
         f'<link rel="icon" href="../icon.png">'
-        f'<link rel="stylesheet" href="../home.css?v=12">'
+        f'<link rel="stylesheet" href="../home.css?v=13">'
         f'<link rel="canonical" href="https://mushafuk.online/{lang}/">'
         f"{hreflang}</head><body class=\"h\"><header class=\"top\"><div class=\"bar\">"
         f'<div class="row"><a class="logo" href="./" dir="ltr"><img src="../icon.png" alt="">'
@@ -520,6 +525,10 @@ def build(lang: str, d: dict) -> str:
         f'<h1 class="verse">{d["h1"]}</h1>{intro_html}'
         f'<a class="cta" href="../en/quran/">{ICO["tafsir"]} {d["cta"]}</a>'
         f'<a class="cta resume" id="resume" hidden href="../en/page/1/">{d["resume"]}</a>'
+        f'<aside class="tsh-banner"><a href="https://quran.mushafuk.online/">'
+        f'<img class="tsh-ico" src="/assets/tasheeh-icon.png" alt="Quran Tasheeh" width="192" height="192">'
+        f'<div class="tsh-txt"><h3>Quran Tasheeh</h3><p>{d["tasheeh"]}</p></div>'
+        f'<span class="go">{d["arr"]}</span></a></aside>'
         f'<img class="rehal" src="../home-rehal.webp" alt="Quran"></section>'
         f'<main class="cards">{cards}{verses}{books}</main>'
         f'<footer><img src="../icon.png" alt=""><div class="c" dir="ltr">© 2026 Mushafuk.online</div>'
