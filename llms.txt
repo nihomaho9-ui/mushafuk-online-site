@@ -51,3 +51,15 @@ Interface languages on this host include Arabic, Azerbaijani, Turkish, English, 
 - [Sitemap index](https://mushafuk.online/sitemap.xml): public HTML pages on this host
 - [Short address guide](https://mushafuk.online/llms-full.txt)
 - [robots.txt](https://mushafuk.online/robots.txt)
+
+## Subdomains
+
+Each host has its own llms.txt. Read that file, not this one, for pages on that host.
+
+- [Tafsir, ayah by ayah](https://tafsir.mushafuk.online/llms.txt)
+- [Early tafsir](https://t2.mushafuk.online/llms.txt)
+- [Usul and Ulum al-Quran](https://t3.mushafuk.online/llms.txt)
+- [Translations](https://t.mushafuk.online/llms.txt)
+- [Urdu, Bengali, Persian, Indonesian](https://t1.mushafuk.online/llms.txt)
+- [Recitation check](https://quran.mushafuk.online/llms.txt)
+- [Shamail, Bulugh, Mishkat, Nawawi](https://hadis.sunan.online/llms.txt). The ten larger hadith books are at https://sunan.online/llms.txt
