@@ -30,6 +30,7 @@ for lg,c in L.items():
     head=f'<title>{t}</title><meta name="description" content="{d}"><link rel="canonical" href="{url}">{alts}<meta property="og:title" content="{t}"><meta property="og:description" content="{d}"><meta property="og:url" content="{url}"><meta property="og:image" content="{B}/icon.png"><script>window.__PAGE={p}</script>'
     h=re.sub(r'<title>.*?</title>','',s,1,flags=re.S)
     h=re.sub(r'<meta name="description"[^>]*>','',h)
+    h=re.sub(r'<link rel="canonical"[^>]*>','',h)
     h=re.sub(r'<style>#qtext\{.*?</style>','',h,flags=re.S)
     h=re.sub(r'<noscript><style>html,body\{.*?</noscript>','',h,flags=re.S)
     h=re.sub(r'<article id="qtext"[^>]*>.*?</article>','',h,flags=re.S)

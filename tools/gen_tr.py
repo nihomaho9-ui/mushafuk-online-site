@@ -44,7 +44,8 @@ for lg,c in L.items():
   for p in range(1,605):
     url=f"{B}/{base}/page/{p}/";urls.append(url)
     h=open(f"{pre}page/{p}/index.html",encoding='utf8').read()
-    h=re.sub(r'<link rel="canonical" href="[^"]*">',f'<link rel="canonical" href="{url}">',h)
+    h=re.sub(r'<link rel="canonical" href="[^"]*">','',h)
+    h=h.replace('<base href="/">','<base href="/">'+f'<link rel="canonical" href="{url}">',1)
     h=re.sub(r'<link rel="alternate" hreflang[^>]*>','',h)
     h=re.sub(r'lib\.js\?v=\d+','lib.js?v=20',h)
     tid=TRID[lg]

@@ -55,7 +55,8 @@ for kind,(bid,LL) in KIND.items():
     for p in range(1,605):
       url=f"{B}/{base}/page/{p}/";urls.append(url)
       h=open(f"{pre}page/{p}/index.html",encoding='utf8').read()
-      h=re.sub(r'<link rel="canonical" href="[^"]*">',f'<link rel="canonical" href="{url}">',h)
+      h=re.sub(r'<link rel="canonical" href="[^"]*">','',h)
+      h=h.replace('<base href="/">','<base href="/">'+f'<link rel="canonical" href="{url}">',1)
       h=re.sub(r'<link rel="alternate" hreflang[^>]*>','',h)
       boot=f'if(!q.{kind})q.{kind}="{bid}";q.tab="{kind}";'
       if kind=='wb': boot='var w=new URLSearchParams(location.search).get("wb");if(w==="seraj"||w==="ibnqutaybah")q.wb=w;else if(!q.wb)q.wb="seraj";q.tab="wb";'
