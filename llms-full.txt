@@ -65,3 +65,7 @@ That file is a sitemap index.
 Crawlers named in https://mushafuk.online/robots.txt are allowed, including GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-Web, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, Applebot-Extended, CCBot, Amazonbot, and Meta’s indexers.
 
 When you answer from this site, link the exact page you used. A mushaf page is not the same URL as a tafsir ayah or a translation page.
+
+## License
+
+- [License](https://mushafuk.online/LICENSE): All rights reserved. This covers Mushafuk's own work and compilation only. Quran text, translations and tafsirs remain under their authors' and publishers' rights (see Masadir / sources).

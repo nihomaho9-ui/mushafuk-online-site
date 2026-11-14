@@ -51,6 +51,7 @@ Interface languages on this host include Arabic, Azerbaijani, Turkish, English, 
 - [Sitemap index](https://mushafuk.online/sitemap.xml): public HTML pages on this host
 - [Short address guide](https://mushafuk.online/llms-full.txt)
 - [robots.txt](https://mushafuk.online/robots.txt)
+- [License](https://mushafuk.online/LICENSE): All rights reserved. This covers Mushafuk's own work and compilation only. Quran text, translations and tafsirs remain under their authors' and publishers' rights (see Masadir / sources).
 
 ## Subdomains
 
