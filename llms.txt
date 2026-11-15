@@ -40,7 +40,7 @@ Arabic tafsir pages live on https://tafsir.mushafuk.online/ (and https://t2.mush
 - [More translations](https://t1.mushafuk.online/): further translation books
 - [Further Arabic tafsirs](https://t2.mushafuk.online/)
 - [Ulum al-Quran and usul](https://t3.mushafuk.online/): books on Quranic sciences and principles of tafsir
-- [Quran Tasheeh](https://quran.mushafuk.online/): recitation practice with a microphone
+- [Tasheeh](https://quran.mushafuk.online/): recitation practice with a microphone
 
 ## Languages
 
