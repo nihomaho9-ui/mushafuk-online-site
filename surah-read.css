@@ -1,7 +1,7 @@
 @font-face{font-family:UthmanTaha;src:url(yazi-fonts/uthmanic-hafs.woff2) format("woff2");font-display:swap}
 @font-face{font-family:QMHafs;src:url(yazi-fonts/uthmanic-hafs.woff2) format("woff2");font-display:swap}
 
-/* Surah translation reader (Azerbaijani Musayev first). Loaded only on /az/tercume/. */
+/* Azerbaijani Musayev reader on /az/tercume/page/{n}/. */
 :root {
   --sr-em: #0f4d3a;
   --sr-em2: #0b3a2c;
@@ -23,6 +23,65 @@ body.sr-on main.tw {
 body.sr-on.qlb-on .sr-page {
   padding-bottom: 5.5rem;
 }
+
+html.sr-az #gate,
+html.sr-az body > header,
+html.sr-az #page,
+html.sr-az .num,
+html.sr-az .qj,
+html.sr-az .seo-crawl {
+  visibility: hidden !important;
+}
+body.sr-on #gate,
+body.sr-on > header,
+body.sr-on #page,
+body.sr-on .num,
+body.sr-on .qj,
+body.sr-on .seo-crawl,
+body.sr-on .qm-full {
+  display: none !important;
+  visibility: hidden !important;
+}
+#sr-root {
+  position: fixed;
+  inset: 0;
+  z-index: 28;
+  display: flex;
+  flex-direction: column;
+  background: var(--sr-cream);
+  overflow: hidden;
+}
+#sr-root .sr-page {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  width: 100%;
+}
+.sr-top h1 .sr-pageno {
+  display: block;
+  margin-top: 0.08rem;
+  font-family: "Segoe UI", "Noto Sans", system-ui, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #8a7d68;
+  letter-spacing: 0.02em;
+}
+.sr-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.2rem 0 0.4rem;
+  font-size: 0.9rem;
+}
+.sr-nav a {
+  color: var(--sr-em);
+  font-weight: 650;
+  text-decoration: none;
+}
+.sr-nav span { color: var(--sr-mut); }
+
 
 .sr-top {
   position: sticky;

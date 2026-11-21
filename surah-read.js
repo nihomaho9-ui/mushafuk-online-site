@@ -1,23 +1,12 @@
-/* Surah translation reader for /az/tercume/?s=N (Əlixan Musayev). Other works stay on their existing pages. */
+/* Azerbaijani Musayev reader on /az/tercume/page/{n}/ — one mushaf page per URL. */
 (function () {
-  const NAMES = "Fatihə,Bəqərə,Ali-İmran,Nisa,Maidə,Ənam,Əraf,Ənfal,Tövbə,Yunus,Hud,Yusuf,Rəd,İbrahim,Hicr,Nəhl,İsra,Kəhf,Məryəm,Taha,Ənbiya,Həcc,Muminun,Nur,Furqan,Şuəra,Nəml,Qəsəs,Ankəbut,Rum,Loğman,Səcdə,Əhzab,Səba,Fatir,Yasin,Saffat,Sad,Zumər,Ğafir,Fussilət,Şura,Zuxruf,Duxan,Casiyə,Əhqaf,Muhəmməd,Fəth,Hucurat,Qaf,Zariyat,Tur,Nəcm,Qəmər,Rəhman,Vaqiə,Hədid,Mucadələ,Həşr,Mumtəhinə,Saff,Cumə,Munafiqun,Təğabun,Talaq,Təhrim,Mulk,Qələm,Haqqə,Məaric,Nuh,Cin,Muzzəmmil,Muddəssir,Qiyamə,İnsan,Mursəlat,Nəbə,Naziat,Əbəsə,Təkvir,İnfitar,Mutəffifin,İnşiqaq,Buruc,Tariq,Əla,Ğaşiyə,Fəcr,Bələd,Şəms,Leyl,Duha,İnşirah,Tin,Ələq,Qədr,Bəyyinə,Zəlzələ,Adiyat,Qariə,Təkasur,Əsr,Huməzə,Fil,Qureyş,Maun,Kövsər,Kafirun,Nəsr,Məsəd,İxlas,Fələq,Nas".split(",");
-  const ARNAMES = "الفاتحة,البقرة,آل عمران,النساء,المائدة,الأنعام,الأعراف,الأنفال,التوبة,يونس,هود,يوسف,الرعد,إبراهيم,الحجر,النحل,الإسراء,الكهف,مريم,طه,الأنبياء,الحج,المؤمنون,النور,الفرقان,الشعراء,النمل,القصص,العنكبوت,الروم,لقمان,السجدة,الأحزاب,سبأ,فاطر,يس,الصافات,ص,الزمر,غافر,فصلت,الشورى,الزخرف,الدخان,الجاثية,الأحقاف,محمد,الفتح,الحجرات,ق,الذاريات,الطور,النجم,القمر,الرحمن,الواقعة,الحديد,المجادلة,الحشر,الممتحنة,الصف,الجمعة,المنافقون,التغابن,الطلاق,التحريم,الملك,القلم,الحاقة,المعارج,نوح,الجن,المزمل,المدثر,القيامة,الإنسان,المرسلات,النبأ,النازعات,عبس,التكوير,الانفطار,المطففين,الانشقاق,البروج,الطارق,الأعلى,الغاشية,الفجر,البلد,الشمس,الليل,الضحى,الشرح,التين,العلق,القدر,البينة,الزلزلة,العاديات,القارعة,التكاثر,العصر,الهمزة,الفيل,قريش,الماعون,الكوثر,الكافرون,النصر,المسد,الإخلاص,الفلق,الناس".split(",");
-  const AYAHS = "7,286,200,176,120,165,206,75,129,109,123,111,43,52,99,128,111,110,98,135,112,78,118,64,77,227,93,88,69,60,34,30,73,54,45,83,182,88,75,85,54,53,89,59,37,35,38,29,18,45,60,49,62,55,78,96,29,22,24,13,14,11,11,18,12,12,30,52,52,44,28,28,20,56,40,31,50,40,46,42,29,19,36,25,22,17,19,26,30,20,15,21,11,8,8,19,5,8,8,11,11,8,3,9,5,4,7,3,6,3,5,4,5,6".split(",").map(Number);
-  const MADANI = new Set([2, 3, 4, 5, 8, 9, 13, 22, 24, 33, 47, 48, 49, 55, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 76, 98, 99, 110]);
-  const STARTS = {};
-  "1:1:2,2:2:3,3:50:3,4:77:2,5:106:8,6:128:3,7:151:3,8:177:3,9:187:2,10:208:2,11:221:9,12:235:11,13:249:3,14:255:5,15:262:3,16:267:9,17:282:3,18:293:12,19:305:3,20:312:7,21:322:3,22:332:2,23:342:2,24:350:2,25:359:13,26:367:2,27:377:2,28:385:10,29:396:10,30:404:12,31:411:3,32:415:2,33:418:2,34:428:3,35:434:10,36:440:6,37:446:2,38:453:2,39:458:6,40:467:5,41:477:3,42:483:3,43:489:7,44:496:3,45:499:2,46:502:9,47:507:2,48:511:3,49:515:9,50:518:3,51:520:14,52:523:10,53:526:2,54:528:12,55:531:7,56:534:9,57:537:13,58:542:3,59:545:9,60:549:2,61:551:9,62:553:3,63:554:9,64:556:2,65:558:2,66:560:3,67:562:3,68:564:8,69:566:12,70:568:11,71:570:7,72:572:3,73:574:3,74:575:10,75:577:8,76:578:12,77:580:9,78:582:3,79:583:10,80:585:2,81:586:4,82:587:3,83:587:14,84:589:5,85:590:4,86:591:3,87:591:12,88:592:7,89:593:5,90:594:8,91:595:4,92:595:13,93:596:8,94:596:15,95:597:5,96:597:11,97:598:6,98:598:11,99:599:8,100:599:14,101:600:6,102:600:13,103:601:3,104:601:7,105:601:13,106:602:3,107:602:8,108:602:14,109:603:3,110:603:8,111:603:13,112:604:3,113:604:7,114:604:12".split(",").forEach((p) => {
-    const [id, page] = p.split(":");
-    STARTS[+id] = +page;
-  });
-
   const BISM = "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ";
-  const ROOT = new URL("../../", location.href);
+  const ROOT = new URL("/", location.href);
   const MUSAYEV_URL = new URL("tr/az.musayev.json", ROOT).href;
   const UTHMANI_URL = new URL("quran-uthmani.txt", ROOT).href;
-  const LIB = new URL("lib.js?v=sr1", ROOT).href;
-  const AUDIO = new URL("audio.js?v=sr1", ROOT).href;
+  const ARNAMES = "الفاتحة,البقرة,آل عمران,النساء,المائدة,الأنعام,الأعراف,الأنفال,التوبة,يونس,هود,يوسف,الرعد,إبراهيم,الحجر,النحل,الإسراء,الكهف,مريم,طه,الأنبياء,الحج,المؤمنون,النور,الفرقان,الشعراء,النمل,القصص,العنكبوت,الروم,لقمان,السجدة,الأحزاب,سبأ,فاطر,يس,الصافات,ص,الزمر,غافر,فصلت,الشورى,الزخرف,الدخان,الجاثية,الأحقاف,محمد,الفتح,الحجرات,ق,الذاريات,الطور,النجم,القمر,الرحمن,الواقعة,الحديد,المجادلة,الحشر,الممتحنة,الصف,الجمعة,المنافقون,التغابن,الطلاق,التحريم,الملك,القلم,الحاقة,المعارج,نوح,الجن,المزمل,المدثر,القيامة,الإنسان,المرسلات,النبأ,النازعات,عبس,التكوير,الانفطار,المطففين,الانشقاق,البروج,الطارق,الأعلى,الغاشية,الفجر,البلد,الشمس,الليل,الضحى,الشرح,التين,العلق,القدر,البينة,الزلزلة,العاديات,القارعة,التكاثر,العصر,الهمزة,الفيل,قريش,الماعون,الكوثر,الكافرون,النصر,المسد,الإخلاص,الفلق,الناس".split(",");
   const TRANSLATOR = { id: "az.musayev", lang: "AZ", name: "Əlixan Musayev", by: "Azərbaycanca" };
-
+  const MADANI = new Set([2, 3, 4, 5, 8, 9, 13, 22, 24, 33, 47, 48, 49, 55, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 76, 98, 99, 110]);
   const OTHERS = [
     ["ru.kuliev", "Эльмир Кулиев", "Русский"],
     ["turkish_shahin", "Ali Özek ve diğerleri", "Türkçe"],
@@ -59,14 +48,11 @@
   };
 
   const cache = {};
-  let libsP = null;
-  let curS = 0;
+  let curN = 0;
+  let swiping = false;
 
-  function paramS() {
-    const q = new URLSearchParams(location.search).get("s");
-    const n = q ? parseInt(q, 10) : 0;
-    return n >= 1 && n <= 114 ? n : 0;
-  }
+  function names() { return window.QM_NAMES || []; }
+  function ayahs() { return window.QM_AYAHS || []; }
   function marks() {
     try { return JSON.parse(localStorage.getItem("qm.bookmarks") || "[]"); } catch (e) { return []; }
   }
@@ -79,24 +65,7 @@
     setMarks(m);
     return i < 0;
   }
-  function loadScript(src) {
-    return new Promise((ok, no) => {
-      const s = document.createElement("script");
-      s.src = src;
-      s.onload = () => ok();
-      s.onerror = () => no(new Error(src));
-      document.head.appendChild(s);
-    });
-  }
-  function ensureLibs() {
-    return (libsP ||= (async () => {
-      window.QM_AYAHS = AYAHS;
-      window.QM_NAMES = NAMES;
-      await loadScript(LIB);
-      await loadScript(AUDIO);
-    })());
-  }
-  async function arabicOf(s) {
+  async function arabicMap() {
     if (!cache.uth) {
       const t = await (await fetch(UTHMANI_URL)).text();
       const map = {};
@@ -109,14 +78,14 @@
       }
       cache.uth = map;
     }
-    return cache.uth[s] || [];
+    return cache.uth;
   }
-  async function musayevOf(s) {
+  async function musayevAll() {
     if (!cache.az) {
       const j = await (await fetch(MUSAYEV_URL)).json();
       cache.az = j.v;
     }
-    return { t: cache.az[s - 1], f: null };
+    return cache.az;
   }
   function stripBism(ar, s, a) {
     if (a !== 1 || s === 9) return ar;
@@ -127,7 +96,6 @@
     return ar;
   }
   function showBism(s) { return s !== 9 && s !== 1; }
-
   function el(tag, cls, html) {
     const e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -148,7 +116,8 @@
     t._h = setTimeout(() => { t.style.opacity = "0"; }, 1400);
   }
   function ayahText(s, a, ar, tr) {
-    return NAMES[s - 1] + " " + s + ":" + a + "\n" + ar + "\n" + tr + "\n— " + TRANSLATOR.name;
+    const N = names();
+    return (N[s - 1] || s) + " " + s + ":" + a + "\n" + ar + "\n" + tr + "\n— " + TRANSLATOR.name;
   }
   async function copyAyah(s, a, ar, tr) {
     const tx = ayahText(s, a, ar, tr);
@@ -162,25 +131,18 @@
   }
   async function shareAyah(s, a, ar, tr) {
     const tx = ayahText(s, a, ar, tr);
-    const url = new URL(location.href);
-    url.searchParams.set("s", String(s));
+    const url = location.origin + "/az/tercume/page/" + curN + "/#" + s + "-" + a;
     if (navigator.share) {
-      try { await navigator.share({ title: NAMES[s - 1] + " " + s + ":" + a, text: tx, url: url.href }); return; }
+      try { await navigator.share({ title: names()[s - 1] + " " + s + ":" + a, text: tx, url: url }); return; }
       catch (e) { if (e && e.name === "AbortError") return; }
     }
     copyAyah(s, a, ar, tr);
   }
   async function playAyah(s, a) {
-    await ensureLibs();
-    if (window.QA) {
-      const st = window.QA;
-      // play() starts that ayah and continues through the surah
-      window.QA.play(s, a);
-    }
+    if (window.QA && window.QA.play) window.QA.play(s, a);
   }
-  async function playSurah(s, btn) {
-    await ensureLibs();
-    if (!window.QA) return;
+  async function playFrom(s, a, btn) {
+    if (!window.QA || !window.QA.play) return;
     if (window.QA.stop && btn.classList.contains("on")) {
       window.QA.stop();
       btn.classList.remove("on");
@@ -188,16 +150,14 @@
       btn.setAttribute("aria-label", "Dinlə");
       return;
     }
-    await window.QA.play(s, 1);
+    await window.QA.play(s, a);
     btn.classList.add("on");
     btn.innerHTML = ICO.pause;
     btn.setAttribute("aria-label", "Dayandır");
   }
-  async function openSettings() {
-    await ensureLibs();
+  function openSettings() {
     if (window.QM && window.QM.openSettings) window.QM.openSettings();
   }
-
   function closePicker() {
     const a = document.getElementById("sr-scrim");
     const b = document.getElementById("sr-sheet");
@@ -220,8 +180,7 @@
     let last = "";
     for (const [id, name, by] of OTHERS) {
       if (by !== last) {
-        const g = el("div", "grp", by);
-        sheet.appendChild(g);
+        sheet.appendChild(el("div", "grp", by));
         last = by;
       }
       const b = el("button", "tr");
@@ -233,38 +192,65 @@
     document.body.append(scrim, sheet);
   }
 
-  function renderShell(s) {
+  function goPage(n) {
+    n = n | 0;
+    if (n < 1 || n > 604 || n === curN) return;
+    closePicker();
+    if (window.QM_TURN) window.QM_TURN(n);
+    else location.assign("/az/tercume/page/" + n + "/");
+  }
+
+  function surahCard(s) {
+    const N = names();
+    const AN = ARNAMES;
+    const A = ayahs();
+    const card = el("section", "sr-card");
+    card.dataset.k = s + "-1";
+    card.innerHTML =
+      '<div class="sr-arname">' + (AN[s - 1] || "") + "</div>" +
+      '<div class="sr-name">' + (N[s - 1] || "") + "</div>" +
+      '<div class="sr-meta"><span>' + (MADANI.has(s) ? "Mədinədə nazil olmuşdur" : "Məkkədə nazil olmuşdur") + "</span>" +
+      "<span>" + (A[s - 1] || "") + " ayədir</span></div>" +
+      (showBism(s) ? '<div class="sr-bism">' + BISM + "</div>" : "");
+    return card;
+  }
+
+  async function open(n) {
+    n = n | 0;
+    if (n < 1 || n > 604) return;
+    curN = n;
+    const pg = window.QM_PAGE && window.QM_PAGE(n);
+    if (!pg || !pg.keys || !pg.keys.length) return;
     document.body.classList.add("sr-on");
+    document.documentElement.classList.remove("qm-turning");
+    try { sessionStorage.removeItem("qm.turn"); } catch (e) {}
+
     let root = document.getElementById("sr-root");
     if (!root) {
       root = document.createElement("div");
       root.id = "sr-root";
       document.body.appendChild(root);
     }
-    const title = NAMES[s - 1] + " surəsi";
-    document.title = title + " — " + TRANSLATOR.name + " | Mushafuk.online";
+    const N = names();
+    const first = pg.keys[0].split(":").map(Number);
+    const title = (N[first[0] - 1] || "") + " surəsi";
+    document.title = "Quran, səhifə " + n + " — " + title + " | Mushafuk.online";
+
     root.innerHTML = "";
     const top = el("header", "sr-top");
     const back = document.createElement("a");
     back.className = "sr-ico";
-    back.href = "./";
+    back.href = "/az/tercume/";
     back.setAttribute("aria-label", "Geri");
     back.innerHTML = ICO.back;
-    back.addEventListener("click", (e) => {
-      if (location.search) {
-        e.preventDefault();
-        history.pushState({}, "", "./");
-        hideReader();
-      }
-    });
     const h1 = document.createElement("h1");
-    h1.textContent = title;
+    h1.innerHTML = title + '<small class="sr-pageno">Səhifə ' + n + "</small>";
     const play = document.createElement("button");
     play.type = "button";
     play.setAttribute("aria-label", "Dinlə");
     play.title = "Dinlə";
     play.innerHTML = ICO.play;
-    play.onclick = () => playSurah(s, play);
+    play.onclick = () => playFrom(first[0], first[1], play);
     const gear = document.createElement("button");
     gear.type = "button";
     gear.setAttribute("aria-label", "Ayarlar");
@@ -277,26 +263,11 @@
     const wait = el("p", "sr-wait", "Yüklənir…");
     page.appendChild(wait);
     root.append(top, page);
-    return { page, wait };
-  }
 
-  async function render(s) {
-    curS = s;
-    const { page, wait } = renderShell(s);
     try {
-      const [arAll, trAll] = await Promise.all([arabicOf(s), musayevOf(s)]);
-      if (curS !== s) return;
+      const [uth, az] = await Promise.all([arabicMap(), musayevAll()]);
+      if (curN !== n) return;
       wait.remove();
-      const n = AYAHS[s - 1];
-      const card = el("section", "sr-card");
-      card.innerHTML =
-        '<div class="sr-arname">' + ARNAMES[s - 1] + "</div>" +
-        '<div class="sr-name">' + NAMES[s - 1] + "</div>" +
-        '<div class="sr-meta"><span>' + (MADANI.has(s) ? "Mədinədə nazil olmuşdur" : "Məkkədə nazil olmuşdur") + "</span>" +
-        "<span>" + n + " ayədir</span></div>" +
-        (showBism(s) ? '<div class="sr-bism">' + BISM + "</div>" : "") +
-        '<div><a class="sr-mushaf" href="page/' + STARTS[s] + "/#" + s + '-1">Mushafda aç</a></div>';
-      page.appendChild(card);
 
       const chip = document.createElement("button");
       chip.type = "button";
@@ -304,24 +275,28 @@
       chip.setAttribute("aria-haspopup", "listbox");
       chip.innerHTML = '<span class="dot">AZ</span><span class="who"><b>' + TRANSLATOR.name + "</b><small>" + TRANSLATOR.by + '</small></span><span class="chev">' + ICO.chev + "</span>";
       chip.onclick = openPicker;
-      page.appendChild(chip);
 
-      const list = document.createElement("div");
-      for (let a = 1; a <= n; a++) {
-        const raw = arAll[a - 1] || "";
+      const frag = document.createDocumentFragment();
+      let chipDone = false;
+      for (const key of pg.keys) {
+        const [s, a] = key.split(":").map(Number);
+        if (a === 1) {
+          if (!chipDone) { page.appendChild(chip); chipDone = true; }
+          page.appendChild(surahCard(s));
+        }
+        if (!chipDone) { page.appendChild(chip); chipDone = true; }
+        const raw = (uth[s] && uth[s][a - 1]) || "";
         const ar = stripBism(raw, s, a);
-        const tr = (trAll.t && trAll.t[a - 1]) || "";
-        const fn = trAll.f && trAll.f[a - 1];
-        const key = s + ":" + a;
+        const tr = (az[s - 1] && az[s - 1][a - 1]) || "";
         const art = el("article", "sr-ayah");
-        art.dataset.ayah = String(a);
+        art.dataset.k = s + "-" + a;
         const bar = el("div", "sr-abar");
         bar.innerHTML = '<span class="sr-anum">' + a + "</span>";
         const mk = document.createElement("button");
         mk.type = "button"; mk.title = "Əlfəcin"; mk.setAttribute("aria-label", "Əlfəcin");
-        const paintMk = () => { const on = isMarked(key); mk.classList.toggle("on", on); mk.innerHTML = on ? ICO.markOn : ICO.mark; };
+        const paintMk = () => { const on = isMarked(s + ":" + a); mk.classList.toggle("on", on); mk.innerHTML = on ? ICO.markOn : ICO.mark; };
         paintMk();
-        mk.onclick = () => { toggleMark(key); paintMk(); };
+        mk.onclick = () => { toggleMark(s + ":" + a); paintMk(); };
         const pb = document.createElement("button");
         pb.type = "button"; pb.title = "Dinlə"; pb.setAttribute("aria-label", "Dinlə");
         pb.innerHTML = ICO.play;
@@ -338,40 +313,68 @@
         const body = el("div", "sr-abody");
         const arP = el("p", "sr-arabic"); arP.textContent = ar;
         const trP = el("p", "sr-tr"); trP.textContent = tr;
-        body.append(arP, trP);
-        if (fn) {
-          const f = el("p", "sr-fn"); f.textContent = fn; body.appendChild(f);
-        }
-        const by = el("p", "sr-by"); by.textContent = TRANSLATOR.name; body.appendChild(by);
+        const by = el("p", "sr-by"); by.textContent = TRANSLATOR.name;
+        body.append(arP, trP, by);
         art.append(bar, body);
-        list.appendChild(art);
+        page.appendChild(art);
       }
-      page.appendChild(list);
+
+      const nav = el("nav", "sr-nav");
+      if (n > 1) {
+        const a = document.createElement("a");
+        a.rel = "prev"; a.href = "/az/tercume/page/" + (n - 1) + "/"; a.textContent = "Əvvəlki";
+        a.addEventListener("click", (e) => { e.preventDefault(); goPage(n - 1); });
+        nav.appendChild(a);
+      } else {
+        nav.appendChild(el("span", "", ""));
+      }
+      const mid = document.createElement("span");
+      mid.textContent = "Səhifə " + n;
+      nav.appendChild(mid);
+      if (n < 604) {
+        const a = document.createElement("a");
+        a.rel = "next"; a.href = "/az/tercume/page/" + (n + 1) + "/"; a.textContent = "Sonrakı";
+        a.addEventListener("click", (e) => { e.preventDefault(); goPage(n + 1); });
+        nav.appendChild(a);
+      }
+      page.appendChild(nav);
+
       document.body.dataset.sr = "ready";
-      ensureLibs(); // warm audio/settings in the background
+      const hash = (location.hash || "").replace(/^#/, "");
+      if (hash) {
+        const t = root.querySelector('[data-k="' + hash + '"]');
+        if (t) t.scrollIntoView({ block: "start" });
+      } else {
+        root.querySelector(".sr-page").scrollTop = 0;
+        window.scrollTo(0, 0);
+      }
     } catch (e) {
       wait.className = "sr-err";
       wait.textContent = "Tərcümə yüklənmədi. İnterneti yoxlayıb yenidən açın.";
     }
   }
 
-  function hideReader() {
-    curS = 0;
-    document.body.classList.remove("sr-on");
-    delete document.body.dataset.sr;
-    const root = document.getElementById("sr-root");
-    if (root) root.innerHTML = "";
-    closePicker();
-    document.title = "Quran tərcüməsi — Azərbaycanca | Mushafuk.online";
-  }
+  window.SR = { open: open, goPage: goPage };
 
-  function apply() {
-    const s = paramS();
-    if (s) render(s);
-    else hideReader();
-  }
+  (function hookTurn() {
+    if (!window.QM_TURN) { setTimeout(hookTurn, 50); return; }
+    if (window.QM_TURN.__sr) return;
+    const orig = window.QM_TURN;
+    function wrapped(n) {
+      const r = orig(n);
+      if (!r) {
+        const now = pageNoFromUrl();
+        if (now) open(now);
+      }
+      return r;
+    }
+    wrapped.__sr = true;
+    window.QM_TURN = wrapped;
+  })();
 
-  window.addEventListener("popstate", apply);
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply);
-  else apply();
+
+  window.addEventListener("popstate", function () {
+    const n = pageNoFromUrl();
+    if (n) open(n);
+  });
 })();

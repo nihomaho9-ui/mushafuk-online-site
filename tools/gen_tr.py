@@ -37,13 +37,8 @@ for lg,c in L.items():
   pre=lg+'/';T=c['T']();base=f"{pre}{c['slug']}"
   # index
   up='../../';url=f"{B}/{base}/";urls.append(url)
-  if lg=='az':
-    items=''.join(f'<a href="?s={s}"><span class="k">{s}</span><span class="nm">{E(c["n"][s-1])}<small>{CNT[s]} {c["ay"]} · {c["pg"]} {START[s]}</small></span><span class="a" dir="rtl">{E(AR[s-1])}</span></a>' for s in range(1,115))
-  else:
-    items=''.join(f'<a href="page/{START[s]}/#{s}-1"><span class="k">{s}</span><span class="nm">{E(c["n"][s-1])}<small>{CNT[s]} {c["ay"]} · {c["pg"]} {START[s]}</small></span><span class="a" dir="rtl">{E(AR[s-1])}</span></a>' for s in range(1,115))
-  extra_css = (lg=='az') and '<link rel="stylesheet" href="../../surah-read.css?v=1">' or ''
-  extra_js = (lg=='az') and '<script src="../../surah-read.js?v=1"></script>' or ''
-  h=head(lg,c['h'],c['d'].format(p=1,s=c['all']),url,up,extra_css)+nav(c,up,pre)+f'<main class="tw"><h1>{E(c["h"])}</h1><p style="text-align:center">{E(c["tn"])}</p><div class="sl">{items}</div></main><footer>© 2026 Mushafuk.online</footer><script src="{up}site.js?v=7"></script>{extra_js}</body></html>'
+  items=''.join(f'<a href="page/{START[s]}/#{s}-1"><span class="k">{s}</span><span class="nm">{E(c["n"][s-1])}<small>{CNT[s]} {c["ay"]} · {c["pg"]} {START[s]}</small></span><span class="a" dir="rtl">{E(AR[s-1])}</span></a>' for s in range(1,115))
+  h=head(lg,c['h'],c['d'].format(p=1,s=c['all']),url,up)+nav(c,up,pre)+f'<main class="tw"><h1>{E(c["h"])}</h1><p style="text-align:center">{E(c["tn"])}</p><div class="sl">{items}</div></main><footer>© 2026 Mushafuk.online</footer><script src="{up}site.js?v=7"></script></body></html>'
   os.makedirs(base,exist_ok=True);open(base+'/index.html','w',encoding='utf8').write(h)
   up='../../../../'
   for p in range(1,605):
@@ -56,7 +51,12 @@ for lg,c in L.items():
     tid=TRID[lg]
     pre_js=f'<script>try{{var q=JSON.parse(localStorage.getItem("qm.prefs")||"{{}}");q.tr="{tid}";q.tab="tr";localStorage.setItem("qm.prefs",JSON.stringify(q));}}catch(e){{}}</script>'
     h=h.replace('<base href="/">','<base href="/">'+pre_js,1)
-    post_js=f'<script>(function w(i){{if(window.QM&&window.QM_PAGE&&window.QM_PAGE({p})){{QM.openFull("tr",null,{p});return}}if(i<200)setTimeout(function(){{w(i+1)}},100)}})(0)</script>'
+    if lg=='az':
+      if 'surah-read.css' not in h:
+        h=h.replace('</head>','<link rel="stylesheet" href="/surah-read.css?v=2"><style>html.sr-az #gate,html.sr-az body>header,html.sr-az #page,html.sr-az .num,html.sr-az .qj,html.sr-az .seo-crawl{visibility:hidden!important}</style><script>document.documentElement.classList.add("sr-az")</script></head>',1)
+      post_js=f'<script src="/surah-read.js?v=2"></script><script>(function w(i){{if(window.SR&&window.QM_PAGE&&window.QM_PAGE({p})){{SR.open({p});return}}if(i<200)setTimeout(function(){{w(i+1)}},100)}})(0)</script>'
+    else:
+      post_js=f'<script>(function w(i){{if(window.QM&&window.QM_PAGE&&window.QM_PAGE({p})){{QM.openFull("tr",null,{p});return}}if(i<200)setTimeout(function(){{w(i+1)}},100)}})(0)</script>'
     h=h.replace('</body>',post_js+'</body>',1)
     hub=f"/{base}/"; hub_lbl=E(c['title'])
     def _nav(pp, hub=hub, hub_lbl=hub_lbl, base=base, c=c):
