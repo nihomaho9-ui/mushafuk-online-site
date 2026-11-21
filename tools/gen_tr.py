@@ -54,7 +54,7 @@ for lg,c in L.items():
     if lg=='az':
       if 'surah-read.css' not in h:
         h=h.replace('</head>','<link rel="stylesheet" href="/surah-read.css?v=2"><style>html.sr-az #gate,html.sr-az body>header,html.sr-az #page,html.sr-az .num,html.sr-az .qj,html.sr-az .seo-crawl{visibility:hidden!important}</style><script>document.documentElement.classList.add("sr-az")</script></head>',1)
-      post_js=f'<script src="/surah-read.js?v=2"></script><script>(function w(i){{if(window.SR&&window.QM_PAGE&&window.QM_PAGE({p})){{SR.open({p});return}}if(i<200)setTimeout(function(){{w(i+1)}},100)}})(0)</script>'
+      post_js=f'<script src="/surah-read.js?v=3"></script><script>(function w(i){{if(window.SR&&window.QM_PAGE&&window.QM_PAGE({p})){{SR.open({p});return}}if(i<200)setTimeout(function(){{w(i+1)}},100)}})(0)</script>'
     else:
       post_js=f'<script>(function w(i){{if(window.QM&&window.QM_PAGE&&window.QM_PAGE({p})){{QM.openFull("tr",null,{p});return}}if(i<200)setTimeout(function(){{w(i+1)}},100)}})(0)</script>'
     h=h.replace('</body>',post_js+'</body>',1)
