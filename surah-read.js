@@ -94,6 +94,12 @@
     }
     return cache.az;
   }
+  // Same mapping as lib.js forFont: uthmanic-hafs.woff2 maps U+06DF (small high rounded zero)
+  // to a wide composite of U+0600, which paints as a black dotted ring after words like ءَامِنُوا۟.
+  // The site displays U+06E0 (small high upright rectangular zero) instead, which this font has.
+  function forFont(t) {
+    return String(t || "").replace(/\u06DF/g, "\u06E0");
+  }
   function stripBism(ar, s, a) {
     if (a !== 1 || s === 9) return ar;
     if (ar.indexOf(BISM) === 0) {
@@ -218,7 +224,7 @@
       '<div class="sr-name">' + (N[s - 1] || "") + "</div>" +
       '<div class="sr-meta"><span>' + (MADANI.has(s) ? "Mədinədə nazil olmuşdur" : "Məkkədə nazil olmuşdur") + "</span>" +
       "<span>" + (A[s - 1] || "") + " ayədir</span></div>" +
-      (showBism(s) ? '<div class="sr-bism">' + BISM + "</div>" : "");
+      (showBism(s) ? '<div class="sr-bism">' + forFont(BISM) + "</div>" : "");
     return card;
   }
 
@@ -318,7 +324,7 @@
         sh.onclick = () => shareAyah(s, a, ar, tr);
         bar.append(mk, pb, cp, sh);
         const body = el("div", "sr-abody");
-        const arP = el("p", "sr-arabic"); arP.textContent = ar;
+        const arP = el("p", "sr-arabic"); arP.textContent = forFont(ar);
         const trP = el("p", "sr-tr"); trP.textContent = tr;
         const by = el("p", "sr-by"); by.textContent = TRANSLATOR.name;
         body.append(arP, trP, by);
