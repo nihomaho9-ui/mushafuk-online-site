@@ -53,13 +53,6 @@
 
   function names() { return window.QM_NAMES || []; }
   function ayahs() { return window.QM_AYAHS || []; }
-
-  function pageNoFromUrl() {
-    const m = location.pathname.match(/\/az\/tercume\/page\/(\d+)\/?$/);
-    if (!m) return 0;
-    const n = +m[1];
-    return n >= 1 && n <= 604 ? n : 0;
-  }
   function marks() {
     try { return JSON.parse(localStorage.getItem("qm.bookmarks") || "[]"); } catch (e) { return []; }
   }
