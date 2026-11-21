@@ -37,8 +37,13 @@ for lg,c in L.items():
   pre=lg+'/';T=c['T']();base=f"{pre}{c['slug']}"
   # index
   up='../../';url=f"{B}/{base}/";urls.append(url)
-  items=''.join(f'<a href="page/{START[s]}/#{s}-1"><span class="k">{s}</span><span class="nm">{E(c["n"][s-1])}<small>{CNT[s]} {c["ay"]} · {c["pg"]} {START[s]}</small></span><span class="a" dir="rtl">{E(AR[s-1])}</span></a>' for s in range(1,115))
-  h=head(lg,c['h'],c['d'].format(p=1,s=c['all']),url,up)+nav(c,up,pre)+f'<main class="tw"><h1>{E(c["h"])}</h1><p style="text-align:center">{E(c["tn"])}</p><div class="sl">{items}</div></main><footer>© 2026 Mushafuk.online</footer><script src="{up}site.js?v=7"></script></body></html>'
+  if lg=='az':
+    items=''.join(f'<a href="?s={s}"><span class="k">{s}</span><span class="nm">{E(c["n"][s-1])}<small>{CNT[s]} {c["ay"]} · {c["pg"]} {START[s]}</small></span><span class="a" dir="rtl">{E(AR[s-1])}</span></a>' for s in range(1,115))
+  else:
+    items=''.join(f'<a href="page/{START[s]}/#{s}-1"><span class="k">{s}</span><span class="nm">{E(c["n"][s-1])}<small>{CNT[s]} {c["ay"]} · {c["pg"]} {START[s]}</small></span><span class="a" dir="rtl">{E(AR[s-1])}</span></a>' for s in range(1,115))
+  extra_css = (lg=='az') and '<link rel="stylesheet" href="../../surah-read.css?v=1">' or ''
+  extra_js = (lg=='az') and '<script src="../../surah-read.js?v=1"></script>' or ''
+  h=head(lg,c['h'],c['d'].format(p=1,s=c['all']),url,up,extra_css)+nav(c,up,pre)+f'<main class="tw"><h1>{E(c["h"])}</h1><p style="text-align:center">{E(c["tn"])}</p><div class="sl">{items}</div></main><footer>© 2026 Mushafuk.online</footer><script src="{up}site.js?v=7"></script>{extra_js}</body></html>'
   os.makedirs(base,exist_ok=True);open(base+'/index.html','w',encoding='utf8').write(h)
   up='../../../../'
   for p in range(1,605):
