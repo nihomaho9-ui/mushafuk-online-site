@@ -104,3 +104,23 @@ background:radial-gradient(ellipse at 50% 30%,#fffaf0 0,#f4ecdb 60%,#efe5d0 100%
   .h .tsh-banner p{font-size:.8rem;line-height:1.4}
   .h .tsh-banner .go{width:32px;height:32px;font-size:1rem}
 }
+
+/* v14 — homepage app store badges (green/gold, no rainbow) */
+.h .stores{position:relative;z-index:2;max-width:640px;width:100%;margin:22px auto 0;padding:0 10px;box-sizing:border-box;text-align:center}
+.h .stores h2{margin:0 0 12px;color:var(--g);font-size:1.15rem;font-weight:800;letter-spacing:.01em}
+.h .stores-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:14px 16px}
+.h .store-item{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.h .store-agc,.h .store-badge{display:block;line-height:0;border-radius:10px;box-shadow:0 6px 16px #0f3d2a22}
+.h .store-svg{display:block;height:48px;width:auto;max-width:100%}
+.h .store-agc{border-radius:10px;transition:transform .2s,box-shadow .2s}
+.h .store-agc:hover{transform:translateY(-2px);box-shadow:0 10px 22px #0f3d2a33}
+.h .store-agc:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.h .store-play{opacity:.72;cursor:default;user-select:none}
+.h .store-play .store-badge{filter:grayscale(.25);box-shadow:0 4px 12px #0f3d2a14}
+.h .store-play .soon{margin:0;max-width:180px;color:#4a564e;font-size:.82rem;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
+@media(max-width:640px){
+  .h .stores{margin-top:18px;padding:0 8px}
+  .h .stores h2{font-size:1.05rem;margin-bottom:10px}
+  .h .store-svg{height:44px}
+  .h .store-play .soon{font-size:.75rem;max-width:166px}
+}

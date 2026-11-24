@@ -13,6 +13,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from store_badges import section as stores_section
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -513,7 +515,7 @@ def build(lang: str, d: dict) -> str:
         f'<meta name="twitter:card" content="summary_large_image">'
         f'<meta name="description" content="{esc_attr(d["desc"])}">'
         f'<link rel="icon" href="../icon.png">'
-        f'<link rel="stylesheet" href="../home.css?v=13">'
+        f'<link rel="stylesheet" href="../home.css?v=14">'
         f'<link rel="canonical" href="https://mushafuk.online/{lang}/">'
         f"{hreflang}</head><body class=\"h\"><header class=\"top\"><div class=\"bar\">"
         f'<div class="row"><a class="logo" href="./" dir="ltr"><img src="../icon.png" alt="">'
@@ -529,6 +531,7 @@ def build(lang: str, d: dict) -> str:
         f'<img class="tsh-ico" src="/assets/tasheeh-icon.png" alt="Tasheeh" width="192" height="192">'
         f'<div class="tsh-txt"><h3>Tasheeh</h3><p>{d["tasheeh"]}</p></div>'
         f'<span class="go">{d["arr"]}</span></a></aside>'
+        f'{stores_section(lang)}'
         f'<img class="rehal" src="../home-rehal.webp" alt="Quran"></section>'
         f'<main class="cards">{cards}{verses}{books}</main>'
         f'<footer><img src="../icon.png" alt=""><div class="c" dir="ltr">© 2026 Mushafuk.online</div>'
