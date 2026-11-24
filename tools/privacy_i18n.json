@@ -1,0 +1,2081 @@
+[
+  {
+    "code": "ar",
+    "html_lang": "ar",
+    "dir": "rtl",
+    "label": "العربية",
+    "btn": "AR",
+    "title": "سياسة الخصوصية — Mushafuk.online",
+    "description": "مصحفك لا يطلب حساباً ولا يعرض إعلانات. الملاحظات تبقى على الجهاز. يسجّل الموقع إحصاءات زيارة أساسية فقط.",
+    "kicker": "الخصوصية",
+    "h1": "سياسة الخصوصية",
+    "updated": "آخر تحديث: 24 نوفمبر 2026.",
+    "intro1": "مصحفك لقراءة مصحف المدينة صفحةً صفحة.",
+    "intro2": "ينشر الموقع Nibras Code.",
+    "nav_quran": "القرآن",
+    "nav_tafsir": "التفاسير",
+    "nav_tr": "الترجمات",
+    "nav_about": "من نحن",
+    "nav_questions": "الأسئلة",
+    "nav_privacy": "الخصوصية",
+    "not_collect_h": "ما لا نجمعه",
+    "not_collect": [
+      "لا يوجد حساب.",
+      "لا نأخذ الاسم ولا البريد ولا الهاتف ولا الموقع ولا جهات الاتصال ولا معرّف الجهاز.",
+      "لا إعلانات.",
+      "لا نبيع بياناتك ولا نشاركها مع المعلنين."
+    ],
+    "stats_h": "إحصاءات الموقع",
+    "stats": [
+      "يسجّل موقع mushafuk.online إحصاءات زيارة أساسية: مسار الصفحة، والموقع المُحيل إن وُجد، ولغة الصفحة، وما إذا كانت الشاشة أقرب إلى هاتف أو إلى حاسوب.",
+      "إذا استخدمت البحث، فقد يُسجَّل نص البحث (حتى 100 حرف) وعدد النتائج، لتحسين الموقع.",
+      "تُرسل هذه البيانات إلى قاعدة بياناتنا نحن، المستضافة لدى Supabase. لا تُستخدم لبناء ملف للقارئ، ولا تُستخدم للإعلانات.",
+      "وكما في أي طلب على الويب، قد يرى الخادم عنوان IP الخاص بك. نحن لا نستخدمه للتعرّف عليك.",
+      "تطبيق أندرويد لا يتضمّن تسجيل الزيارات هذا."
+    ],
+    "device_h": "ما يبقى على الجهاز",
+    "device": [
+      "اللغة وحجم النص والوضع الليلي تبقى على هذا الجهاز.",
+      "التفسير والترجمة والإعراب وغريب القرآن التي تختارها تبقى على هذا الجهاز.",
+      "العلامات والملاحظات تبقى على هذا الجهاز فقط.",
+      "لا تُرسل إلى خادم."
+    ],
+    "search_h": "البحث",
+    "search": [
+      "البحث ينظر فقط إلى نص القرآن والترجمات والتفاسير الموجودة في هذا الموقع.",
+      "إذا كان السؤال بالأذربيجانية أو التركية أو الإنجليزية أو الروسية، فالجواب من ترجمة تلك اللغة.",
+      "السؤال لا يُرسل إلى نموذج خارجي."
+    ],
+    "internet_h": "الإنترنت والتلاوة",
+    "internet": [
+      "يُستخدم الإنترنت لفتح الصفحة والتفسير والترجمة والإعراب وغريب القرآن والصوت.",
+      "الصوت يُفتح عبر خدمة EveryAyah.",
+      "الاتصال عبر HTTPS.",
+      "لا يُنشأ ملف للقارئ من هذا الاتصال."
+    ],
+    "app_h": "تطبيق مصحفك على أندرويد",
+    "app": [
+      "تستخدم ميزة التصحيح (التحقق من التلاوة) في التطبيق الميكروفون فقط عند الضغط على زر الميكروفون.",
+      "يُتعرَّف على الصوت على الهاتف نفسه، ولا يُرفع الصوت ولا يُحفظ. ينتهي الاستماع عند إيقاف الميكروفون. يمكنك سحب الإذن في أي وقت من إعدادات الهاتف.",
+      "يُنزَّل نموذج الكلام (نحو 69 ميغابايت) مرة واحدة عبر HTTPS عند طلبك فقط، من GitHub (raw.githubusercontent.com)، أو من quran.mushafuk.online احتياطياً، ويمكن حذفه من إعدادات التطبيق تحت «الإعدادات ← الحفظ».",
+      "عند تنزيل التفسير أو الترجمة تُجلب الملفات عبر HTTPS من nihomaho9-ui.github.io. خطوط صفحات المصحف المدني (نحو 95 ميغابايت) تُنزَّل مرة واحدة عبر HTTPS من jsDelivr أو GitHub، ثم تبقى على الجهاز ليعمل التطبيق دون اتصال.",
+      "لا يظهر لتلك الاستضافات سوى بيانات تقنية قياسية مثل عنوان IP؛ نحن لا نستلمها، ولا يُرسل عنك شيء.",
+      "آخر صفحة والعلامات والإعدادات والتفاسير والترجمات المنزّلة وسجل التحقق من التلاوة ونموذج الكلام تبقى على الجهاز فقط.",
+      "يطلب التطبيق إذن الميكروفون فقط عند تشغيل الميكروفون لأول مرة في وضع التصحيح. لا يطلب الكاميرا ولا الموقع ولا جهات الاتصال ولا الوصول إلى الملفات.",
+      "لا حساب في التطبيق، ولا إعلانات ولا تحليلات."
+    ],
+    "children_h": "الأطفال",
+    "children": [
+      "الموقع لجميع الأعمار. لا نجمع عن قصد أسماء الأطفال ولا بيانات التواصل معهم.",
+      "المحتوى قرآن بلا إعلانات."
+    ],
+    "contact_h": "التواصل",
+    "contact_name": "Nibras Code.",
+    "email_label": "البريد",
+    "site_label": "الموقع",
+    "terms_label": "الشروط",
+    "sources_label": "المصادر"
+  },
+  {
+    "code": "az",
+    "html_lang": "az",
+    "dir": "ltr",
+    "label": "Azərbaycanca",
+    "btn": "AZ",
+    "title": "Məxfilik siyasəti — Mushafuk.online",
+    "description": "Mushafuk.online hesab istəmir və reklam göstərmir. Qeydlər cihazda qalır. Sayt yalnız əsas ziyarət statistikasını yazır.",
+    "kicker": "Məxfilik",
+    "h1": "Məxfilik siyasəti",
+    "updated": "Son yenilənmə: 24 noyabr 2026.",
+    "intro1": "Mushafuk.online Mədinə mushafını səhifə-səhifə oxumaq üçündür.",
+    "intro2": "Saytı Nibras Code dərc edir.",
+    "nav_quran": "Quran",
+    "nav_tafsir": "Təfsirlər",
+    "nav_tr": "Tərcümələr",
+    "nav_about": "Haqqında",
+    "nav_questions": "Suallar",
+    "nav_privacy": "Məxfilik",
+    "not_collect_h": "Nə toplamırıq",
+    "not_collect": [
+      "Hesab yoxdur.",
+      "Ad, e-poçt, telefon, yer, kontakt və cihaz identifikatoru alınmır.",
+      "Reklam yoxdur.",
+      "Məlumatınız satılmır və reklamçılarla paylaşılmır."
+    ],
+    "stats_h": "Sayt statistikası",
+    "stats": [
+      "mushafuk.online saytı əsas ziyarət statistikasını yazır: açılan səhifənin ünvanı, gəldiyiniz sayt (varsa), səhifənin dili və ekranın telefona, yoxsa kompüterə oxşaması.",
+      "Axtarışdan istifadə edəndə axtarış mətni (ən çox 100 simvol) və nəticə sayı da yazıla bilər ki, sayt yaxşılaşdırılsın.",
+      "Bu məlumat öz verilənlər bazamıza göndərilir, onu Supabase yerləşdirir. Oxucu profili yığılmır və reklam üçün istifadə olunmur.",
+      "Hər veb sorğusunda olduğu kimi, server IP ünvanınızı görə bilər. Biz ondan sizi tanımaq üçün istifadə etmirik.",
+      "Android tətbiqində bu ziyarət qeydi yoxdur."
+    ],
+    "device_h": "Cihazda qalanlar",
+    "device": [
+      "Dil, mətn ölçüsü və gecə rejimi bu cihazda qalır.",
+      "Seçilmiş təfsir, tərcümə, i‘rab və qərib kitabı bu cihazda qalır.",
+      "Əlfəcinlər və qeydlər yalnız bu cihazda qalır.",
+      "Onlar serverə göndərilmir."
+    ],
+    "search_h": "Axtarış",
+    "search": [
+      "Saytdakı axtarış yalnız buradakı Quran mətninə, tərcümələrə və təfsirlərə baxır.",
+      "Sual azərbaycan, türk, ingilis və ya rus dilindədirsə, cavab həmin dilin tərcüməsindən gəlir.",
+      "Sual kənar bir modelə göndərilmir."
+    ],
+    "internet_h": "İnternet və qiraət",
+    "internet": [
+      "İnternet səhifəni, təfsiri, tərcüməni, i‘rabı, qərib sözləri və səsi açmaq üçündür.",
+      "Səslər EveryAyah xidmətindən açılır.",
+      "Əlaqə HTTPS ilə gedir.",
+      "Bu bağlantıdan oxucu profili yığılmır."
+    ],
+    "app_h": "Mushafuk Android tətbiqi",
+    "app": [
+      "Tətbiqdəki Təshih (oxunuş yoxlaması) mikrofonu yalnız siz mikrofon düyməsinə basanda işlədir.",
+      "Səs telefonun özündə tanınır; heç yerə göndərilmir və saxlanmır. Mikrofonu dayandıranda dinləmə bitir. İcazəni istənilən vaxt telefonun ayarlarından geri ala bilərsiniz.",
+      "Nitq modeli (təqribən 69 MB) yalnız siz istəyəndə bir dəfə HTTPS ilə GitHub-dan (raw.githubusercontent.com), ehtiyat olaraq isə quran.mushafuk.online ünvanından endirilir və tətbiqdə Ayarlar → Hifz bölməsindən silinə bilər.",
+      "Təfsir və ya tərcümə yükləyəndə fayllar nihomaho9-ui.github.io ünvanından HTTPS ilə gətirilir. Mədinə səhifə şriftləri (təqribən 95 MB) bir dəfə HTTPS ilə jsDelivr və ya GitHub-dan endirilir, sonra cihazda qalır ki, tətbiq oflayn işləsin.",
+      "Həmin hostlara yalnız standart texniki məlumat (məsələn, IP ünvanı) görünür; biz onu almırıq və sizin haqqınızda heç nə göndərilmir.",
+      "Son səhifə, əlfəcinlər, ayarlar, yüklənmiş təfsir və tərcümələr, oxunuş yoxlamasının tarixçəsi və nitq modeli yalnız cihazda qalır.",
+      "Tətbiq mikrofon icazəsini yalnız Təshih rejimində mikrofonu ilk dəfə açanda istəyir. Kamera, məkan, kontakt və fayl icazəsi istənmir.",
+      "Tətbiqdə hesab yoxdur, reklam və analitika da yoxdur."
+    ],
+    "children_h": "Uşaqlar",
+    "children": [
+      "Sayt hər yaş üçündür. Uşaqlardan bilərəkdən ad və ya əlaqə məlumatı toplamırıq.",
+      "Məzmun Qurandır və reklam yoxdur."
+    ],
+    "contact_h": "Əlaqə",
+    "contact_name": "Nibras Code.",
+    "email_label": "Poçt",
+    "site_label": "Sayt",
+    "terms_label": "Şərtlər",
+    "sources_label": "Mənbələr"
+  },
+  {
+    "code": "bn",
+    "html_lang": "bn",
+    "dir": "ltr",
+    "label": "বাংলা",
+    "btn": "BN",
+    "title": "গোপনীয়তা নীতি — Mushafuk.online",
+    "description": "Mushafuk.online কোনো অ্যাকাউন্ট চায় না এবং বিজ্ঞাপন দেখায় না। নোট ডিভাইসেই থাকে। সাইট কেবল মৌলিক পরিদর্শন পরিসংখ্যান রাখে।",
+    "kicker": "গোপনীয়তা",
+    "h1": "গোপনীয়তা নীতি",
+    "updated": "সর্বশেষ হালনাগাদ: ২৪ নভেম্বর ২০২৬।",
+    "intro1": "Mushafuk.online মদিনার মুশাফ পৃষ্ঠায় পৃষ্ঠায় পড়ার জন্য।",
+    "intro2": "সাইটটি প্রকাশ করে Nibras Code।",
+    "nav_quran": "কুরআন",
+    "nav_tafsir": "তাফসির",
+    "nav_tr": "অনুবাদ",
+    "nav_about": "পরিচিতি",
+    "nav_questions": "প্রশ্ন",
+    "nav_privacy": "গোপনীয়তা",
+    "not_collect_h": "আমরা যা সংগ্রহ করি না",
+    "not_collect": [
+      "কোনো অ্যাকাউন্ট নেই।",
+      "আমরা আপনার নাম, ইমেইল, ফোন, অবস্থান, পরিচিতি বা ডিভাইস শনাক্তকারী নিই না।",
+      "কোনো বিজ্ঞাপন নেই।",
+      "আমরা আপনার তথ্য বিক্রি করি না এবং বিজ্ঞাপনদাতাদের সঙ্গে ভাগ করি না।"
+    ],
+    "stats_h": "সাইটের পরিসংখ্যান",
+    "stats": [
+      "mushafuk.online-এ সাইট মৌলিক পরিদর্শন পরিসংখ্যান রাখে: পৃষ্ঠার পথ, আগত ওয়েবসাইট (যদি থাকে), পৃষ্ঠার ভাষা, এবং পর্দা ফোনের মতো না কম্পিউটারের মতো।",
+      "আপনি অনুসন্ধান ব্যবহার করলে, অনুসন্ধানের পাঠ্য (সর্বোচ্চ ১০০ অক্ষর) এবং ফলাফলের সংখ্যাও রাখা হতে পারে, যাতে সাইট উন্নত করা যায়।",
+      "এটি আমাদের নিজস্ব ডেটাবেসে পাঠানো হয়, যা Supabase হোস্ট করে। এটি পাঠকের প্রোফাইল তৈরি করতে বা বিজ্ঞাপনের জন্য ব্যবহৃত হয় না।",
+      "যেকোনো ওয়েব অনুরোধের মতো সার্ভার আপনার IP ঠিকানা দেখতে পারে। আমরা আপনাকে শনাক্ত করতে সেটি ব্যবহার করি না।",
+      "অ্যান্ড্রয়েড অ্যাপে এই পরিদর্শন রেকর্ড নেই।"
+    ],
+    "device_h": "ডিভাইসে যা থাকে",
+    "device": [
+      "ভাষা, লেখার আকার এবং রাতের মোড এই ডিভাইসেই থাকে।",
+      "আপনি যে তাফসির, অনুবাদ, ই‘রাব এবং গরীব গ্রন্থ বেছে নেন, সেগুলো এই ডিভাইসেই থাকে।",
+      "বুকমার্ক ও নোট শুধু এই ডিভাইসে থাকে।",
+      "সেগুলো সার্ভারে পাঠানো হয় না।"
+    ],
+    "search_h": "অনুসন্ধান",
+    "search": [
+      "অনুসন্ধান শুধু এই সাইটে থাকা কুরআনের পাঠ, অনুবাদ এবং তাফসির দেখে।",
+      "প্রশ্ন আজারবাইজানি, তুর্কি, ইংরেজি বা রুশ ভাষায় হলে উত্তর সেই ভাষার অনুবাদ থেকে আসে।",
+      "প্রশ্ন বাইরের কোনো মডেলে পাঠানো হয় না।"
+    ],
+    "internet_h": "ইন্টারনেট ও তিলাওয়াত",
+    "internet": [
+      "ইন্টারনেট ব্যবহার হয় পৃষ্ঠা, তাফসির, অনুবাদ, ই‘রাব, দুর্লভ শব্দ এবং অডিও খোলার জন্য।",
+      "অডিও EveryAyah সেবার মাধ্যমে খোলা হয়।",
+      "সংযোগ HTTPS-এর মাধ্যমে হয়।",
+      "এই সংযোগ থেকে পাঠকের প্রোফাইল তৈরি করা হয় না।"
+    ],
+    "app_h": "Mushafuk অ্যান্ড্রয়েড অ্যাপ",
+    "app": [
+      "অ্যাপের তাসহিহ (তিলাওয়াত যাচাই) ফিচার মাইক্রোফোন ব্যবহার করে শুধু তখনই, যখন আপনি মাইক্রোফোন বোতাম চাপেন।",
+      "কথা ফোনের ভিতরেই চেনা হয়; অডিও কখনো আপলোড বা সংরক্ষণ করা হয় না। মাইক্রোফোন বন্ধ করলে শোনা শেষ হয়। ফোনের সেটিংস থেকে যেকোনো সময় অনুমতি প্রত্যাহার করতে পারেন।",
+      "কথার মডেল (প্রায় ৬৯ MB) শুধু আপনি চাইলে একবার HTTPS-এ GitHub (raw.githubusercontent.com) থেকে, বা বিকল্প হিসেবে quran.mushafuk.online থেকে নামানো হয় এবং অ্যাপে সেটিংস → হিফজ থেকে মুছে ফেলা যায়।",
+      "তাফসির বা অনুবাদ নামালে ফাইলগুলো HTTPS-এ nihomaho9-ui.github.io থেকে আনা হয়। মদিনার পৃষ্ঠার ফন্ট (প্রায় ৯৫ MB) একবার HTTPS-এ jsDelivr বা GitHub থেকে নামানো হয়, তারপর ডিভাইসে রাখা হয় যাতে অ্যাপ অফলাইনে চলে।",
+      "সেই হোস্টগুলো শুধু সাধারণ প্রযুক্তিগত তথ্য (যেমন IP ঠিকানা) দেখতে পায়; আমরা সেটি পাই না, এবং আপনার সম্পর্কে কিছু পাঠানো হয় না।",
+      "শেষ পৃষ্ঠা, বুকমার্ক, সেটিংস, নামানো তাফসির ও অনুবাদ, তিলাওয়াত যাচাইয়ের ইতিহাস এবং কথার মডেল শুধু ডিভাইসে থাকে।",
+      "অ্যাপ মাইক্রোফোনের অনুমতি চায় শুধু তাসহিহ মোডে প্রথমবার মাইক্রোফোন চালু করলে। ক্যামেরা, অবস্থান, পরিচিতি বা ফাইল অ্যাক্সেস চায় না।",
+      "অ্যাপে কোনো অ্যাকাউন্ট নেই, বিজ্ঞাপন বা অ্যানালিটিক্সও নেই।"
+    ],
+    "children_h": "শিশু",
+    "children": [
+      "সাইট সব বয়সের জন্য। আমরা জেনেশুনে শিশুদের নাম বা যোগাযোগের তথ্য সংগ্রহ করি না।",
+      "বিষয়বস্তু কুরআন, এবং কোনো বিজ্ঞাপন নেই।"
+    ],
+    "contact_h": "যোগাযোগ",
+    "contact_name": "Nibras Code.",
+    "email_label": "ইমেইল",
+    "site_label": "ওয়েবসাইট",
+    "terms_label": "শর্তাবলী",
+    "sources_label": "উৎস"
+  },
+  {
+    "code": "zh",
+    "html_lang": "zh-Hans",
+    "dir": "ltr",
+    "label": "中文",
+    "btn": "中文",
+    "title": "隐私政策 — Mushafuk.online",
+    "description": "Mushafuk.online 不要求注册账户，也不展示广告。笔记仅保存在本机。网站只记录基本访问统计。",
+    "kicker": "隐私",
+    "h1": "隐私政策",
+    "updated": "最近更新：2026年11月24日。",
+    "intro1": "Mushafuk.online 用于逐页阅读麦地那穆萨夫（Madinah mushaf）。",
+    "intro2": "本网站由 Nibras Code 发布。",
+    "nav_quran": "古兰经",
+    "nav_tafsir": "经注",
+    "nav_tr": "译文",
+    "nav_about": "关于我们",
+    "nav_questions": "常见问题",
+    "nav_privacy": "隐私政策",
+    "not_collect_h": "我们不收集的信息",
+    "not_collect": [
+      "没有账户。",
+      "我们不收集您的姓名、电子邮箱、电话、位置、通讯录或设备标识符。",
+      "没有广告。",
+      "我们不出售您的数据，也不与广告商分享。"
+    ],
+    "stats_h": "网站统计",
+    "stats": [
+      "在 mushafuk.online 上，网站会记录基本访问统计：页面路径、来源网站（如有）、页面语言，以及屏幕更像手机还是电脑。",
+      "如果您使用搜索，搜索文本（最多 100 个字符）和结果数量也可能被记录，以便改进网站。",
+      "这些数据会发送到我们自己的数据库，由 Supabase 托管。它们不用于建立读者画像，也不用于广告。",
+      "与任何网站请求一样，服务器可能会看到您的 IP 地址。我们不会用它来识别您的身份。",
+      "Android 应用不包含此项访问记录。"
+    ],
+    "device_h": "保留在设备上的内容",
+    "device": [
+      "语言、文字大小和夜间模式保留在本设备上。",
+      "您选择的经注、译文、语法分析（i‘rab）和生僻词（gharib）书保留在本设备上。",
+      "书签和笔记仅保留在本设备上。",
+      "它们不会被发送到服务器。"
+    ],
+    "search_h": "搜索",
+    "search": [
+      "搜索只查阅本网站上的古兰经文本、译文和经注。",
+      "如果问题是阿塞拜疆语、土耳其语、英语或俄语，答案来自该语言的译文。",
+      "问题不会被发送到外部模型。"
+    ],
+    "internet_h": "互联网与诵读",
+    "internet": [
+      "互联网用于打开页面、经注、译文、语法分析、生僻词和音频。",
+      "音频通过 EveryAyah 服务打开。",
+      "连接使用 HTTPS。",
+      "此连接不会被用来建立读者档案。"
+    ],
+    "app_h": "Mushafuk Android 应用",
+    "app": [
+      "应用中的 Tasheeh（诵读检查）功能仅在您按下麦克风按钮时使用麦克风。",
+      "语音在手机本机识别；音频不会被上传，也不会被存储。停止麦克风后即停止聆听。您可以随时在手机设置中撤回该权限。",
+      "语音模型（约 69 MB）仅在您要求时通过 HTTPS 从 GitHub（raw.githubusercontent.com）下载一次，备用地址为 quran.mushafuk.online，并可在应用的“设置 → Hifz”中删除。",
+      "下载经注或译文时，文件通过 HTTPS 从 nihomaho9-ui.github.io 获取。麦地那页面字体（约 95 MB）会通过 HTTPS 从 jsDelivr 或 GitHub 下载一次，然后保存在设备上，以便应用离线使用。",
+      "这些主机只能看到标准技术数据（例如 IP 地址）；我们不会收到这些数据，也不会发送任何关于您的信息。",
+      "上一页、书签、设置、已下载的经注和译文、诵读检查记录以及语音模型仅保留在设备上。",
+      "应用仅在您首次在 Tasheeh 模式中打开麦克风时请求麦克风权限。它不请求相机、位置、通讯录或文件访问权限。",
+      "应用没有账户，也没有广告或分析功能。"
+    ],
+    "children_h": "儿童",
+    "children": [
+      "本网站适合所有年龄。我们不会故意收集儿童的姓名或联系方式。",
+      "内容为古兰经，没有广告。"
+    ],
+    "contact_h": "联系方式",
+    "contact_name": "Nibras Code.",
+    "email_label": "电子邮件",
+    "site_label": "网站",
+    "terms_label": "条款",
+    "sources_label": "来源"
+  },
+  {
+    "code": "de",
+    "html_lang": "de",
+    "dir": "ltr",
+    "label": "Deutsch",
+    "btn": "DE",
+    "title": "Datenschutzerklärung — Mushafuk.online",
+    "description": "Mushafuk.online verlangt kein Konto und zeigt keine Werbung. Notizen bleiben auf dem Gerät. Die Website speichert nur grundlegende Besuchsstatistiken.",
+    "kicker": "Datenschutz",
+    "h1": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: 24. November 2026.",
+    "intro1": "Mushafuk.online dient dem seitenweisen Lesen des Medinenser Mushaf.",
+    "intro2": "Die Website wird von Nibras Code veröffentlicht.",
+    "nav_quran": "Koran",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Übersetzungen",
+    "nav_about": "Über uns",
+    "nav_questions": "Fragen",
+    "nav_privacy": "Datenschutz",
+    "not_collect_h": "Was wir nicht erheben",
+    "not_collect": [
+      "Es gibt kein Konto.",
+      "Wir erheben nicht Ihren Namen, Ihre E-Mail-Adresse, Telefonnummer, Ihren Standort, Ihre Kontakte oder eine Gerätekennung.",
+      "Es gibt keine Werbung.",
+      "Wir verkaufen Ihre Daten nicht und geben sie nicht an Werbetreibende weiter."
+    ],
+    "stats_h": "Website-Statistiken",
+    "stats": [
+      "Auf mushafuk.online zeichnet die Website grundlegende Besuchsstatistiken auf: den Seitenpfad, die verweisende Website (falls vorhanden), die Sprache der Seite und ob der Bildschirm eher einem Telefon oder einem Computer gleicht.",
+      "Wenn Sie die Suche nutzen, können der Suchtext (bis zu 100 Zeichen) und die Zahl der Treffer ebenfalls aufgezeichnet werden, damit die Website verbessert werden kann.",
+      "Diese Daten werden an unsere eigene, von Supabase gehostete Datenbank gesendet. Sie dienen nicht dazu, ein Profil der lesenden Person zu erstellen, und sie werden nicht für Werbung verwendet.",
+      "Wie bei jeder Website-Anfrage kann der Server Ihre IP-Adresse sehen. Wir verwenden sie nicht, um Sie zu identifizieren.",
+      "Die Android-App enthält diese Besuchserfassung nicht."
+    ],
+    "device_h": "Was auf dem Gerät bleibt",
+    "device": [
+      "Sprache, Textgröße und Nachtmodus bleiben auf diesem Gerät.",
+      "Der von Ihnen gewählte Tafsir, die Übersetzung sowie das I‘rab- und Gharib-Buch bleiben auf diesem Gerät.",
+      "Lesezeichen und Notizen bleiben nur auf diesem Gerät.",
+      "Sie werden nicht an einen Server gesendet."
+    ],
+    "search_h": "Suche",
+    "search": [
+      "Die Suche betrachtet nur den Korantext, die Übersetzungen und die Tafsire, die auf dieser Website vorliegen.",
+      "Ist die Frage auf Aserbaidschanisch, Türkisch, Englisch oder Russisch, kommt die Antwort aus der Übersetzung dieser Sprache.",
+      "Die Frage wird nicht an ein externes Modell gesendet."
+    ],
+    "internet_h": "Internet und Rezitation",
+    "internet": [
+      "Das Internet wird genutzt, um eine Seite, einen Tafsir, eine Übersetzung, I‘rab, seltene Wörter und den Ton zu öffnen.",
+      "Der Ton wird über den Dienst EveryAyah geöffnet.",
+      "Die Verbindung erfolgt per HTTPS.",
+      "Aus dieser Verbindung wird kein Profil der lesenden Person erstellt."
+    ],
+    "app_h": "Mushafuk-Android-App",
+    "app": [
+      "Die Funktion Tasheeh (Rezitationsprüfung) in der App nutzt das Mikrofon nur, wenn Sie die Mikrofontaste drücken.",
+      "Die Sprache wird auf dem Telefon selbst erkannt; Ton wird niemals hochgeladen und niemals gespeichert. Das Zuhören endet, wenn Sie das Mikrofon anhalten. Die Berechtigung können Sie jederzeit in den Telefoneinstellungen widerrufen.",
+      "Das Sprachmodell (etwa 69 MB) wird einmal über HTTPS heruntergeladen, nur wenn Sie es anfordern, von GitHub (raw.githubusercontent.com) oder hilfsweise von quran.mushafuk.online, und kann in der App unter Einstellungen → Hifz gelöscht werden.",
+      "Wenn Sie Tafsir oder Übersetzungen herunterladen, werden die Dateien über HTTPS von nihomaho9-ui.github.io geholt. Die Medinenser Seiten-Schriftarten (etwa 95 MB) werden einmal über HTTPS von jsDelivr oder GitHub heruntergeladen und dann auf dem Gerät behalten, damit die App offline arbeiten kann.",
+      "Diesen Hosts sind nur übliche technische Daten (etwa eine IP-Adresse) sichtbar; wir empfangen sie nicht, und es wird nichts über Sie gesendet.",
+      "Die letzte Seite, Lesezeichen, Einstellungen, heruntergeladene Tafsire und Übersetzungen, der Verlauf der Rezitationsprüfung und das Sprachmodell bleiben nur auf dem Gerät.",
+      "Die App fragt nur dann nach der Mikrofonberechtigung, wenn Sie das Mikrofon im Tasheeh-Modus zum ersten Mal einschalten. Kamera, Standort, Kontakte oder Dateizugriff werden nicht angefragt.",
+      "Die App hat kein Konto und weder Werbung noch Analytik."
+    ],
+    "children_h": "Kinder",
+    "children": [
+      "Die Website ist für alle Altersgruppen. Wir erheben wissentlich keine Namen oder Kontaktdaten von Kindern.",
+      "Der Inhalt ist der Koran, und es gibt keine Werbung."
+    ],
+    "contact_h": "Kontakt",
+    "contact_name": "Nibras Code.",
+    "email_label": "E-Mail",
+    "site_label": "Website",
+    "terms_label": "Bedingungen",
+    "sources_label": "Quellen"
+  },
+  {
+    "code": "en",
+    "html_lang": "en",
+    "dir": "ltr",
+    "label": "English",
+    "btn": "EN",
+    "title": "Privacy policy — Mushafuk.online",
+    "description": "Mushafuk.online asks for no account and shows no ads. Notes stay on the device. The site records only basic visit statistics.",
+    "kicker": "Privacy",
+    "h1": "Privacy policy",
+    "updated": "Last updated: 24 November 2026.",
+    "intro1": "Mushafuk.online is for reading the Madinah mushaf page by page.",
+    "intro2": "The site is published by Nibras Code.",
+    "nav_quran": "Quran",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Translations",
+    "nav_about": "About",
+    "nav_questions": "Questions",
+    "nav_privacy": "Privacy",
+    "not_collect_h": "What we do not collect",
+    "not_collect": [
+      "There is no account.",
+      "We do not take your name, email, phone, location, contacts, or device id.",
+      "There are no ads.",
+      "We do not sell your data, and we do not share it with advertisers."
+    ],
+    "stats_h": "Site statistics",
+    "stats": [
+      "On mushafuk.online the site records basic visit statistics: the page path, the referring website (if any), the page language, and whether the screen looks like a phone or a computer.",
+      "If you use search, the search text (up to 100 characters) and the number of results may also be recorded, so the site can be improved.",
+      "This is sent to our own database, hosted by Supabase. It is not used to build a profile of the reader, and it is not used for ads.",
+      "As with any website request, the server may see your IP address. We do not use it to identify you.",
+      "The Android app does not include this visit recording."
+    ],
+    "device_h": "What stays on the device",
+    "device": [
+      "Language, text size, and night mode stay on this device.",
+      "The tafsir, translation, i‘rab, and gharib book you pick stay on this device.",
+      "Bookmarks and notes stay on this device only.",
+      "They are not sent to a server."
+    ],
+    "search_h": "Search",
+    "search": [
+      "Search looks only at the Quran text, translations, and tafsirs that are on this site.",
+      "If the question is in Azerbaijani, Turkish, English, or Russian, the answer comes from that language’s translation.",
+      "The question is not sent to an outside model."
+    ],
+    "internet_h": "Internet and recitation",
+    "internet": [
+      "Internet is used to open a page, a tafsir, a translation, i‘rab, rare words, and the audio.",
+      "Audio opens through the EveryAyah service.",
+      "The connection is HTTPS.",
+      "This connection is not used to build a profile of the reader."
+    ],
+    "app_h": "Mushafuk Android app",
+    "app": [
+      "The Tasheeh (recitation check) feature in the app uses the microphone only when you press the mic button.",
+      "Speech is recognised on the phone itself; audio is never uploaded and never stored. Listening ends when you stop the mic. You can revoke the permission in your phone settings at any time.",
+      "The speech model (about 69 MB) is downloaded once over HTTPS, only when you ask for it, from GitHub (raw.githubusercontent.com), or from quran.mushafuk.online as a fallback, and can be deleted in the app under Settings → Hifz.",
+      "When you download tafsir or translations, files are fetched over HTTPS from nihomaho9-ui.github.io. The Madinah page fonts (about 95 MB) are downloaded once over HTTPS from jsDelivr or GitHub, then kept on the device so the app can work offline.",
+      "Only standard technical data (such as an IP address) is visible to those hosts; we do not receive it, and nothing about you is sent.",
+      "The last page, bookmarks, settings, downloaded tafsir and translations, recitation-check history, and the speech model stay only on the device.",
+      "The app asks for microphone permission only when you first turn the mic on in Tasheeh mode. It does not request camera, location, contacts or file access.",
+      "The app has no account, and no ads or analytics."
+    ],
+    "children_h": "Children",
+    "children": [
+      "The site is for all ages. We do not knowingly collect names or contact details from children.",
+      "The content is the Quran, and there are no ads."
+    ],
+    "contact_h": "Contact",
+    "contact_name": "Nibras Code.",
+    "email_label": "Email",
+    "site_label": "Website",
+    "terms_label": "Terms",
+    "sources_label": "Sources"
+  },
+  {
+    "code": "es",
+    "html_lang": "es",
+    "dir": "ltr",
+    "label": "Español",
+    "btn": "ES",
+    "title": "Política de privacidad — Mushafuk.online",
+    "description": "Mushafuk.online no pide cuenta ni muestra anuncios. Las notas permanecen en el dispositivo. El sitio solo registra estadísticas básicas de visita.",
+    "kicker": "Privacidad",
+    "h1": "Política de privacidad",
+    "updated": "Última actualización: 24 de noviembre de 2026.",
+    "intro1": "Mushafuk.online sirve para leer el musḥaf de Medina página a página.",
+    "intro2": "El sitio lo publica Nibras Code.",
+    "nav_quran": "Corán",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Traducciones",
+    "nav_about": "Acerca de",
+    "nav_questions": "Preguntas",
+    "nav_privacy": "Privacidad",
+    "not_collect_h": "Lo que no recopilamos",
+    "not_collect": [
+      "No hay cuenta.",
+      "No tomamos su nombre, correo, teléfono, ubicación, contactos ni el identificador del dispositivo.",
+      "No hay anuncios.",
+      "No vendemos sus datos ni los compartimos con anunciantes."
+    ],
+    "stats_h": "Estadísticas del sitio",
+    "stats": [
+      "En mushafuk.online el sitio registra estadísticas básicas de visita: la ruta de la página, el sitio de procedencia (si lo hay), el idioma de la página y si la pantalla parece un teléfono o un ordenador.",
+      "Si usa la búsqueda, el texto buscado (hasta 100 caracteres) y el número de resultados también pueden registrarse, para mejorar el sitio.",
+      "Esto se envía a nuestra propia base de datos, alojada por Supabase. No se usa para construir un perfil del lector ni para anuncios.",
+      "Como en cualquier solicitud web, el servidor puede ver su dirección IP. No la usamos para identificarle.",
+      "La aplicación para Android no incluye este registro de visitas."
+    ],
+    "device_h": "Lo que permanece en el dispositivo",
+    "device": [
+      "El idioma, el tamaño del texto y el modo nocturno permanecen en este dispositivo.",
+      "El tafsir, la traducción, el i‘rab y el libro de gharib que elija permanecen en este dispositivo.",
+      "Los marcadores y las notas permanecen solo en este dispositivo.",
+      "No se envían a un servidor."
+    ],
+    "search_h": "Búsqueda",
+    "search": [
+      "La búsqueda consulta solo el texto del Corán, las traducciones y los tafsirs que hay en este sitio.",
+      "Si la pregunta está en azerbaiyano, turco, inglés o ruso, la respuesta sale de la traducción de ese idioma.",
+      "La pregunta no se envía a un modelo externo."
+    ],
+    "internet_h": "Internet y recitación",
+    "internet": [
+      "Internet se usa para abrir una página, un tafsir, una traducción, el i‘rab, palabras raras y el audio.",
+      "El audio se abre a través del servicio EveryAyah.",
+      "La conexión es HTTPS.",
+      "Esta conexión no se usa para construir un perfil del lector."
+    ],
+    "app_h": "Aplicación Android de Mushafuk",
+    "app": [
+      "La función Tasheeh (comprobación de la recitación) en la aplicación usa el micrófono solo cuando pulsa el botón del micrófono.",
+      "El habla se reconoce en el propio teléfono; el audio nunca se sube ni se almacena. La escucha termina cuando detiene el micrófono. Puede revocar el permiso en cualquier momento en los ajustes del teléfono.",
+      "El modelo de voz (unos 69 MB) se descarga una vez por HTTPS, solo cuando lo pide, desde GitHub (raw.githubusercontent.com) o, como alternativa, desde quran.mushafuk.online, y puede eliminarse en la aplicación en Ajustes → Hifz.",
+      "Al descargar tafsir o traducciones, los archivos se obtienen por HTTPS desde nihomaho9-ui.github.io. Las fuentes de las páginas de Medina (unos 95 MB) se descargan una vez por HTTPS desde jsDelivr o GitHub y luego se guardan en el dispositivo para que la aplicación funcione sin conexión.",
+      "Esos servidores solo ven datos técnicos habituales (como una dirección IP); nosotros no los recibimos y no se envía nada sobre usted.",
+      "La última página, los marcadores, los ajustes, el tafsir y las traducciones descargados, el historial de la comprobación de la recitación y el modelo de voz permanecen solo en el dispositivo.",
+      "La aplicación pide permiso de micrófono solo la primera vez que enciende el micrófono en el modo Tasheeh. No solicita cámara, ubicación, contactos ni acceso a archivos.",
+      "La aplicación no tiene cuenta, ni anuncios ni analítica."
+    ],
+    "children_h": "Niños",
+    "children": [
+      "El sitio es para todas las edades. No recopilamos a sabiendas nombres ni datos de contacto de niños.",
+      "El contenido es el Corán y no hay anuncios."
+    ],
+    "contact_h": "Contacto",
+    "contact_name": "Nibras Code.",
+    "email_label": "Correo",
+    "site_label": "Sitio web",
+    "terms_label": "Términos",
+    "sources_label": "Fuentes"
+  },
+  {
+    "code": "fa",
+    "html_lang": "fa",
+    "dir": "rtl",
+    "label": "فارسی",
+    "btn": "FA",
+    "title": "سیاست حریم خصوصی — Mushafuk.online",
+    "description": "Mushafuk.online حساب نمی‌خواهد و تبلیغ نشان نمی‌دهد. یادداشت‌ها روی دستگاه می‌مانند. سایت فقط آمار پایه بازدید را ثبت می‌کند.",
+    "kicker": "حریم خصوصی",
+    "h1": "سیاست حریم خصوصی",
+    "updated": "آخرین به‌روزرسانی: ۲۴ نوامبر ۲۰۲۶.",
+    "intro1": "Mushafuk.online برای خواندن مصحف مدینه، صفحه به صفحه است.",
+    "intro2": "این سایت را Nibras Code منتشر می‌کند.",
+    "nav_quran": "قرآن",
+    "nav_tafsir": "تفسیر",
+    "nav_tr": "ترجمه‌ها",
+    "nav_about": "درباره ما",
+    "nav_questions": "پرسش‌ها",
+    "nav_privacy": "حریم خصوصی",
+    "not_collect_h": "آنچه جمع نمی‌کنیم",
+    "not_collect": [
+      "حساب کاربری وجود ندارد.",
+      "نام، رایانامه، تلفن، مکان، مخاطبین یا شناسه دستگاه گرفته نمی‌شود.",
+      "تبلیغی نیست.",
+      "داده‌های شما را نمی‌فروشیم و با تبلیغ‌کنندگان به اشتراک نمی‌گذاریم."
+    ],
+    "stats_h": "آمار سایت",
+    "stats": [
+      "در mushafuk.online سایت آمار پایه بازدید را ثبت می‌کند: مسیر صفحه، وب‌سایت ارجاع‌دهنده (در صورت وجود)، زبان صفحه، و این‌که صفحه نمایش بیشتر به تلفن شبیه است یا به رایانه.",
+      "اگر از جستجو استفاده کنید، متن جستجو (تا ۱۰۰ نویسه) و تعداد نتایج نیز ممکن است ثبت شود تا سایت بهبود یابد.",
+      "این داده‌ها به پایگاه داده خود ما، میزبانی‌شده در Supabase، فرستاده می‌شود. برای ساختن نمایه خواننده و برای تبلیغات به کار نمی‌رود.",
+      "مانند هر درخواست وب، سرور ممکن است نشانی IP شما را ببیند. ما از آن برای شناسایی شما استفاده نمی‌کنیم.",
+      "اپلیکیشن اندروید این ثبت بازدید را ندارد."
+    ],
+    "device_h": "آنچه روی دستگاه می‌ماند",
+    "device": [
+      "زبان، اندازه متن و حالت شب روی همین دستگاه می‌ماند.",
+      "تفسیر، ترجمه، اعراب و کتاب غریب که برمی‌گزینید روی همین دستگاه می‌ماند.",
+      "نشانک‌ها و یادداشت‌ها فقط روی همین دستگاه می‌مانند.",
+      "به سرور فرستاده نمی‌شوند."
+    ],
+    "search_h": "جستجو",
+    "search": [
+      "جستجو فقط به متن قرآن، ترجمه‌ها و تفاسیر موجود در همین سایت نگاه می‌کند.",
+      "اگر پرسش به آذربایجانی، ترکی، انگلیسی یا روسی باشد، پاسخ از ترجمه همان زبان می‌آید.",
+      "پرسش به مدل بیرونی فرستاده نمی‌شود."
+    ],
+    "internet_h": "اینترنت و تلاوت",
+    "internet": [
+      "اینترنت برای گشودن صفحه، تفسیر، ترجمه، اعراب، واژگان غریب و صدا به کار می‌رود.",
+      "صدا از طریق خدمت EveryAyah باز می‌شود.",
+      "ارتباط با HTTPS است.",
+      "از این ارتباط نمایه خواننده ساخته نمی‌شود."
+    ],
+    "app_h": "اپلیکیشن اندروید مصحفك",
+    "app": [
+      "قابلیت تصحیح (بررسی تلاوت) در اپلیکیشن میکروفون را فقط وقتی به کار می‌برد که دکمه میکروفون را بفشارید.",
+      "گفتار روی خود گوشی بازشناخته می‌شود؛ صدا هرگز بارگذاری و ذخیره نمی‌شود. با توقف میکروفون، شنیدن پایان می‌یابد. می‌توانید هر زمان مجوز را از تنظیمات گوشی پس بگیرید.",
+      "مدل گفتار (حدود ۶۹ مگابایت) فقط با درخواست شما یک بار از طریق HTTPS از GitHub (raw.githubusercontent.com) یا به صورت پشتیبان از quran.mushafuk.online بارگیری می‌شود و می‌توان آن را در اپلیکیشن از مسیر تنظیمات ← حفظ حذف کرد.",
+      "هنگام بارگیری تفسیر یا ترجمه، پرونده‌ها از طریق HTTPS از nihomaho9-ui.github.io گرفته می‌شوند. قلم‌های صفحات مصحف مدینه (حدود ۹۵ مگابایت) یک بار از طریق HTTPS از jsDelivr یا GitHub بارگیری می‌شوند و سپس روی دستگاه می‌مانند تا اپلیکیشن بدون اینترنت کار کند.",
+      "فقط داده‌های فنی معمول (مانند نشانی IP) برای آن میزبان‌ها دیده می‌شود؛ ما آن را دریافت نمی‌کنیم و چیزی درباره شما فرستاده نمی‌شود.",
+      "آخرین صفحه، نشانک‌ها، تنظیمات، تفسیر و ترجمه‌های بارگیری‌شده، تاریخچه بررسی تلاوت و مدل گفتار فقط روی دستگاه می‌مانند.",
+      "اپلیکیشن مجوز میکروفون را فقط وقتی می‌خواهد که نخستین بار در حالت تصحیح میکروفون را روشن کنید. دوربین، مکان، مخاطبین یا دسترسی به پرونده درخواست نمی‌شود.",
+      "اپلیکیشن حساب ندارد و تبلیغ و تحلیل‌گر هم ندارد."
+    ],
+    "children_h": "کودکان",
+    "children": [
+      "سایت برای همه سنین است. آگاهانه نام یا اطلاعات تماس کودکان را جمع نمی‌کنیم.",
+      "محتوا قرآن است و تبلیغی نیست."
+    ],
+    "contact_h": "تماس",
+    "contact_name": "Nibras Code.",
+    "email_label": "رایانامه",
+    "site_label": "وب‌سایت",
+    "terms_label": "شرایط",
+    "sources_label": "منابع"
+  },
+  {
+    "code": "fr",
+    "html_lang": "fr",
+    "dir": "ltr",
+    "label": "Français",
+    "btn": "FR",
+    "title": "Politique de confidentialité — Mushafuk.online",
+    "description": "Mushafuk.online ne demande pas de compte et n’affiche pas de publicités. Les notes restent sur l’appareil. Le site n’enregistre que des statistiques de visite élémentaires.",
+    "kicker": "Confidentialité",
+    "h1": "Politique de confidentialité",
+    "updated": "Dernière mise à jour : 24 novembre 2026.",
+    "intro1": "Mushafuk.online sert à lire le mushaf de Médine page par page.",
+    "intro2": "Le site est publié par Nibras Code.",
+    "nav_quran": "Coran",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Traductions",
+    "nav_about": "À propos",
+    "nav_questions": "Questions",
+    "nav_privacy": "Confidentialité",
+    "not_collect_h": "Ce que nous ne collectons pas",
+    "not_collect": [
+      "Il n’y a pas de compte.",
+      "Nous ne prenons ni votre nom, ni votre e-mail, ni votre téléphone, ni votre localisation, ni vos contacts, ni l’identifiant de l’appareil.",
+      "Il n’y a pas de publicités.",
+      "Nous ne vendons pas vos données et nous ne les partageons pas avec des annonceurs."
+    ],
+    "stats_h": "Statistiques du site",
+    "stats": [
+      "Sur mushafuk.online, le site enregistre des statistiques de visite élémentaires : le chemin de la page, le site d’origine (s’il y en a un), la langue de la page, et si l’écran ressemble à un téléphone ou à un ordinateur.",
+      "Si vous utilisez la recherche, le texte recherché (jusqu’à 100 caractères) et le nombre de résultats peuvent aussi être enregistrés, afin d’améliorer le site.",
+      "Ces données sont envoyées à notre propre base, hébergée par Supabase. Elles ne servent pas à établir un profil du lecteur, ni à la publicité.",
+      "Comme pour toute requête web, le serveur peut voir votre adresse IP. Nous ne l’utilisons pas pour vous identifier.",
+      "L’application Android n’inclut pas cet enregistrement des visites."
+    ],
+    "device_h": "Ce qui reste sur l’appareil",
+    "device": [
+      "La langue, la taille du texte et le mode nuit restent sur cet appareil.",
+      "Le tafsir, la traduction, l’i‘rab et le livre de gharib que vous choisissez restent sur cet appareil.",
+      "Les signets et les notes restent uniquement sur cet appareil.",
+      "Ils ne sont pas envoyés à un serveur."
+    ],
+    "search_h": "Recherche",
+    "search": [
+      "La recherche ne consulte que le texte du Coran, les traductions et les tafsirs présents sur ce site.",
+      "Si la question est en azéri, en turc, en anglais ou en russe, la réponse vient de la traduction de cette langue.",
+      "La question n’est pas envoyée à un modèle extérieur."
+    ],
+    "internet_h": "Internet et récitation",
+    "internet": [
+      "Internet sert à ouvrir une page, un tafsir, une traduction, l’i‘rab, les mots rares et l’audio.",
+      "L’audio s’ouvre via le service EveryAyah.",
+      "La connexion se fait en HTTPS.",
+      "Cette connexion n’est pas utilisée pour constituer un profil du lecteur."
+    ],
+    "app_h": "Application Android Mushafuk",
+    "app": [
+      "La fonction Tasheeh (vérification de la récitation) dans l’application n’utilise le microphone que lorsque vous appuyez sur le bouton du micro.",
+      "La parole est reconnue sur le téléphone lui-même ; l’audio n’est jamais envoyé ni stocké. L’écoute s’arrête lorsque vous coupez le micro. Vous pouvez retirer l’autorisation à tout moment dans les réglages du téléphone.",
+      "Le modèle de parole (environ 69 Mo) est téléchargé une fois en HTTPS, seulement si vous le demandez, depuis GitHub (raw.githubusercontent.com), ou depuis quran.mushafuk.online en secours, et peut être supprimé dans l’application sous Réglages → Hifz.",
+      "Lorsque vous téléchargez un tafsir ou des traductions, les fichiers sont récupérés en HTTPS depuis nihomaho9-ui.github.io. Les polices des pages de Médine (environ 95 Mo) sont téléchargées une fois en HTTPS depuis jsDelivr ou GitHub, puis conservées sur l’appareil pour que l’application fonctionne hors ligne.",
+      "Seules des données techniques habituelles (telles qu’une adresse IP) sont visibles pour ces hôtes ; nous ne les recevons pas, et rien vous concernant n’est envoyé.",
+      "La dernière page, les signets, les réglages, les tafsirs et traductions téléchargés, l’historique de la vérification de récitation et le modèle de parole restent uniquement sur l’appareil.",
+      "L’application demande l’autorisation du microphone seulement la première fois que vous allumez le micro en mode Tasheeh. Elle ne demande ni la caméra, ni la localisation, ni les contacts, ni l’accès aux fichiers.",
+      "L’application n’a pas de compte, ni publicités, ni analytique."
+    ],
+    "children_h": "Enfants",
+    "children": [
+      "Le site s’adresse à tous les âges. Nous ne collectons pas sciemment les noms ou coordonnées d’enfants.",
+      "Le contenu est le Coran, et il n’y a pas de publicités."
+    ],
+    "contact_h": "Contact",
+    "contact_name": "Nibras Code.",
+    "email_label": "E-mail",
+    "site_label": "Site web",
+    "terms_label": "Conditions",
+    "sources_label": "Sources"
+  },
+  {
+    "code": "ha",
+    "html_lang": "ha",
+    "dir": "ltr",
+    "label": "Hausa",
+    "btn": "HA",
+    "title": "Manufar sirri — Mushafuk.online",
+    "description": "Mushafuk.online ba ya neman asusu kuma ba ya nuna talla. Bayanai suna kan na’ura. Shafin yana rubuta ƙididdigar ziyara ta asali kawai.",
+    "kicker": "Sirri",
+    "h1": "Manufar sirri",
+    "updated": "An sabunta ƙarshe: 24 ga Nuwamba 2026.",
+    "intro1": "Mushafuk.online na karanta mushafin Madina shafi-shafi ne.",
+    "intro2": "Nibras Code ne ke buga shafin.",
+    "nav_quran": "Alkur'ani",
+    "nav_tafsir": "Tafsiri",
+    "nav_tr": "Fassara",
+    "nav_about": "Game da mu",
+    "nav_questions": "Tambayoyi",
+    "nav_privacy": "Sirri",
+    "not_collect_h": "Abin da ba mu tattara ba",
+    "not_collect": [
+      "Babu asusu.",
+      "Ba mu ɗauki suna, imel, waya, wuri, lambobin sadarwa, ko alamar na’ura ba.",
+      "Babu talla.",
+      "Ba mu sayar da bayananku ba, kuma ba mu raba su da masu talla ba."
+    ],
+    "stats_h": "Kididdigar shafin",
+    "stats": [
+      "A mushafuk.online shafin yana rubuta ƙididdigar ziyara ta asali: hanyar shafin, shafin da kuka fito daga gare shi (idan akwai), harshen shafin, da kuma ko allon ya yi kama da waya ko kwamfuta.",
+      "Idan kun yi amfani da bincike, rubutun bincike (har zuwa haruffa 100) da adadin sakamakon kuma ana iya rubuta su, don a inganta shafin.",
+      "Ana aika wannan zuwa tattara bayananmu, wanda Supabase ke ɗaukar nauyin sa. Ba a yi amfani da shi wajen gina bayanin mai karatu ba, kuma ba a yi amfani da shi don talla ba.",
+      "Kamar kowace buƙatar yanar gizo, uwar garke na iya ganin adireshin IP ɗinku. Ba mu yi amfani da shi don gane ku ba.",
+      "Manhajar Android ba ta ƙunshi wannan rubutun ziyara ba."
+    ],
+    "device_h": "Abin da yake a kan na’ura",
+    "device": [
+      "Harshe, girman rubutu, da yanayin dare suna a kan wannan na’ura.",
+      "Tafsiri, fassara, i‘rab, da littafin gharib da kuka zaɓa suna a kan wannan na’ura.",
+      "Alamomin shafi da bayanai suna a kan wannan na’ura kawai.",
+      "Ba a aika su zuwa uwar garke ba."
+    ],
+    "search_h": "Bincike",
+    "search": [
+      "Bincike yana kallo kawai ga rubutun Alkur'ani, fassarori, da tafsirai da ke a wannan shafi.",
+      "Idan tambayar tana cikin Azerbaijanci, Turki, Ingilishi, ko Rashanci, amsa tana zuwa daga fassarar wannan harshe.",
+      "Ba a aika tambayar zuwa wani samfurin waje ba."
+    ],
+    "internet_h": "Intanet da karatu",
+    "internet": [
+      "Ana amfani da intanet don buɗe shafi, tafsiri, fassara, i‘rab, kalmomi da baƙi, da sauti.",
+      "Sauti yana buɗewa ta hidimar EveryAyah.",
+      "Haɗin yana tafiya da HTTPS.",
+      "Ba a yi amfani da wannan haɗin don gina bayanin mai karatu ba."
+    ],
+    "app_h": "Manhajar Android ta Mushafuk",
+    "app": [
+      "Siffar Tasheeh (duba karatun) a cikin manhaja tana amfani da makirufo kawai lokacin da kuka danna maɓallin makirufo.",
+      "Ana gane magana a kan waya kanta; ba a taba loda sauti ba kuma ba a adana shi ba. Sauraro yana ƙarewa da kuka tsaya makirufo. Kuna iya janye izinin a kowane lokaci a cikin saitunan waya.",
+      "Samfurin magana (kusan MB 69) ana sauke shi sau ɗaya ta HTTPS, kawai idan kuka nema, daga GitHub (raw.githubusercontent.com), ko daga quran.mushafuk.online a matsayin madadin, kuma ana iya goge shi a manhaja a ƙarƙashin Saituna → Hifz.",
+      "Idan kuka sauke tafsiri ko fassarori, ana ɗaukar fayiloli ta HTTPS daga nihomaho9-ui.github.io. Rubutun shafukan Madina (kusan MB 95) ana sauke su sau ɗaya ta HTTPS daga jsDelivr ko GitHub, sai a ajiye su a na’ura don manhaja ta yi aiki ba tare da intanet ba.",
+      "Bayanan fasaha na yau da kullum kawai (kamar adireshin IP) ke bayyana wa waɗannan rundunonin; ba mu karɓe su ba, kuma ba a aika komai game da ku ba.",
+      "Shafin ƙarshe, alamomin shafi, saituna, tafsirin da fassarorin da aka sauke, tarihin duba karatun, da samfurin magana suna a kan na’ura kawai.",
+      "Manhaja tana neman izinin makirufo kawai lokacin da kuka kunna makirufo a karon farko a yanayin Tasheeh. Ba ta neman kyamara, wuri, lambobin sadarwa, ko shiga fayiloli ba.",
+      "Manhaja ba ta da asusu, kuma babu talla ko nazari."
+    ],
+    "children_h": "Yara",
+    "children": [
+      "Shafin na kowane shekara ne. Ba mu tattara sunaye ko bayanan tuntuɓar yara da gangan ba.",
+      "Abun ciki Alkur'ani ne, kuma babu talla."
+    ],
+    "contact_h": "Tuntuɓa",
+    "contact_name": "Nibras Code.",
+    "email_label": "Imel",
+    "site_label": "Shafin yanar gizo",
+    "terms_label": "Sharuɗa",
+    "sources_label": "Majiyoyi"
+  },
+  {
+    "code": "hi",
+    "html_lang": "hi",
+    "dir": "ltr",
+    "label": "हिन्दी",
+    "btn": "HI",
+    "title": "गोपनीयता नीति — Mushafuk.online",
+    "description": "Mushafuk.online खाता नहीं माँगता और विज्ञापन नहीं दिखाता। नोट डिवाइस पर रहते हैं। साइट केवल बुनियादी यात्रा सांख्यिकी दर्ज करती है।",
+    "kicker": "गोपनीयता",
+    "h1": "गोपनीयता नीति",
+    "updated": "अंतिम अद्यतन: 24 नवम्बर 2026.",
+    "intro1": "Mushafuk.online मदीना मुसहफ़ को पृष्ठ दर पृष्ठ पढ़ने के लिए है।",
+    "intro2": "साइट Nibras Code द्वारा प्रकाशित है.",
+    "nav_quran": "कुरआन",
+    "nav_tafsir": "तफ़सीर",
+    "nav_tr": "अनुवाद",
+    "nav_about": "हमारे बारे में",
+    "nav_questions": "प्रश्न",
+    "nav_privacy": "गोपनीयता",
+    "not_collect_h": "हम क्या नहीं جمع करते",
+    "not_collect": [
+      "कोई खाता नहीं है.",
+      "हम आपका नाम, ईमेल, फ़ोन, स्थान, संपर्क या डिवाइस पहचानकर्ता नहीं लेते.",
+      "कोई विज्ञापन नहीं हैं.",
+      "हम आपका डेटा नहीं बेचते और विज्ञापनदाताओं के साथ साझा नहीं करते."
+    ],
+    "stats_h": "साइट सांख्यिकी",
+    "stats": [
+      "mushafuk.online पर साइट बुनियादी यात्रा सांख्यिकी दर्ज करती है: पृष्ठ का पथ, संदर्भित वेबसाइट (यदि हो), पृष्ठ की भाषा, और स्क्रीन फ़ोन जैसी लगती है या कंप्यूटर जैसी.",
+      "यदि आप खोज का उपयोग करते हैं, तो खोज पाठ (अधिकतम 100 अक्षर) और परिणामों की संख्या भी दर्ज की जा सकती है, ताकि साइट सुधर सके.",
+      "यह हमारे अपने डेटाबेस को भेजा जाता है, जिसे Supabase होस्ट करता है. इसका उपयोग पाठक की प्रोफ़ाइल बनाने या विज्ञापन के लिए नहीं होता.",
+      "किसी भी वेब अनुरोध की तरह सर्वर आपका IP पता देख सकता है. हम आपको पहचानने के लिए उसका उपयोग नहीं करते.",
+      "Android ऐप में यह यात्रा-अभिलेख नहीं है."
+    ],
+    "device_h": "डिवाइस पर क्या रहता है",
+    "device": [
+      "भाषा, पाठ का आकार और रात्रि मोड इसी डिवाइस पर रहते हैं.",
+      "आपकी चुनी तफ़सीर, अनुवाद, इ‘राब और ग़रीब पुस्तक इसी डिवाइस पर रहती है.",
+      "बुकमार्क और नोट केवल इसी डिवाइस पर रहते हैं.",
+      "वे सर्वर पर नहीं भेजे जाते."
+    ],
+    "search_h": "खोज",
+    "search": [
+      "खोज केवल इसी साइट पर मौजूद कुरआन के पाठ, अनुवादों और तफ़सीरों को देखती है.",
+      "यदि प्रश्न अज़रबैजानी, तुर्की, अंग्रेज़ी या रूसी में है, तो उत्तर उसी भाषा के अनुवाद से आता है.",
+      "प्रश्न किसी बाहरी मॉडल को नहीं भेजा जाता."
+    ],
+    "internet_h": "इंटरनेट और तिलावत",
+    "internet": [
+      "इंटरनेट पृष्ठ, तफ़सीर, अनुवाद, इ‘राब, दुर्लभ शब्द और ऑडियो खोलने के लिए उपयोग होता है.",
+      "ऑडियो EveryAyah सेवा के माध्यम से खुलता है.",
+      "कनेक्शन HTTPS से होता है.",
+      "इस कनेक्शन से पाठक की प्रोफ़ाइल नहीं बनाई जाती."
+    ],
+    "app_h": "Mushafuk Android ऐप",
+    "app": [
+      "ऐप में तस्हीह (तिलावत जाँच) सुविधा माइक्रोफ़ोन का उपयोग केवल तब करती है जब आप माइक्रोफ़ोन बटन दबाते हैं.",
+      "वाणी फ़ोन पर ही पहचानी जाती है; ऑडियो कभी अपलोड या संग्रहीत नहीं होता. माइक्रोफ़ोन बंद करते ही सुनना समाप्त हो जाता है. आप फ़ोन सेटिंग में कभी भी अनुमति वापस ले सकते हैं.",
+      "वाणी मॉडल (लगभग 69 MB) केवल आपके अनुरोध पर एक बार HTTPS से GitHub (raw.githubusercontent.com) से, या विकल्प के रूप में quran.mushafuk.online से डाउनलोड होता है, और ऐप में सेटिंग → हिफ़्ज़ से हटाया जा सकता है.",
+      "जब आप तफ़सीर या अनुवाद डाउनलोड करते हैं, फ़ाइलें HTTPS से nihomaho9-ui.github.io से आती हैं. मदीना पृष्ठ के फ़ॉन्ट (लगभग 95 MB) एक बार HTTPS से jsDelivr या GitHub से डाउनलोड होते हैं, फिर डिवाइस पर रहते हैं ताकि ऐप ऑफ़लाइन चल सके.",
+      "उन होस्ट को केवल सामान्य तकनीकी डेटा (जैसे IP पता) दिखाई देता है; हम उसे प्राप्त नहीं करते, और आपके बारे में कुछ नहीं भेजा जाता.",
+      "अंतिम पृष्ठ, बुकमार्क, सेटिंग, डाउनलोड की गई तफ़सीर और अनुवाद, तिलावत जाँच का इतिहास और वाणी मॉडल केवल डिवाइस पर रहते हैं.",
+      "ऐप माइक्रोफ़ोन की अनुमति केवल तभी माँगता है जब आप तस्हीह मोड में पहली बार माइक्रोफ़ोन चालू करते हैं. कैमरा, स्थान, संपर्क या फ़ाइल पहुँच नहीं माँगी जाती.",
+      "ऐप में कोई खाता नहीं है, और न विज्ञापन हैं न विश्लेषण."
+    ],
+    "children_h": "बच्चे",
+    "children": [
+      "साइट सभी आयु के लिए है. हम जानबूझकर बच्चों के नाम या संपर्क विवरण नहीं جمع करते.",
+      "सामग्री कुरआन है, और कोई विज्ञापन नहीं हैं."
+    ],
+    "contact_h": "संपर्क",
+    "contact_name": "Nibras Code.",
+    "email_label": "ईमेल",
+    "site_label": "वेबसाइट",
+    "terms_label": "शर्तें",
+    "sources_label": "स्रोत"
+  },
+  {
+    "code": "id",
+    "html_lang": "id",
+    "dir": "ltr",
+    "label": "Indonesia",
+    "btn": "ID",
+    "title": "Kebijakan privasi — Mushafuk.online",
+    "description": "Mushafuk.online tidak meminta akun dan tidak menampilkan iklan. Catatan tetap di perangkat. Situs hanya mencatat statistik kunjungan dasar.",
+    "kicker": "Privasi",
+    "h1": "Kebijakan privasi",
+    "updated": "Terakhir diperbarui: 24 November 2026.",
+    "intro1": "Mushafuk.online untuk membaca mushaf Madinah halaman demi halaman.",
+    "intro2": "Situs ini diterbitkan oleh Nibras Code.",
+    "nav_quran": "Quran",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Terjemahan",
+    "nav_about": "Tentang",
+    "nav_questions": "Pertanyaan",
+    "nav_privacy": "Privasi",
+    "not_collect_h": "Apa yang tidak kami kumpulkan",
+    "not_collect": [
+      "Tidak ada akun.",
+      "Kami tidak mengambil nama, email, telepon, lokasi, kontak, atau identitas perangkat Anda.",
+      "Tidak ada iklan.",
+      "Kami tidak menjual data Anda dan tidak membagikannya kepada pengiklan."
+    ],
+    "stats_h": "Statistik situs",
+    "stats": [
+      "Di mushafuk.online, situs mencatat statistik kunjungan dasar: jalur halaman, situs rujukan (jika ada), bahasa halaman, dan apakah layar tampak seperti telepon atau komputer.",
+      "Jika Anda menggunakan pencarian, teks pencarian (hingga 100 karakter) dan jumlah hasil juga dapat dicatat, agar situs dapat diperbaiki.",
+      "Data ini dikirim ke basis data kami sendiri, yang dihosting oleh Supabase. Data itu tidak digunakan untuk membangun profil pembaca dan tidak digunakan untuk iklan.",
+      "Seperti pada setiap permintaan situs web, server mungkin melihat alamat IP Anda. Kami tidak menggunakannya untuk mengidentifikasi Anda.",
+      "Aplikasi Android tidak menyertakan pencatatan kunjungan ini."
+    ],
+    "device_h": "Apa yang tetap di perangkat",
+    "device": [
+      "Bahasa, ukuran teks, dan mode malam tetap di perangkat ini.",
+      "Tafsir, terjemahan, i‘rab, dan kitab gharib yang Anda pilih tetap di perangkat ini.",
+      "Markah buku dan catatan hanya tetap di perangkat ini.",
+      "Semuanya tidak dikirim ke server."
+    ],
+    "search_h": "Pencarian",
+    "search": [
+      "Pencarian hanya melihat teks Quran, terjemahan, dan tafsir yang ada di situs ini.",
+      "Jika pertanyaan dalam bahasa Azerbaijan, Turki, Inggris, atau Rusia, jawabannya berasal dari terjemahan bahasa itu.",
+      "Pertanyaan tidak dikirim ke model di luar."
+    ],
+    "internet_h": "Internet dan bacaan",
+    "internet": [
+      "Internet digunakan untuk membuka halaman, tafsir, terjemahan, i‘rab, kata-kata langka, dan audio.",
+      "Audio dibuka melalui layanan EveryAyah.",
+      "Sambungan memakai HTTPS.",
+      "Sambungan ini tidak digunakan untuk membangun profil pembaca."
+    ],
+    "app_h": "Aplikasi Android Mushafuk",
+    "app": [
+      "Fitur Tasheeh (pemeriksaan bacaan) di aplikasi memakai mikrofon hanya ketika Anda menekan tombol mikrofon.",
+      "Ucapan dikenali di telepon itu sendiri; audio tidak pernah diunggah dan tidak pernah disimpan. Pendengaran berhenti ketika Anda mematikan mikrofon. Anda dapat mencabut izin kapan saja di pengaturan telepon.",
+      "Model ucapan (sekitar 69 MB) diunduh sekali melalui HTTPS, hanya ketika Anda memintanya, dari GitHub (raw.githubusercontent.com), atau dari quran.mushafuk.online sebagai cadangan, dan dapat dihapus di aplikasi pada Pengaturan → Hifz.",
+      "Ketika Anda mengunduh tafsir atau terjemahan, berkas diambil melalui HTTPS dari nihomaho9-ui.github.io. Font halaman Madinah (sekitar 95 MB) diunduh sekali melalui HTTPS dari jsDelivr atau GitHub, lalu disimpan di perangkat agar aplikasi dapat bekerja luring.",
+      "Hanya data teknis biasa (seperti alamat IP) yang terlihat oleh host tersebut; kami tidak menerimanya, dan tidak ada hal tentang Anda yang dikirim.",
+      "Halaman terakhir, markah buku, pengaturan, tafsir dan terjemahan yang diunduh, riwayat pemeriksaan bacaan, dan model ucapan hanya tetap di perangkat.",
+      "Aplikasi meminta izin mikrofon hanya ketika Anda pertama kali menyalakan mikrofon dalam mode Tasheeh. Aplikasi tidak meminta kamera, lokasi, kontak, atau akses berkas.",
+      "Aplikasi tidak memiliki akun, dan tidak ada iklan atau analitik."
+    ],
+    "children_h": "Anak-anak",
+    "children": [
+      "Situs ini untuk segala usia. Kami tidak sengaja mengumpulkan nama atau data kontak anak-anak.",
+      "Isinya adalah Quran, dan tidak ada iklan."
+    ],
+    "contact_h": "Kontak",
+    "contact_name": "Nibras Code.",
+    "email_label": "Email",
+    "site_label": "Situs web",
+    "terms_label": "Ketentuan",
+    "sources_label": "Sumber"
+  },
+  {
+    "code": "ja",
+    "html_lang": "ja",
+    "dir": "ltr",
+    "label": "日本語",
+    "btn": "JA",
+    "title": "プライバシーポリシー — Mushafuk.online",
+    "description": "Mushafuk.online はアカウントを求めず、広告も表示しません。メモは端末に残ります。サイトが記録するのは基本的な訪問統計のみです。",
+    "kicker": "プライバシー",
+    "h1": "プライバシーポリシー",
+    "updated": "最終更新：2026年11月24日。",
+    "intro1": "Mushafuk.online は、マディーナのムスハフをページごとに読むためのサイトです。",
+    "intro2": "サイトは Nibras Code が公開しています。",
+    "nav_quran": "クルアーン",
+    "nav_tafsir": "タフスィール",
+    "nav_tr": "翻訳",
+    "nav_about": "私たちについて",
+    "nav_questions": "質問",
+    "nav_privacy": "プライバシー",
+    "not_collect_h": "収集しないもの",
+    "not_collect": [
+      "アカウントはありません。",
+      "氏名、メール、電話、位置情報、連絡先、端末識別子は取得しません。",
+      "広告はありません。",
+      "お客様のデータを販売せず、広告主とも共有しません。"
+    ],
+    "stats_h": "サイト統計",
+    "stats": [
+      "mushafuk.online では、基本的な訪問統計を記録します。ページの経路、参照元サイト（ある場合）、ページの言語、画面が電話とコンピュータのどちらに近いか、です。",
+      "検索を使う場合、サイト改善のため、検索語（最大100文字）と結果件数も記録されることがあります。",
+      "これらは Supabase 上の当社自身のデータベースに送られます。読者のプロフィール作成や広告には使いません。",
+      "一般のウェブサイトへの通信と同様、サーバーは IP アドレスを見ることがあります。それを身元の特定には使いません。",
+      "Android アプリには、この訪問記録は含まれません。"
+    ],
+    "device_h": "端末に残るもの",
+    "device": [
+      "言語、文字サイズ、夜間モードはこの端末に残ります。",
+      "選択したタフスィール、翻訳、イウラーブ、ガリーブの書はこの端末に残ります。",
+      "ブックマークとメモはこの端末にのみ残ります。",
+      "サーバーには送られません。"
+    ],
+    "search_h": "検索",
+    "search": [
+      "検索は、このサイトにあるクルアーン本文、翻訳、タフスィールだけを見ます。",
+      "質問がアゼルバイジャン語、トルコ語、英語、またはロシア語の場合、答えはその言語の翻訳から得られます。",
+      "質問は外部のモデルには送られません。"
+    ],
+    "internet_h": "インターネットと誦読",
+    "internet": [
+      "インターネットは、ページ、タフスィール、翻訳、イウラーブ、珍しい語句、音声を開くために使います。",
+      "音声は EveryAyah サービスを通じて開きます。",
+      "接続は HTTPS です。",
+      "この接続から読者のプロフィールは作られません。"
+    ],
+    "app_h": "Mushafuk の Android アプリ",
+    "app": [
+      "アプリの Tasheeh（誦読チェック）機能は、マイクボタンを押したときだけマイクを使います。",
+      "音声認識は電話本体で行われ、音声がアップロードされたり保存されたりすることはありません。マイクを止めると聴取は終わります。権限は電話の設定からいつでも取り消せます。",
+      "音声モデル（約69 MB）は、依頼したときに一度だけ HTTPS で GitHub（raw.githubusercontent.com）から、予備として quran.mushafuk.online からダウンロードされ、アプリの「設定 → Hifz」で削除できます。",
+      "タフスィールや翻訳をダウンロードすると、ファイルは HTTPS で nihomaho9-ui.github.io から取得されます。マディーナのページ用フォント（約95 MB）は、HTTPS で jsDelivr または GitHub から一度ダウンロードされ、アプリがオフラインで動くよう端末に残されます。",
+      "それらのホストに見えるのは、IP アドレスなどの通常の技術データだけです。当社はそれを受け取らず、あなたに関する情報も送られません。",
+      "最後のページ、ブックマーク、設定、ダウンロードしたタフスィールと翻訳、誦読チェックの履歴、音声モデルは端末にのみ残ります。",
+      "アプリがマイクの許可を求めるのは、Tasheeh モードで初めてマイクをオンにしたときだけです。カメラ、位置情報、連絡先、ファイルへのアクセスは求めません。",
+      "アプリにアカウントはなく、広告も解析もありません。"
+    ],
+    "children_h": "子ども",
+    "children": [
+      "本サイトはあらゆる年齢向けです。子どもの氏名や連絡先を故意に収集することはありません。",
+      "内容はクルアーンであり、広告はありません。"
+    ],
+    "contact_h": "連絡先",
+    "contact_name": "Nibras Code.",
+    "email_label": "メール",
+    "site_label": "ウェブサイト",
+    "terms_label": "利用規約",
+    "sources_label": "出典"
+  },
+  {
+    "code": "ku",
+    "html_lang": "ku",
+    "dir": "rtl",
+    "label": "کوردی",
+    "btn": "KU",
+    "title": "سیاسەتی تایبەتێتی — Mushafuk.online",
+    "description": "Mushafuk.online حساب ناوێت و ڕیکلام پیشان نادات. تێبینییەکان لەسەر ئامێرەکە دەمێننەوە. ماڵپەڕ تەنها ئاماری سەرەتایی سەردان تۆمار دەکات.",
+    "kicker": "تایبەتێتی",
+    "h1": "سیاسەتی تایبەتێتی",
+    "updated": "دوایین نوێکردنەوە: ٢٤ی نۆڤەمبەری ٢٠٢٦.",
+    "intro1": "Mushafuk.online بۆ خوێندنەوەی موسحەفی مەدینە لاپەڕە بە لاپەڕەیە.",
+    "intro2": "ماڵپەڕەکە Nibras Code بڵاوی دەکاتەوە.",
+    "nav_quran": "قورئان",
+    "nav_tafsir": "تەفسیر",
+    "nav_tr": "وەرگێڕانەکان",
+    "nav_about": "دەربارەی ئێمە",
+    "nav_questions": "پرسیارەکان",
+    "nav_privacy": "تایبەتێتی",
+    "not_collect_h": "ئەوەی کۆی ناکەینەوە",
+    "not_collect": [
+      "حساب نییە.",
+      "ناو، ئیمەیڵ، تەلەفۆن، شوێن، پەیوەندییەکان یان ناسنامەی ئامێر ناگرین.",
+      "ڕیکلام نییە.",
+      "زانیارییەکانت نافرۆشین و لەگەڵ ڕیکلامکەران هاوبەشی ناکەین."
+    ],
+    "stats_h": "ئاماری ماڵپەڕ",
+    "stats": [
+      "لە mushafuk.online ماڵپەڕ ئاماری سەرەتایی سەردان تۆمار دەکات: ڕێڕەوی لاپەڕە، ماڵپەڕی سەرچاوە (ئەگەر هەبێت)، زمانی لاپەڕە، و ئەوەی شاشە زیاتر وێنەی تەلەفۆنە یان کۆمپیوتەر.",
+      "ئەگەر گەڕان بەکاربهێنیت، دەقی گەڕان (تا ١٠٠ پیت) و ژمارەی ئەنجامەکانیش لەوانەیە تۆمار بکرێن، بۆ باشترکردنی ماڵپەڕ.",
+      "ئەمە دەنێردرێت بۆ بنکەی زانیاریی خۆمان، کە Supabase میوانداری دەکات. بۆ دروستکردنی پڕۆفایلی خوێنەر و بۆ ڕیکلام بەکارناهێنرێت.",
+      "وەک هەر داواکارییەکی وێب، ڕاژەکار لەوانەیە ناونیشانی IPـەکەت ببینێت. ئێمە بۆ ناسینەوەت بەکاری ناهێنین.",
+      "ئەپی ئەندرۆید ئەم تۆمارکردنی سەردانە لەخۆ ناگرێت."
+    ],
+    "device_h": "ئەوەی لەسەر ئامێر دەمێنێتەوە",
+    "device": [
+      "زمان، قەبارەی دەق و دۆخی شەو لەسەر ئەم ئامێرە دەمێننەوە.",
+      "تەفسیر، وەرگێڕان، اعراب و کتێبی غەریب کە هەڵیدەبژێریت لەسەر ئەم ئامێرە دەمێننەوە.",
+      "نیشانەکان و تێبینییەکان تەنها لەسەر ئەم ئامێرە دەمێننەوە.",
+      "نانێردرێن بۆ ڕاژەکار."
+    ],
+    "search_h": "گەڕان",
+    "search": [
+      "گەڕان تەنها سەیری دەقی قورئان، وەرگێڕانەکان و تەفسیرەکانی ئەم ماڵپەڕە دەکات.",
+      "ئەگەر پرسیارەکە بە ئازەربایجانی، تورکی، ئینگلیزی یان ڕووسی بێت، وەڵام لە وەرگێڕانی ئەو زمانەوە دێت.",
+      "پرسیار بۆ مۆدێلێکی دەرەکی نانێردرێت."
+    ],
+    "internet_h": "ئینتەرنێت و خوێندنەوە",
+    "internet": [
+      "ئینتەرنێت بۆ کردنەوەی لاپەڕە، تەفسیر، وەرگێڕان، اعراب، وشە دەگمەنەکان و دەنگ بەکاردێت.",
+      "دەنگ لە ڕێگەی خزمەتگوزاری EveryAyah دەکرێتەوە.",
+      "پەیوەندی بە HTTPS ـە.",
+      "لەم پەیوەندییەوە پڕۆفایلی خوێنەر دروست ناکرێت."
+    ],
+    "app_h": "ئەپی ئەندرۆیدی Mushafuk",
+    "app": [
+      "تایبەتمەندی تەسحێح (پشکنینی خوێندنەوە) لە ئەپەکەدا مایکرۆفۆن تەنها کاتێک بەکاردەهێنێت کە دوگمەی مایکرۆفۆن دەگریت.",
+      "قسە لەسەر خودی تەلەفۆن دەناسرێتەوە؛ دەنگ هەرگیز بارناکرێت و هەڵناگیرێت. گوێگرتن کۆتایی دێت کاتێک مایکرۆفۆن دەوەستێنیت. دەتوانیت هەر کاتێک مۆڵەتەکە لە ڕێکخستنەکانی تەلەفۆن هەڵبوەشێنیتەوە.",
+      "مۆدێلی قسە (نزیکەی ٦٩ مێگابایت) تەنها کاتێک داوای دەکەیت یەک جار بە HTTPS لە GitHub (raw.githubusercontent.com)، یان وەک یەدەگ لە quran.mushafuk.online دادەبەزێت، و دەتوانرێت لە ئەپەکەدا لە ڕێکخستنەکان ← حیفظ بسڕدرێتەوە.",
+      "کاتێک تەفسیر یان وەرگێڕان دادەبەزێنیت، پەڕگەکان بە HTTPS لە nihomaho9-ui.github.io دەهێنرێن. فۆنتەکانی لاپەڕەی مەدینە (نزیکەی ٩٥ مێگابایت) یەک جار بە HTTPS لە jsDelivr یان GitHub دادەبەزن، پاشان لەسەر ئامێر دەمێننەوە تا ئەپەکە بە بێ هێڵ کار بکات.",
+      "تەنها زانیاری تەکنیکی ئاسایی (وەک ناونیشانی IP) بۆ ئەو میواندارانە دیارە؛ ئێمە وەریناگرین، و هیچ شتێک دەربارەی تۆ نانێردرێت.",
+      "دوایین لاپەڕە، نیشانەکان، ڕێکخستنەکان، تەفسیر و وەرگێڕانە داگیراوەکان، مێژووی پشکنینی خوێندنەوە و مۆدێلی قسە تەنها لەسەر ئامێر دەمێننەوە.",
+      "ئەپەکە مۆڵەتی مایکرۆفۆن تەنها کاتێک دەخوازێت کە یەکەم جار لە دۆخی تەسحێح مایکرۆفۆن هەڵدەکەیت. کامێرا، شوێن، پەیوەندییەکان یان دەستگەیشتن بە پەڕگە داواناکرێت.",
+      "ئەپەکە حسابی نییە، ڕیکلام و شیکاریشی نییە."
+    ],
+    "children_h": "منداڵان",
+    "children": [
+      "ماڵپەڕ بۆ هەموو تەمەنێکە. بە ئەنقەست ناوی منداڵان یان زانیاری پەیوەندییان کۆناکەینەوە.",
+      "ناوەڕۆک قورئانە و ڕیکلام نییە."
+    ],
+    "contact_h": "پەیوەندی",
+    "contact_name": "Nibras Code.",
+    "email_label": "ئیمەیڵ",
+    "site_label": "ماڵپەڕ",
+    "terms_label": "مەرجەکان",
+    "sources_label": "سەرچاوەکان"
+  },
+  {
+    "code": "ky",
+    "html_lang": "ky",
+    "dir": "ltr",
+    "label": "Кыргызча",
+    "btn": "KY",
+    "title": "Купуялуулук саясаты — Mushafuk.online",
+    "description": "Mushafuk.online эсеп сурабайт жана жарнама көрсөтпөйт. Жазуулар түзмөктө калат. Сайт негизги кирүү статистикасын гана жазат.",
+    "kicker": "Купуялуулук",
+    "h1": "Купуялуулук саясаты",
+    "updated": "Акыркы жаңыртуу: 2026-жылдын 24-ноябры.",
+    "intro1": "Mushafuk.online Мадина мусхафын баракма-барак окуу үчүн.",
+    "intro2": "Сайтты Nibras Code жарыялайт.",
+    "nav_quran": "Куран",
+    "nav_tafsir": "Тафсир",
+    "nav_tr": "Котормолор",
+    "nav_about": "Биз жөнүндө",
+    "nav_questions": "Суроолор",
+    "nav_privacy": "Купуялуулук",
+    "not_collect_h": "Эмнени жыйнабайбыз",
+    "not_collect": [
+      "Эсеп жок.",
+      "Атыңыз, электрондук почта, телефон, жайгашкан жер, контакттар же түзмөк идентификатору алынбайт.",
+      "Жарнама жок.",
+      "Маалыматыңызды сатпайбыз жана жарнамачылар менен бөлүшпөйбүз."
+    ],
+    "stats_h": "Сайттын статистикасы",
+    "stats": [
+      "mushafuk.online сайты негизги кирүү статистикасын жазат: барактын жолу, кайсы сайттан келгениңиз (бар болсо), барактын тили жана экран телефонго окшошубу же компьютерге.",
+      "Изделүүнү колдонсоңуз, изделүү тексти (кеңири 100 белги) жана жыйынтыктардын саны да жазылышы мүмкүн, сайт жакшырсын үчүн.",
+      "Бул маалымат өз маалымат базабызга жөнөтүлөт, аны Supabase жайгаштырат. Окурмандын профили түзүлбөйт жана жарнама үчүн колдонулбайт.",
+      "Каалаган веб сурамдагыдай, сервер IP дарегиңизди көрүшү мүмкүн. Биз аны сизди таануу үчүн колдонбойбуз.",
+      "Android тиркемесинде бул кирүү жазуусу жок."
+    ],
+    "device_h": "Түзмөктө кала тургандар",
+    "device": [
+      "Тил, тексттин өлчөмү жана түнкү режим ушул түзмөктө калат.",
+      "Тандалган тафсир, котормо, и‘раб жана гариб китеби ушул түзмөктө калат.",
+      "Кыстырмалар жана жазуулар ушул түзмөктө гана калат.",
+      "Алар серверге жөнөтүлбөйт."
+    ],
+    "search_h": "Издөө",
+    "search": [
+      "Издөө ушул сайттагы Курандын текстине, котормолорго жана тафсирлерге гана карайтынат.",
+      "Суроо азербайжан, түрк, англис же орус тилинде болсо, жооп ошол тилдин котормосунан келет.",
+      "Суроо сырткы моделге жөнөтүлбөйт."
+    ],
+    "internet_h": "Интернет жана кыраат",
+    "internet": [
+      "Интернет баракты, тафсирди, котормону, и‘рабды, сейрек сөздөрдү жана үндү ачуу үчүн колдонулат.",
+      "Үн EveryAyah кызматы аркылуу ачылат.",
+      "Байланыш HTTPS менен жүрөт.",
+      "Бул байланыштан окурмандын профили жыйналбайт."
+    ],
+    "app_h": "Mushafuk Android тиркемеси",
+    "app": [
+      "Тиркемедеги Тасхих (кыраатты текшерүү) микрофонду сиз микрофон баскычын басканда гана колдонот.",
+      "Сүйлөө телефондун өзүндө таанылат; үн эч жакка жүктөлбөйт жана сакталбайт. Микрофонду токтотсоңуз, угуу бүтөт. Уруксатты каалаган учурда телефондун жөндөөлөрүнөн кайтарып алсаңыз болот.",
+      "Сүйлөө модели (болжол менен 69 МБ) сиз сураганда гана бир жолу HTTPS менен GitHub’дан (raw.githubusercontent.com), запас катары quran.mushafuk.online’дан жүктөлөт жана тиркемеде Жөндөөлөр → Хифз бөлүмүнөн өчүрүлүшү мүмкүн.",
+      "Тафсир же котормо жүктөгөндө файлдар nihomaho9-ui.github.io’дан HTTPS менен алынат. Мадина барак шрифттери (болжол менен 95 МБ) бир жолу HTTPS менен jsDelivr же GitHub’дан жүктөлүп, андан кийин түзмөктө калат, тиркеме офлайн иштесин үчүн.",
+      "Ал хостторго стандарттуу техникалык маалымат гана (мисалы, IP дареги) көрүнөт; биз аны албайбыз жана сиз жөнүндө эч нерсе жөнөтүлбөйт.",
+      "Акыркы барак, кыстырмалар, жөндөөлөр, жүктөлгөн тафсир менен котормолор, кыраат текшерүүсүнүн тарыхы жана сүйлөө модели түзмөктө гана калат.",
+      "Тиркеме микрофон уруксатын Тасхих режиминде микрофонду биринчи жолу күйгүзгөндө гана сурайт. Камера, жайгашкан жер, контакттар же файл уруксаты суралбайт.",
+      "Тиркемеде эсеп жок, жарнама жана аналитика да жок."
+    ],
+    "children_h": "Балдар",
+    "children": [
+      "Сайт бардык жашка. Биз атайылап балдардын атын же байланыш маалыматын жыйнабайбыз.",
+      "Мазмуну Куран, жана жарнама жок."
+    ],
+    "contact_h": "Байланыш",
+    "contact_name": "Nibras Code.",
+    "email_label": "Почта",
+    "site_label": "Веб-сайт",
+    "terms_label": "Шарттар",
+    "sources_label": "Булактар"
+  },
+  {
+    "code": "ms",
+    "html_lang": "ms",
+    "dir": "ltr",
+    "label": "Melayu",
+    "btn": "MS",
+    "title": "Dasar privasi — Mushafuk.online",
+    "description": "Mushafuk.online tidak meminta akaun dan tidak memaparkan iklan. Nota kekal pada peranti. Laman ini hanya merekod statistik lawatan asas.",
+    "kicker": "Privasi",
+    "h1": "Dasar privasi",
+    "updated": "Kali terakhir dikemas kini: 24 November 2026.",
+    "intro1": "Mushafuk.online adalah untuk membaca mushaf Madinah halaman demi halaman.",
+    "intro2": "Laman ini diterbitkan oleh Nibras Code.",
+    "nav_quran": "Quran",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Terjemahan",
+    "nav_about": "Perihal",
+    "nav_questions": "Soalan",
+    "nav_privacy": "Privasi",
+    "not_collect_h": "Apa yang kami tidak kumpulkan",
+    "not_collect": [
+      "Tiada akaun.",
+      "Kami tidak mengambil nama, e-mel, telefon, lokasi, kenalan, atau pengenal peranti anda.",
+      "Tiada iklan.",
+      "Kami tidak menjual data anda dan tidak berkongsinya dengan pengiklan."
+    ],
+    "stats_h": "Statistik laman",
+    "stats": [
+      "Di mushafuk.online, laman ini merekod statistik lawatan asas: laluan halaman, laman rujukan (jika ada), bahasa halaman, dan sama ada skrin kelihatan seperti telefon atau komputer.",
+      "Jika anda menggunakan carian, teks carian (sehingga 100 aksara) dan bilangan hasil juga boleh direkodkan, supaya laman ini dapat ditambah baik.",
+      "Data ini dihantar ke pangkalan data kami sendiri, yang dihoskan oleh Supabase. Ia tidak digunakan untuk membina profil pembaca dan tidak digunakan untuk iklan.",
+      "Seperti mana-mana permintaan laman web, pelayan mungkin melihat alamat IP anda. Kami tidak menggunakannya untuk mengenal pasti anda.",
+      "Aplikasi Android tidak merangkumi rakaman lawatan ini."
+    ],
+    "device_h": "Apa yang kekal pada peranti",
+    "device": [
+      "Bahasa, saiz teks dan mod malam kekal pada peranti ini.",
+      "Tafsir, terjemahan, i‘rab dan kitab gharib yang anda pilih kekal pada peranti ini.",
+      "Penanda halaman dan nota kekal pada peranti ini sahaja.",
+      "Ia tidak dihantar ke pelayan."
+    ],
+    "search_h": "Carian",
+    "search": [
+      "Carian hanya melihat teks Quran, terjemahan dan tafsir yang ada di laman ini.",
+      "Jika soalan dalam bahasa Azerbaijan, Turki, Inggeris atau Rusia, jawapannya datang daripada terjemahan bahasa itu.",
+      "Soalan tidak dihantar kepada model luar."
+    ],
+    "internet_h": "Internet dan bacaan",
+    "internet": [
+      "Internet digunakan untuk membuka halaman, tafsir, terjemahan, i‘rab, kata-kata jarang dan audio.",
+      "Audio dibuka melalui perkhidmatan EveryAyah.",
+      "Sambungan menggunakan HTTPS.",
+      "Sambungan ini tidak digunakan untuk membina profil pembaca."
+    ],
+    "app_h": "Aplikasi Android Mushafuk",
+    "app": [
+      "Ciri Tasheeh (semakan bacaan) dalam aplikasi menggunakan mikrofon hanya apabila anda menekan butang mikrofon.",
+      "Tuturan dikenali pada telefon itu sendiri; audio tidak pernah dimuat naik dan tidak pernah disimpan. Pendengaran berakhir apabila anda memberhentikan mikrofon. Anda boleh menarik balik kebenaran pada bila-bila masa dalam tetapan telefon.",
+      "Model tuturan (kira-kira 69 MB) dimuat turun sekali melalui HTTPS, hanya apabila anda memintanya, daripada GitHub (raw.githubusercontent.com), atau daripada quran.mushafuk.online sebagai sandaran, dan boleh dipadam dalam aplikasi di Tetapan → Hifz.",
+      "Apabila anda memuat turun tafsir atau terjemahan, fail diambil melalui HTTPS daripada nihomaho9-ui.github.io. Fon halaman Madinah (kira-kira 95 MB) dimuat turun sekali melalui HTTPS daripada jsDelivr atau GitHub, kemudian disimpan pada peranti supaya aplikasi dapat berfungsi luar talian.",
+      "Hanya data teknikal biasa (seperti alamat IP) dapat dilihat oleh hos tersebut; kami tidak menerimanya, dan tiada apa-apa tentang anda dihantar.",
+      "Halaman terakhir, penanda halaman, tetapan, tafsir dan terjemahan yang dimuat turun, sejarah semakan bacaan, dan model tuturan kekal pada peranti sahaja.",
+      "Aplikasi meminta kebenaran mikrofon hanya apabila anda pertama kali menghidupkan mikrofon dalam mod Tasheeh. Ia tidak meminta kamera, lokasi, kenalan atau akses fail.",
+      "Aplikasi tiada akaun, dan tiada iklan atau analitik."
+    ],
+    "children_h": "Kanak-kanak",
+    "children": [
+      "Laman ini untuk semua peringkat umur. Kami tidak dengan sengaja mengumpulkan nama atau butiran hubungan kanak-kanak.",
+      "Kandungannya ialah Quran, dan tiada iklan."
+    ],
+    "contact_h": "Hubungi",
+    "contact_name": "Nibras Code.",
+    "email_label": "E-mel",
+    "site_label": "Laman web",
+    "terms_label": "Terma",
+    "sources_label": "Sumber"
+  },
+  {
+    "code": "nl",
+    "html_lang": "nl",
+    "dir": "ltr",
+    "label": "Nederlands",
+    "btn": "NL",
+    "title": "Privacybeleid — Mushafuk.online",
+    "description": "Mushafuk.online vraagt geen account en toont geen advertenties. Notities blijven op het apparaat. De site legt alleen eenvoudige bezoekstatistieken vast.",
+    "kicker": "Privacy",
+    "h1": "Privacybeleid",
+    "updated": "Laatst bijgewerkt: 24 november 2026.",
+    "intro1": "Mushafuk.online is bedoeld om de Medinese mushaf pagina voor pagina te lezen.",
+    "intro2": "De site wordt uitgegeven door Nibras Code.",
+    "nav_quran": "Koran",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Vertalingen",
+    "nav_about": "Over ons",
+    "nav_questions": "Vragen",
+    "nav_privacy": "Privacy",
+    "not_collect_h": "Wat we niet verzamelen",
+    "not_collect": [
+      "Er is geen account.",
+      "We nemen uw naam, e-mailadres, telefoonnummer, locatie, contacten of apparaat-id niet op.",
+      "Er zijn geen advertenties.",
+      "We verkopen uw gegevens niet en delen ze niet met adverteerders."
+    ],
+    "stats_h": "Sitestatistieken",
+    "stats": [
+      "Op mushafuk.online legt de site eenvoudige bezoekstatistieken vast: het pad van de pagina, de verwijzende website (indien aanwezig), de taal van de pagina, en of het scherm op een telefoon of een computer lijkt.",
+      "Als u de zoekfunctie gebruikt, kunnen de zoektekst (tot 100 tekens) en het aantal resultaten ook worden vastgelegd, zodat de site kan worden verbeterd.",
+      "Dit wordt naar onze eigen database gestuurd, gehost door Supabase. Het wordt niet gebruikt om een profiel van de lezer op te stellen en niet voor advertenties.",
+      "Net als bij elk websiteverzoek kan de server uw IP-adres zien. We gebruiken het niet om u te identificeren.",
+      "De Android-app bevat deze bezoekregistratie niet."
+    ],
+    "device_h": "Wat op het apparaat blijft",
+    "device": [
+      "Taal, tekstgrootte en nachtmodus blijven op dit apparaat.",
+      "De tafsir, vertaling, i‘rab en gharib-boek die u kiest, blijven op dit apparaat.",
+      "Bladwijzers en notities blijven alleen op dit apparaat.",
+      "Ze worden niet naar een server gestuurd."
+    ],
+    "search_h": "Zoeken",
+    "search": [
+      "De zoekfunctie kijkt alleen naar de Korantekst, vertalingen en tafsirs die op deze site staan.",
+      "Als de vraag in het Azerbeidzjaans, Turks, Engels of Russisch is, komt het antwoord uit de vertaling van die taal.",
+      "De vraag wordt niet naar een extern model gestuurd."
+    ],
+    "internet_h": "Internet en recitatie",
+    "internet": [
+      "Internet wordt gebruikt om een pagina, een tafsir, een vertaling, i‘rab, zeldzame woorden en de audio te openen.",
+      "Audio wordt geopend via de dienst EveryAyah.",
+      "De verbinding loopt over HTTPS.",
+      "Deze verbinding wordt niet gebruikt om een profiel van de lezer op te bouwen."
+    ],
+    "app_h": "Mushafuk Android-app",
+    "app": [
+      "De functie Tasheeh (recitatiecontrole) in de app gebruikt de microfoon alleen wanneer u op de microfoonknop drukt.",
+      "Spraak wordt herkend op de telefoon zelf; audio wordt nooit geüpload en nooit opgeslagen. Het luisteren stopt wanneer u de microfoon uitzet. U kunt de toestemming te allen tijde intrekken in de telefooninstellingen.",
+      "Het spraakmodel (ongeveer 69 MB) wordt eenmaal via HTTPS gedownload, alleen wanneer u erom vraagt, van GitHub (raw.githubusercontent.com), of van quran.mushafuk.online als reservedoel, en kan in de app worden verwijderd onder Instellingen → Hifz.",
+      "Wanneer u tafsir of vertalingen downloadt, worden de bestanden via HTTPS opgehaald van nihomaho9-ui.github.io. De Medinese paginaletters (ongeveer 95 MB) worden eenmaal via HTTPS gedownload van jsDelivr of GitHub en daarna op het apparaat bewaard, zodat de app offline kan werken.",
+      "Alleen gebruikelijke technische gegevens (zoals een IP-adres) zijn zichtbaar voor die hosts; wij ontvangen ze niet, en er wordt niets over u verzonden.",
+      "De laatste pagina, bladwijzers, instellingen, gedownloade tafsir en vertalingen, de geschiedenis van de recitatiecontrole en het spraakmodel blijven alleen op het apparaat.",
+      "De app vraagt alleen microfoontoestemming wanneer u de microfoon voor het eerst aanzet in de Tasheeh-modus. Camera, locatie, contacten of bestandstoegang worden niet gevraagd.",
+      "De app heeft geen account, en geen advertenties of analytics."
+    ],
+    "children_h": "Kinderen",
+    "children": [
+      "De site is voor alle leeftijden. We verzamelen niet bewust namen of contactgegevens van kinderen.",
+      "De inhoud is de Koran, en er zijn geen advertenties."
+    ],
+    "contact_h": "Contact",
+    "contact_name": "Nibras Code.",
+    "email_label": "E-mail",
+    "site_label": "Website",
+    "terms_label": "Voorwaarden",
+    "sources_label": "Bronnen"
+  },
+  {
+    "code": "ps",
+    "html_lang": "ps",
+    "dir": "rtl",
+    "label": "پښتو",
+    "btn": "PS",
+    "title": "د محرمیت تګلاره — Mushafuk.online",
+    "description": "Mushafuk.online حساب نه غواړي او اعلانونه نه ښيي. یادښتونه په وسیله کې پاتې کېږي. وېبپاڼه یوازې بنسټیزې د لیدنې احصایې ثبتوي.",
+    "kicker": "محرمیت",
+    "h1": "د محرمیت تګلاره",
+    "updated": "وروستۍ تازه کېدنه: ۲۴ نومبر ۲۰۲۶.",
+    "intro1": "Mushafuk.online د مدینې مصحف د پاڼې په پاڼه لوستلو لپاره دی.",
+    "intro2": "وېبپاڼه Nibras Code خپروي.",
+    "nav_quran": "قرآن",
+    "nav_tafsir": "تفسیر",
+    "nav_tr": "ژباړې",
+    "nav_about": "زموږ په اړه",
+    "nav_questions": "پوښتنې",
+    "nav_privacy": "محرمیت",
+    "not_collect_h": "هغه څه چې نه راټولوو",
+    "not_collect": [
+      "حساب نشته.",
+      "موږ ستاسو نوم، برېښنالیک، تلیفون، ځای، اړیکې یا د وسیلې پېژندنه نه اخلو.",
+      "اعلانونه نشته.",
+      "ستاسو معلومات نه پلورو او له اعلان کوونکو سره یې نه شریکوو."
+    ],
+    "stats_h": "د وېبپاڼې احصایې",
+    "stats": [
+      "په mushafuk.online وېبپاڼه بنسټیزې د لیدنې احصایې ثبتوي: د پاڼې لار، د سرچینې وېبپاڼه (که وي)، د پاڼې ژبه، او دا چې پرده ډېره تلیفون ته ورته ده که کمپیوټر ته.",
+      "که لټون وکاروئ، د لټون متن (تر ۱۰۰ تورو) او د پایلو شمېر هم ثبتېدای شي، څو وېبپاڼه ښه شي.",
+      "دا زموږ خپل ډېټابېس ته لېږل کېږي، چې Supabase یې کوربه کوي. د لوستونکي د پېژندپاڼې جوړولو او اعلانونو لپاره نه کارېږي.",
+      "لکه د هرې وېب غوښتنې په څېر، پالنګر کېدای شي ستاسو IP پته وویني. موږ یې ستاسو د پېژندلو لپاره نه کاروو.",
+      "د انډرایډ اپلیکېشن دا د لیدنې ثبت نه لري."
+    ],
+    "device_h": "هغه څه چې په وسیله کې پاتې کېږي",
+    "device": [
+      "ژبه، د متن اندازه او د شپې حالت په دې وسیله کې پاتې کېږي.",
+      "هغه تفسیر، ژباړه، اعراب او د غریب کتاب چې غوره کړئ، په دې وسیله کې پاتې کېږي.",
+      "نښې او یادښتونه یوازې په دې وسیله کې پاتې کېږي.",
+      "پالنګر ته نه لېږل کېږي."
+    ],
+    "search_h": "لټون",
+    "search": [
+      "لټون یوازې د دې وېبپاڼې د قرآن متن، ژباړو او تفسیرونو ته ګوري.",
+      "که پوښتنه په آذربایجاني، ترکي، انګلیسي یا روسي وي، ځواب د هغې ژبې له ژباړې څخه راځي.",
+      "پوښتنه بهرني ماډل ته نه لېږل کېږي."
+    ],
+    "internet_h": "انټرنېټ او تلاوت",
+    "internet": [
+      "انټرنېټ د پاڼې، تفسیر، ژباړې، اعراب، نادره کلمو او غږ د پرانیستلو لپاره کارېږي.",
+      "غږ د EveryAyah خدمت له لارې پرانیستل کېږي.",
+      "اړیکه HTTPS ده.",
+      "له دې اړیکې څخه د لوستونکي پېژندپاڼه نه جوړېږي."
+    ],
+    "app_h": "د Mushafuk انډرایډ اپلیکېشن",
+    "app": [
+      "په اپلیکېشن کې د تصحیح (د تلاوت کتنه) ځانګړتیا مایکروفون یوازې هغه وخت کاروي چې تاسو د مایکروفون تڼۍ ووهئ.",
+      "خبرې په خپله ټېلیفون کې پېژندل کېږي؛ غږ هیڅکله نه پورته کېږي او نه ساتل کېږي. کله چې مایکروفون ودروئ، اورېدل پای ته رسېږي. اجازه هر وخت د ټېلیفون په امستنو کې بېرته اخیستلی شئ.",
+      "د خبرو ماډل (شاوخوا ۶۹ مېګابایټ) یوازې ستاسو په غوښتنه یو ځل په HTTPS د GitHub (raw.githubusercontent.com) څخه، یا د بدیل په توګه د quran.mushafuk.online څخه ښکته کېږي، او په اپلیکېشن کې د امستنو ← حفظ برخه کې ړنګېدای شي.",
+      "کله چې تفسیر یا ژباړې ښکته کوئ، دوتنې په HTTPS د nihomaho9-ui.github.io څخه راوړل کېږي. د مدینې د پاڼو ليکبڼې (شاوخوا ۹۵ مېګابایټ) یو ځل په HTTPS د jsDelivr یا GitHub څخه ښکته کېږي، بیا په وسیله کې پاتې کېږي څو اپلیکېشن پرته له انټرنېټه کار وکړي.",
+      "دغو کوربه ګانو ته یوازې معیاري تخنیکي معلومات (لکه IP پته) ښکاري؛ موږ یې نه ترلاسه کوو، او ستاسو په اړه څه نه لېږل کېږي.",
+      "وروستۍ پاڼه، نښې، امستنې، ښکته شوي تفسیر او ژباړې، د تلاوت کتنې تاریخچه او د خبرو ماډل یوازې په وسیله کې پاتې کېږي.",
+      "اپلیکېشن د مایکروفون اجازه یوازې هغه وخت غواړي چې لومړی ځل په تصحیح حالت کې مایکروفون بل کړئ. کیمره، ځای، اړیکې یا دوتنو ته لاسرسی نه غواړي.",
+      "اپلیکېشن حساب نه لري، او نه اعلانونه لري او نه شننه."
+    ],
+    "children_h": "ماشومان",
+    "children": [
+      "وېبپاڼه د هر عمر لپاره ده. موږ په پوهه د ماشومانو نومونه یا د اړیکې جزئیات نه راټولوو.",
+      "منځپانګه قرآن دی، او اعلانونه نشته."
+    ],
+    "contact_h": "اړیکه",
+    "contact_name": "Nibras Code.",
+    "email_label": "برېښنالیک",
+    "site_label": "وېبپاڼه",
+    "terms_label": "شرطونه",
+    "sources_label": "سرچینې"
+  },
+  {
+    "code": "pt",
+    "html_lang": "pt",
+    "dir": "ltr",
+    "label": "Português",
+    "btn": "PT",
+    "title": "Política de privacidade — Mushafuk.online",
+    "description": "Mushafuk.online não pede conta e não mostra anúncios. As notas ficam no dispositivo. O sítio regista apenas estatísticas básicas de visita.",
+    "kicker": "Privacidade",
+    "h1": "Política de privacidade",
+    "updated": "Última atualização: 24 de novembro de 2026.",
+    "intro1": "Mushafuk.online serve para ler o mushaf de Medina página a página.",
+    "intro2": "O sítio é publicado pela Nibras Code.",
+    "nav_quran": "Alcorão",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Traduções",
+    "nav_about": "Sobre",
+    "nav_questions": "Perguntas",
+    "nav_privacy": "Privacidade",
+    "not_collect_h": "O que não recolhemos",
+    "not_collect": [
+      "Não há conta.",
+      "Não recolhemos o seu nome, e-mail, telefone, localização, contactos nem o identificador do dispositivo.",
+      "Não há anúncios.",
+      "Não vendemos os seus dados nem os partilhamos com anunciantes."
+    ],
+    "stats_h": "Estatísticas do sítio",
+    "stats": [
+      "Em mushafuk.online, o sítio regista estatísticas básicas de visita: o caminho da página, o sítio de origem (se existir), o idioma da página e se o ecrã parece um telefone ou um computador.",
+      "Se usar a pesquisa, o texto pesquisado (até 100 caracteres) e o número de resultados também podem ser registados, para melhorar o sítio.",
+      "Isto é enviado para a nossa própria base de dados, alojada pela Supabase. Não é usado para construir um perfil do leitor nem para anúncios.",
+      "Como em qualquer pedido a um sítio, o servidor pode ver o seu endereço IP. Não o usamos para o identificar.",
+      "A aplicação para Android não inclui este registo de visitas."
+    ],
+    "device_h": "O que fica no dispositivo",
+    "device": [
+      "O idioma, o tamanho do texto e o modo noturno ficam neste dispositivo.",
+      "O tafsir, a tradução, o i‘rab e o livro de gharib que escolher ficam neste dispositivo.",
+      "Os marcadores e as notas ficam apenas neste dispositivo.",
+      "Não são enviados para um servidor."
+    ],
+    "search_h": "Pesquisa",
+    "search": [
+      "A pesquisa consulta apenas o texto do Alcorão, as traduções e os tafsirs que estão neste sítio.",
+      "Se a pergunta estiver em azerbaijano, turco, inglês ou russo, a resposta vem da tradução dessa língua.",
+      "A pergunta não é enviada a um modelo externo."
+    ],
+    "internet_h": "Internet e recitação",
+    "internet": [
+      "A internet é usada para abrir uma página, um tafsir, uma tradução, o i‘rab, palavras raras e o áudio.",
+      "O áudio abre-se através do serviço EveryAyah.",
+      "A ligação é HTTPS.",
+      "Esta ligação não é usada para construir um perfil do leitor."
+    ],
+    "app_h": "Aplicação Android Mushafuk",
+    "app": [
+      "A função Tasheeh (verificação da recitação) na aplicação usa o microfone apenas quando carrega no botão do microfone.",
+      "A fala é reconhecida no próprio telefone; o áudio nunca é enviado nem armazenado. A escuta termina quando para o microfone. Pode retirar a permissão a qualquer momento nas definições do telefone.",
+      "O modelo de fala (cerca de 69 MB) é descarregado uma vez por HTTPS, só quando o pede, a partir do GitHub (raw.githubusercontent.com) ou, como alternativa, de quran.mushafuk.online, e pode ser apagado na aplicação em Definições → Hifz.",
+      "Quando descarrega tafsir ou traduções, os ficheiros são obtidos por HTTPS a partir de nihomaho9-ui.github.io. As fontes das páginas de Medina (cerca de 95 MB) são descarregadas uma vez por HTTPS a partir do jsDelivr ou do GitHub e depois ficam no dispositivo para a aplicação funcionar sem rede.",
+      "Apenas dados técnicos habituais (como um endereço IP) são visíveis para esses anfitriões; nós não os recebemos e nada sobre si é enviado.",
+      "A última página, os marcadores, as definições, o tafsir e as traduções descarregados, o histórico da verificação da recitação e o modelo de fala ficam apenas no dispositivo.",
+      "A aplicação pede a permissão do microfone apenas na primeira vez que liga o microfone no modo Tasheeh. Não pede câmara, localização, contactos nem acesso a ficheiros.",
+      "A aplicação não tem conta, nem anúncios nem analítica."
+    ],
+    "children_h": "Crianças",
+    "children": [
+      "O sítio é para todas as idades. Não recolhemos deliberadamente nomes ou dados de contacto de crianças.",
+      "O conteúdo é o Alcorão e não há anúncios."
+    ],
+    "contact_h": "Contacto",
+    "contact_name": "Nibras Code.",
+    "email_label": "E-mail",
+    "site_label": "Sítio web",
+    "terms_label": "Termos",
+    "sources_label": "Fontes"
+  },
+  {
+    "code": "ru",
+    "html_lang": "ru",
+    "dir": "ltr",
+    "label": "Русский",
+    "btn": "RU",
+    "title": "Политика конфиденциальности — Mushafuk.online",
+    "description": "Mushafuk.online не требует аккаунта и не показывает рекламу. Заметки остаются на устройстве. Сайт записывает только базовую статистику посещений.",
+    "kicker": "Конфиденциальность",
+    "h1": "Политика конфиденциальности",
+    "updated": "Последнее обновление: 24 ноября 2026.",
+    "intro1": "Mushafuk.online — для чтения мединского мусхафа страница за страницей.",
+    "intro2": "Сайт издаёт Nibras Code.",
+    "nav_quran": "Коран",
+    "nav_tafsir": "Тафсиры",
+    "nav_tr": "Переводы",
+    "nav_about": "О нас",
+    "nav_questions": "Вопросы",
+    "nav_privacy": "Конфиденциальность",
+    "not_collect_h": "Что мы не собираем",
+    "not_collect": [
+      "Аккаунта нет.",
+      "Имя, почта, телефон, геолокация, контакты и id устройства не собираются.",
+      "Рекламы нет.",
+      "Мы не продаём ваши данные и не передаём их рекламодателям."
+    ],
+    "stats_h": "Статистика сайта",
+    "stats": [
+      "На mushafuk.online записывается базовая статистика посещений: путь страницы, сайт-источник (если он есть), язык страницы и то, похож ли экран на телефон или на компьютер.",
+      "Если вы пользуетесь поиском, текст запроса (до 100 символов) и число результатов тоже могут быть записаны, чтобы улучшать сайт.",
+      "Эти данные отправляются в нашу собственную базу, размещённую у Supabase. Они не используются, чтобы составлять профиль читателя, и не используются для рекламы.",
+      "Как при любом запросе к сайту, сервер может видеть ваш IP-адрес. Мы не используем его, чтобы вас опознать.",
+      "В приложении для Android этой записи посещений нет."
+    ],
+    "device_h": "Что остаётся на устройстве",
+    "device": [
+      "Язык, размер текста и ночной режим остаются на этом устройстве.",
+      "Выбранные тафсир, перевод, и‘раб и гариб остаются на этом устройстве.",
+      "Закладки и заметки остаются только на устройстве.",
+      "Они не уходят на сервер."
+    ],
+    "search_h": "Поиск",
+    "search": [
+      "Поиск смотрит только на текст Корана, переводы и тафсиры, которые есть на этом сайте.",
+      "Если вопрос на азербайджанском, турецком, английском или русском, ответ берётся из перевода этого языка.",
+      "Вопрос не отправляется внешней модели."
+    ],
+    "internet_h": "Интернет и чтение",
+    "internet": [
+      "Интернет нужен, чтобы открыть страницу, тафсир, перевод, и‘раб, редкие слова и звук.",
+      "Звук открывается через сервис EveryAyah.",
+      "Соединение идёт по HTTPS.",
+      "Из этого соединения профиль читателя не собирается."
+    ],
+    "app_h": "Приложение Mushafuk для Android",
+    "app": [
+      "Функция Тасхих (проверка чтения) в приложении использует микрофон только когда вы нажимаете кнопку микрофона.",
+      "Речь распознаётся на самом телефоне; звук никуда не загружается и не сохраняется. Прослушивание заканчивается, когда вы выключаете микрофон. Разрешение можно отозвать в настройках телефона в любой момент.",
+      "Речевая модель (около 69 МБ) скачивается один раз по HTTPS, только по вашему запросу, с GitHub (raw.githubusercontent.com) или, как запасной вариант, с quran.mushafuk.online, и её можно удалить в приложении в разделе «Настройки → Хифз».",
+      "При загрузке тафсира или перевода файлы запрашиваются по HTTPS с nihomaho9-ui.github.io. Шрифты мединских страниц (около 95 МБ) один раз скачиваются по HTTPS с jsDelivr или GitHub и остаются на устройстве, чтобы приложение работало без сети.",
+      "Этим узлам видны только стандартные технические данные (например, IP-адрес); мы их не получаем, и о вас ничего не отправляется.",
+      "Последняя страница, закладки, настройки, загруженные тафсиры и переводы, история проверки чтения и речевая модель остаются только на устройстве.",
+      "Приложение запрашивает микрофон только при первом включении микрофона в режиме Тасхих. Камера, геолокация, контакты и доступ к файлам не запрашиваются.",
+      "В приложении нет аккаунта, нет рекламы и нет аналитики."
+    ],
+    "children_h": "Дети",
+    "children": [
+      "Сайт для всех возрастов. Мы сознательно не собираем имена и контактные данные детей.",
+      "Содержание — Коран, без рекламы."
+    ],
+    "contact_h": "Контакт",
+    "contact_name": "Nibras Code.",
+    "email_label": "Почта",
+    "site_label": "Сайт",
+    "terms_label": "Условия",
+    "sources_label": "Источники"
+  },
+  {
+    "code": "so",
+    "html_lang": "so",
+    "dir": "ltr",
+    "label": "Soomaali",
+    "btn": "SO",
+    "title": "Siyaasadda sirta — Mushafuk.online",
+    "description": "Mushafuk.online kuma weydiisto akoon, kuma muujiyo xayaysiis. Qoraalladu waxay ku hadhaan qalabka. Degelu wuxuu diiwaangeliyaa oo keliya tirakoobka booqashada ee aasaasiga ah.",
+    "kicker": "Sir",
+    "h1": "Siyaasadda sirta",
+    "updated": "Markii ugu dambeysay ee la cusboonaysiiyay: 24 Noofambar 2026.",
+    "intro1": "Mushafuk.online waa in la akhriyo mushafka Madiina bogba bog.",
+    "intro2": "Degelka waxaa daabacay Nibras Code.",
+    "nav_quran": "Quraanka",
+    "nav_tafsir": "Tafsiir",
+    "nav_tr": "Turjumaadaha",
+    "nav_about": "Nagu saabsan",
+    "nav_questions": "Su'aalaha",
+    "nav_privacy": "Qarsoodinimada",
+    "not_collect_h": "Waxa aannan ururin",
+    "not_collect": [
+      "Akoon ma jiro.",
+      "Kama qaadno magacaaga, iimaylka, taleefanka, goobta, xiriirada, ama aqoonsiga qalabka.",
+      "Xayaysiis ma jiro.",
+      "Xogtaada ma iibino, kuma wadaagno xayeysiiyayaasha."
+    ],
+    "stats_h": "Tirakoobka degelka",
+    "stats": [
+      "mushafuk.online waxa uu diiwaangeliyaa tirakoobka booqashada ee aasaasiga ah: jidka bogga, degelka aad ka timid (haddii jiro), luqadda bogga, iyo in shaashaddu u eg tahay taleefan iyo in kale kumbuyuutar.",
+      "Haddii aad isticmaasho raadinta, qoraalka raadinta (ilaa 100 xaraf) iyo tirada natiijooyinka sidoo kale waa la diiwaangelin karaa, si degelka loo wanaajiyo.",
+      "Tan waxaa loo diraa kaydkeenna, oo ay martigeliso Supabase. Looma isticmaalo in lagu dhiso astaanta akhristaha, looma isticmaalo xayaysiiska.",
+      "Sida baahida kasta ee shabakadda, server-ku wuxuu arki karaa cinwaankaaga IP. Uma isticmaalno inaan kugu aqoonsanno.",
+      "Barnaamijka Android kuma jiro diiwaangelintan booqashada."
+    ],
+    "device_h": "Waxa ku hadha qalabka",
+    "device": [
+      "Luqadda, cabbirka qoraalka, iyo habka habeenka waxay ku hadhaan qalabkan.",
+      "Tafsiirka, turjumaadda, i‘raabka, iyo buugga gharib ee aad dooratay waxay ku hadhaan qalabkan.",
+      "Calaamadaha iyo qoraalladu waxay ku hadhaan qalabkan oo keliya.",
+      "Looma diro server."
+    ],
+    "search_h": "Raadinta",
+    "search": [
+      "Raadintu waxay eegtaa oo keliya qoraalka Quraanka, turjumaadaha, iyo tafsiirrada ku yaal degelkan.",
+      "Haddii su’aashu ku qoran tahay Asarbayjaan, Turki, Ingiriisi, ama Ruush, jawaabtu waxay ka timaadaa turjumaadda luqaddaas.",
+      "Su’aasha looma diro moodal dibadda ah."
+    ],
+    "internet_h": "Internetka iyo tilaawada",
+    "internet": [
+      "Internetka waxaa loo isticmaalaa in lagu furo bog, tafsiir, turjumaad, i‘raab, erayo naadir ah, iyo maqalka.",
+      "Maqalka waxaa lagu furaa adeegga EveryAyah.",
+      "Isku xirka waa HTTPS.",
+      "Isku xirkan looma isticmaalo in lagu dhiso astaanta akhristaha."
+    ],
+    "app_h": "Barnaamijka Android ee Mushafuk",
+    "app": [
+      "Astaanta Tasheeh (hubinta tilaawada) ee barnaamijka waxay isticmaashaa makarafoonka kaliya marka aad riixdo badhanka makarafoonka.",
+      "Hadalka waxaa lagu aqoonsadaa telefoonka laftiisa; maqalka lama soo gelinayo, lama keydiyo. Dhageysigu wuu dhammaadaa marka aad joojiso makarafoonka. Ogolaanshaha waad ka noqon kartaa goor kasta ee goobaha telefoonka.",
+      "Moodalka hadalka (qiyaastii 69 MB) hal mar ayaa lagu soo dejiyaa HTTPS, kaliya marka aad weydiisato, laga soo qaado GitHub (raw.githubusercontent.com), ama quran.mushafuk.online sidii beddel, waxaana laga tirtiri karaa barnaamijka ee Settings → Hifz.",
+      "Marka aad soo dejiso tafsiir ama turjumaado, faylasha waxaa lagala soo baxaa HTTPS laga bilaabo nihomaho9-ui.github.io. Fooramada bogagga Madiina (qiyaastii 95 MB) hal mar ayaa lagu soo dejiyaa HTTPS laga soo qaado jsDelivr ama GitHub, ka dibna lagu hayaa qalabka si barnaamijku ugu shaqeeyo iyada oo aan line lahayn.",
+      "Kuwa martigeliya waxaa u muuqda oo keliya xog farsamo oo caadi ah (sida cinwaanka IP); annagu ma helno, waxna kuguma saabsana lama diro.",
+      "Bogga ugu dambeeya, calaamadaha, dejimaha, tafsiirka iyo turjumaadaha la soo dejiyay, taariikhda hubinta tilaawada, iyo moodalka hadalka waxay ku hadhaan qalabka oo keliya.",
+      "Barnaamijku wuxuu weydiistaa ogolaanshaha makarafoonka kaliya markii ugu horreysay ee aad makarafoonka shiddo habka Tasheeh. Kama weydiisto kamarad, goob, xiriirada, ama gelitaanka faylasha.",
+      "Barnaamijku akoon ma lahan, xayaysiis iyo falanqaynna ma lahan."
+    ],
+    "children_h": "Carruurta",
+    "children": [
+      "Degelku waa dhammaan da'da. Si ula kac ah uma ururinno magacyada ama faahfaahinta xiriirka ee carruurta.",
+      "Nuxurku waa Quraanka, xayaysiisna ma jiro."
+    ],
+    "contact_h": "Xiriir",
+    "contact_name": "Nibras Code.",
+    "email_label": "Iimayl",
+    "site_label": "Degel",
+    "terms_label": "Shuruudaha",
+    "sources_label": "Ilaha"
+  },
+  {
+    "code": "ta",
+    "html_lang": "ta",
+    "dir": "ltr",
+    "label": "தமிழ்",
+    "btn": "TA",
+    "title": "தனியுரிமைக் கொள்கை — Mushafuk.online",
+    "description": "Mushafuk.online கணக்கு கேட்காது, விளம்பரங்களையும் காட்டாது. குறிப்புகள் சாதனத்திலேயே இருக்கும். தளம் அடிப்படை வருகைப் புள்ளிவிவரங்களை மட்டுமே பதிவு செய்கிறது.",
+    "kicker": "தனியுரிமை",
+    "h1": "தனியுரிமைக் கொள்கை",
+    "updated": "கடைசியாகப் புதுப்பிக்கப்பட்டது: 24 நவம்பர் 2026.",
+    "intro1": "Mushafuk.online மதீனா முஸ்ஹபைப் பக்கம்பக்கமாகப் படிப்பதற்கானது.",
+    "intro2": "தளத்தை Nibras Code வெளியிடுகிறது.",
+    "nav_quran": "குர்ஆன்",
+    "nav_tafsir": "தஃப்சீர்",
+    "nav_tr": "மொழிபெயர்ப்புகள்",
+    "nav_about": "எங்களைப் பற்றி",
+    "nav_questions": "கேள்விகள்",
+    "nav_privacy": "தனியுரிமை",
+    "not_collect_h": "நாங்கள் சேகரிக்காதவை",
+    "not_collect": [
+      "கணக்கு இல்லை.",
+      "உங்கள் பெயர், மின்னஞ்சல், தொலைபேசி, இடம், தொடர்புகள் அல்லது சாதன அடையாளத்தை நாங்கள் எடுக்கமாட்டோம்.",
+      "விளம்பரங்கள் இல்லை.",
+      "உங்கள் தரவை நாங்கள் விற்கமாட்டோம், விளம்பரதாரர்களுடன் பகிரவும் மாட்டோம்."
+    ],
+    "stats_h": "தளப் புள்ளிவிவரங்கள்",
+    "stats": [
+      "mushafuk.online தளம் அடிப்படை வருகைப் புள்ளிவிவரங்களைப் பதிவு செய்கிறது: பக்கப் பாதை, வந்த இணையதளம் (இருந்தால்), பக்கத்தின் மொழி, திரை தொலைபேசியைப் போல உள்ளதா அல்லது கணினியைப் போல உள்ளதா என்பது.",
+      "தேடலைப் பயன்படுத்தினால், தேடல் உரை (அதிகபட்சம் 100 எழுத்துகள்) மற்றும் முடிவுகளின் எண்ணிக்கையும் தளத்தை மேம்படுத்தப் பதிவு செய்யப்படலாம்.",
+      "இது எங்கள் சொந்த தரவுத்தளத்துக்கு அனுப்பப்படுகிறது, அதை Supabase வழங்குகிறது. வாசகர் சுயவிவரம் உருவாக்கவோ விளம்பரத்துக்கோ இது பயன்படுத்தப்படுவதில்லை.",
+      "எந்த இணையக் கோரிக்கையிலும் போல, சேவையகம் உங்கள் IP முகவரியைக் காணலாம். உங்களை அடையாளம் காண நாங்கள் அதைப் பயன்படுத்துவதில்லை.",
+      "Android செயலியில் இந்த வருகைப் பதிவு இல்லை."
+    ],
+    "device_h": "சாதனத்தில் இருப்பவை",
+    "device": [
+      "மொழி, உரை அளவு மற்றும் இரவுப் பயன்முறை இந்தச் சாதனத்திலேயே இருக்கும்.",
+      "நீங்கள் தேர்ந்தெடுக்கும் தஃப்சீர், மொழிபெயர்ப்பு, இஃராப் மற்றும் கரீப் நூல் இந்தச் சாதனத்திலேயே இருக்கும்.",
+      "புத்தகக்குறிகளும் குறிப்புகளும் இந்தச் சாதனத்தில் மட்டுமே இருக்கும்.",
+      "அவை சேவையகத்துக்கு அனுப்பப்படுவதில்லை."
+    ],
+    "search_h": "தேடல்",
+    "search": [
+      "தேடல் இந்தத் தளத்தில் உள்ள குர்ஆன் உரை, மொழிபெயர்ப்புகள், தஃப்சீர்களை மட்டுமே பார்க்கிறது.",
+      "கேள்வி அசர்பைஜானி, துருக்கியம், ஆங்கிலம் அல்லது உருசியம் என்றால், பதில் அந்த மொழியின் மொழிபெயர்ப்பிலிருந்து வரும்.",
+      "கேள்வி வெளி மாதிரிக்கு அனுப்பப்படுவதில்லை."
+    ],
+    "internet_h": "இணையம் மற்றும் ஓதுதல்",
+    "internet": [
+      "இணையம் ஒரு பக்கம், தஃப்சீர், மொழிபெயர்ப்பு, இஃராப், அரிய சொற்கள், ஒலி ஆகியவற்றைத் திறக்கப் பயன்படுகிறது.",
+      "ஒலி EveryAyah சேவை வழியாகத் திறக்கப்படுகிறது.",
+      "இணைப்பு HTTPS ஆகும்.",
+      "இந்த இணைப்பிலிருந்து வாசகர் சுயவிவரம் உருவாக்கப்படுவதில்லை."
+    ],
+    "app_h": "Mushafuk Android செயலி",
+    "app": [
+      "செயலியில் உள்ள தஸ்ஹீஹ் (ஓதுதலைச் சரிபார்த்தல்) அம்சம், நீங்கள் மைக் பொத்தானை அழுத்தும்போது மட்டுமே மைக்ரோஃபோனைப் பயன்படுத்துகிறது.",
+      "பேச்சு தொலைபேசியிலேயே அறியப்படுகிறது; ஒலி ஒருபோதும் பதிவேற்றப்படுவதில்லை, சேமிக்கப்படுவதில்லை. மைக்கை நிறுத்தினால் கேட்பது முடியும். தொலைபேசி அமைப்புகளில் எப்போது வேண்டுமானாலும் அனுமதியைத் திரும்பப் பெறலாம்.",
+      "பேச்சு மாதிரி (சுமார் 69 MB) நீங்கள் கேட்கும்போது மட்டுமே ஒரு முறை HTTPS வழியாக GitHub (raw.githubusercontent.com) இலிருந்தோ, மாற்றாக quran.mushafuk.online இலிருந்தோ பதிவிறக்கப்படுகிறது, செயலியில் அமைப்புகள் → ஹிஃப்ஸ் என்பதில் நீக்கலாம்.",
+      "தஃப்சீர் அல்லது மொழிபெயர்ப்புகளைப் பதிவிறக்கும்போது, கோப்புகள் HTTPS வழியாக nihomaho9-ui.github.io இலிருந்து பெறப்படுகின்றன. மதீனா பக்க எழுத்துருக்கள் (சுமார் 95 MB) ஒரு முறை HTTPS வழியாக jsDelivr அல்லது GitHub இலிருந்து பதிவிறக்கப்பட்டு, செயலி இணையமின்றி இயங்கும் வகையில் சாதனத்தில் வைக்கப்படுகின்றன.",
+      "அந்த புரவலன்களுக்கு வழக்கமான தொழில்நுட்பத் தரவு மட்டுமே (IP முகவரி போன்றவை) தெரியும்; நாங்கள் அதைப் பெறுவதில்லை, உங்களைப் பற்றிய எதுவும் அனுப்பப்படுவதில்லை.",
+      "கடைசிப் பக்கம், புத்தகக்குறிகள், அமைப்புகள், பதிவிறக்கப்பட்ட தஃப்சீர் மற்றும் மொழிபெயர்ப்புகள், ஓதுதல் சரிபார்ப்பு வரலாறு, பேச்சு மாதிரி ஆகியவை சாதனத்தில் மட்டுமே இருக்கும்.",
+      "தஸ்ஹீஹ் பயன்முறையில் முதல் முறையாக மைக்கை இயக்கும்போது மட்டுமே செயலி மைக்ரோஃபோன் அனுமதியைக் கேட்கும். கேமரா, இடம், தொடர்புகள் அல்லது கோப்பு அணுகலைக் கேட்காது.",
+      "செயலியில் கணக்கு இல்லை, விளம்பரமோ பகுப்பாய்வோ இல்லை."
+    ],
+    "children_h": "குழந்தைகள்",
+    "children": [
+      "தளம் அனைத்து வயதினருக்கும். குழந்தைகளின் பெயர் அல்லது தொடர்பு விவரங்களை வேண்டுமென்றே சேகரிக்கமாட்டோம்.",
+      "உள்ளடக்கம் குர்ஆன், விளம்பரங்கள் இல்லை."
+    ],
+    "contact_h": "தொடர்பு",
+    "contact_name": "Nibras Code.",
+    "email_label": "மின்னஞ்சல்",
+    "site_label": "இணையதளம்",
+    "terms_label": "விதிகள்",
+    "sources_label": "ஆதாரங்கள்"
+  },
+  {
+    "code": "tg",
+    "html_lang": "tg",
+    "dir": "ltr",
+    "label": "Тоҷикӣ",
+    "btn": "TG",
+    "title": "Сиёсати махфият — Mushafuk.online",
+    "description": "Mushafuk.online ҳисоб намехоҳад ва реклама нишон намедиҳад. Қайдҳо дар дастгоҳ мемонанд. Сомона танҳо омори асосии боздидро менависад.",
+    "kicker": "Махфият",
+    "h1": "Сиёсати махфият",
+    "updated": "Навсозии охирин: 24 ноябри 2026.",
+    "intro1": "Mushafuk.online барои хондани мусҳафи Мадина саҳифа ба саҳифа аст.",
+    "intro2": "Сомонаро Nibras Code нашр мекунад.",
+    "nav_quran": "Қуръон",
+    "nav_tafsir": "Тафсир",
+    "nav_tr": "Тарҷумаҳо",
+    "nav_about": "Дар бораи мо",
+    "nav_questions": "Саволҳо",
+    "nav_privacy": "Махфият",
+    "not_collect_h": "Чӣ ҷамъ намекунем",
+    "not_collect": [
+      "Ҳисоб нест.",
+      "Ном, почтаи электронӣ, телефон, макон, тамосҳо ё шиносаи дастгоҳ гирифта намешавад.",
+      "Реклама нест.",
+      "Маълумоти шуморо намефурӯшем ва бо таблиғгарон мубодила намекунем."
+    ],
+    "stats_h": "Омори сомона",
+    "stats": [
+      "Дар mushafuk.online сомона омори асосии боздидро менависад: роҳи саҳифа, сомонаи истинодӣ (агар бошад), забони саҳифа ва он ки экран ба телефон монанд аст ё ба компютер.",
+      "Агар ҷустуҷӯро истифода баред, матни ҷустуҷӯ (то 100 аломат) ва шумораи натиҷаҳо низ навишта шуда метавонанд, то сомона беҳтар шавад.",
+      "Ин маълумот ба пойгоҳи мо фиристода мешавад, ки онро Supabase ҷойгир мекунад. Барои сохтани профили хонанда ва барои реклама истифода намешавад.",
+      "Мисли ҳар дархости веб, сервер метавонад суроғаи IP-и шуморо бубинад. Мо онро барои шинохтани шумо истифода намебарем.",
+      "Барномаи Android ин сабти боздидро надорад."
+    ],
+    "device_h": "Он чӣ дар дастгоҳ мемонад",
+    "device": [
+      "Забон, андозаи матн ва ҳолати шаб дар ҳамин дастгоҳ мемонанд.",
+      "Тафсир, тарҷума, иъроб ва китоби ғарибе, ки интихоб мекунед, дар ҳамин дастгоҳ мемонанд.",
+      "Хаҷҷгузорӣ ва қайдҳо танҳо дар ҳамин дастгоҳ мемонанд.",
+      "Онҳо ба сервер фиристода намешаванд."
+    ],
+    "search_h": "Ҷустуҷӯ",
+    "search": [
+      "Ҷустуҷӯ танҳо ба матни Қуръон, тарҷумаҳо ва тафсирҳои ҳамин сомона менигарад.",
+      "Агар савол ба забони озарбойҷонӣ, туркӣ, англисӣ ё русӣ бошад, ҷавоб аз тарҷумаи ҳамон забон меояд.",
+      "Савол ба модели беруна фиристода намешавад."
+    ],
+    "internet_h": "Интернет ва тиловат",
+    "internet": [
+      "Интернет барои кушодани саҳифа, тафсир, тарҷума, иъроб, калимаҳои нодир ва садо истифода мешавад.",
+      "Садо тавассути хидмати EveryAyah кушода мешавад.",
+      "Пайваст HTTPS аст.",
+      "Аз ин пайваст профили хонанда сохта намешавад."
+    ],
+    "app_h": "Барномаи Android-и Mushafuk",
+    "app": [
+      "Хусусияти Тасҳеҳ (санҷиши тиловат) дар барнома микрофонро танҳо ҳангоми пахш кардани тугмаи микрофон истифода мебарад.",
+      "Гуфтор дар худи телефон шинохта мешавад; садо ҳеҷ гоҳ бор намешавад ва захира намешавад. Вақте микрофонро қатъ мекунед, шунидан тамом мешавад. Иҷозатро ҳар вақт аз танзимоти телефон пас гирифта метавонед.",
+      "Модели гуфтор (тақрибан 69 МБ) танҳо бо дархости шумо як бор тариқи HTTPS аз GitHub (raw.githubusercontent.com), ё ҳамчун захира аз quran.mushafuk.online боргирӣ мешавад ва дар барнома аз Танзимот → ҳифз ҳазф шуда метавонад.",
+      "Ҳангоми боргирии тафсир ё тарҷума файлҳо тариқи HTTPS аз nihomaho9-ui.github.io гирифта мешаванд. Шрифтҳои саҳифаҳои Мадина (тақрибан 95 МБ) як бор тариқи HTTPS аз jsDelivr ё GitHub боргирӣ шуда, баъд дар дастгоҳ мемонанд, то барнома бе интернет кор кунад.",
+      "Ба он мизбонҳо танҳо маълумоти техникии муқаррарӣ (масалан, суроғаи IP) намоён аст; мо онро намегирем ва дар бораи шумо чизе фиристода намешавад.",
+      "Саҳифаи охирин, хаҷҷгузорӣ, танзимот, тафсиру тарҷумаҳои боргирифта, таърихи санҷиши тиловат ва модели гуфтор танҳо дар дастгоҳ мемонанд.",
+      "Барнома иҷозати микрофонро танҳо вақте мехоҳад, ки бори аввал дар ҳолати Тасҳеҳ микрофонро фурӯзон кунед. Камера, макон, тамосҳо ё дастрасӣ ба файлҳо дархост намешавад.",
+      "Дар барнома ҳисоб нест, реклама ва таҳлил ҳам нест."
+    ],
+    "children_h": "Кӯдакон",
+    "children": [
+      "Сомона барои ҳама синну сол аст. Мо қасдан ном ё маълумоти тамоси кӯдаконро ҷамъ намекунем.",
+      "Муҳтаво Қуръон аст ва реклама нест."
+    ],
+    "contact_h": "Тамос",
+    "contact_name": "Nibras Code.",
+    "email_label": "Почта",
+    "site_label": "Сомона",
+    "terms_label": "Шартҳо",
+    "sources_label": "Манбаъҳо"
+  },
+  {
+    "code": "tr",
+    "html_lang": "tr",
+    "dir": "ltr",
+    "label": "Türkçe",
+    "btn": "TR",
+    "title": "Gizlilik politikası — Mushafuk.online",
+    "description": "Mushafuk.online hesap istemez ve reklam göstermez. Notlar cihazda kalır. Site yalnızca temel ziyaret istatistiği tutar.",
+    "kicker": "Gizlilik",
+    "h1": "Gizlilik politikası",
+    "updated": "Son güncelleme: 24 Kasım 2026.",
+    "intro1": "Mushafuk.online, Medine mushafını sayfa sayfa okumak içindir.",
+    "intro2": "Siteyi Nibras Code yayımlar.",
+    "nav_quran": "Kuran",
+    "nav_tafsir": "Tefsirler",
+    "nav_tr": "Mealler",
+    "nav_about": "Hakkında",
+    "nav_questions": "Sorular",
+    "nav_privacy": "Gizlilik",
+    "not_collect_h": "Neyi toplamayız",
+    "not_collect": [
+      "Hesap yoktur.",
+      "Ad, e-posta, telefon, konum, kişiler ve cihaz kimliği alınmaz.",
+      "Reklam yoktur.",
+      "Verileriniz satılmaz ve reklamcılarla paylaşılmaz."
+    ],
+    "stats_h": "Site istatistikleri",
+    "stats": [
+      "mushafuk.online temel ziyaret istatistiği kaydeder: açılan sayfanın yolu, varsa geldiğiniz site, sayfa dili ve ekranın telefona mı bilgisayara mı benzediği.",
+      "Aramayı kullanırsanız, sitenin geliştirilmesi için arama metni (en fazla 100 karakter) ve sonuç sayısı da kaydedilebilir.",
+      "Bu veri, Supabase’te barındırılan kendi veritabanımıza gönderilir. Okur profili çıkarılmaz ve reklam için kullanılmaz.",
+      "Her web isteğinde olduğu gibi sunucu IP adresinizi görebilir. Biz bunu sizi tanımak için kullanmayız.",
+      "Android uygulamasında bu ziyaret kaydı yoktur."
+    ],
+    "device_h": "Cihazda kalanlar",
+    "device": [
+      "Dil, yazı boyutu ve gece modu bu cihazda kalır.",
+      "Seçilen tefsir, meal, i‘rab ve garip kitap bu cihazda kalır.",
+      "Yer imleri ve notlar yalnız bu cihazda durur.",
+      "Sunucuya gitmez."
+    ],
+    "search_h": "Arama",
+    "search": [
+      "Sitedeki arama yalnız buradaki Kur’an metnine, meallere ve tefsirlere bakar.",
+      "Soru Azerbaycanca, Türkçe, İngilizce veya Rusça ise cevap o dilin mealinden gelir.",
+      "Soru dışarıdaki bir modele gitmez."
+    ],
+    "internet_h": "İnternet ve tilavet",
+    "internet": [
+      "İnternet sayfayı, tefsiri, meali, i‘rabı, garip kelimeleri ve sesi açmak içindir.",
+      "Sesler EveryAyah hizmetinden açılır.",
+      "Bağlantı HTTPS iledir.",
+      "Bu bağlantıdan okur profili toplanmaz."
+    ],
+    "app_h": "Mushafuk Android uygulaması",
+    "app": [
+      "Uygulamadaki Tashih (okuyuş kontrolü) mikrofonu yalnızca siz mikrofon düğmesine bastığınızda kullanır.",
+      "Ses telefonun kendisinde tanınır; hiçbir yere gönderilmez ve kaydedilmez. Mikrofonu durdurunca dinleme biter. İzni dilediğiniz zaman telefon ayarlarından geri alabilirsiniz.",
+      "Konuşma modeli (yaklaşık 69 MB) yalnızca siz isteyince bir kez HTTPS ile GitHub’dan (raw.githubusercontent.com), yedek olarak da quran.mushafuk.online adresinden indirilir ve uygulamada Ayarlar → Hifz bölümünden silinebilir.",
+      "Tefsir veya meal indirdiğinizde dosyalar nihomaho9-ui.github.io adresinden HTTPS ile alınır. Medine sayfa yazı tipleri (yaklaşık 95 MB) bir kez HTTPS ile jsDelivr veya GitHub’dan indirilir, sonra çevrimdışı çalışsın diye cihazda tutulur.",
+      "Bu sunuculara yalnızca standart teknik veri (örneğin IP adresi) görünür; biz onu almayız ve sizin hakkınızda bir şey gönderilmez.",
+      "Son sayfa, yer imleri, ayarlar, indirilen tefsir ve mealler, okuyuş kontrolü geçmişi ve konuşma modeli yalnız cihazda kalır.",
+      "Uygulama mikrofon iznini yalnızca Tashih kipinde mikrofonu ilk açtığınızda ister. Kamera, konum, kişiler ve dosya izni istenmez.",
+      "Uygulamada hesap yoktur; reklam ve analitik de yoktur."
+    ],
+    "children_h": "Çocuklar",
+    "children": [
+      "Site her yaş içindir. Çocuklardan bilerek ad veya iletişim bilgisi toplamayız.",
+      "İçerik Kur’an’dır ve reklam yoktur."
+    ],
+    "contact_h": "İletişim",
+    "contact_name": "Nibras Code.",
+    "email_label": "Posta",
+    "site_label": "Site",
+    "terms_label": "Şartlar",
+    "sources_label": "Kaynaklar"
+  },
+  {
+    "code": "ug",
+    "html_lang": "ug",
+    "dir": "rtl",
+    "label": "ئۇيغۇرچە",
+    "btn": "UG",
+    "title": "مەخپىيەتلىك سىياسىتى — Mushafuk.online",
+    "description": "Mushafuk.online ھېسابات تەلەپ قىلمايدۇ ۋە ئېلان كۆرسەتمەيدۇ. خاتىرىلەر ئۈسكۈنىدە قالىدۇ. تور بېكەت پەقەت ئاساسىي زىيارەت ئىستاتىستىكىسىنى خاتىرىلەيدۇ.",
+    "kicker": "مەخپىيەتلىك",
+    "h1": "مەخپىيەتلىك سىياسىتى",
+    "updated": "ئاخىرقى يېڭىلاش: 2026-يىلى 24-نويابىر.",
+    "intro1": "Mushafuk.online مەدىنە مۇسخىپىنى بەت-بەت ئوقۇش ئۈچۈن.",
+    "intro2": "تور بېكەتنى Nibras Code ئېلان قىلىدۇ.",
+    "nav_quran": "قۇرئان",
+    "nav_tafsir": "تەپسىر",
+    "nav_tr": "تەرجىمىلەر",
+    "nav_about": "بىز ھەققىدە",
+    "nav_questions": "سوئاللار",
+    "nav_privacy": "مەخپىيەتلىك",
+    "not_collect_h": "بىز يىغمايدىغانلىرى",
+    "not_collect": [
+      "ھېسابات يوق.",
+      "بىز ئىسمىڭىز، ئېلخەت، تېلېفون، ئورۇن، ئالاقىداشلار ياكى ئۈسكۈنە پەرق نومۇرىنى ئالمايمىز.",
+      "ئېلان يوق.",
+      "سانلىق مەلۇماتىڭىزنى ساتمىمىز، ئېلان قىلغۇچىلار بىلەن ھەمبەھىرلىمەيمىز."
+    ],
+    "stats_h": "تور بېكەت ئىستاتىستىكىسى",
+    "stats": [
+      "mushafuk.online تور بېكىتى ئاساسىي زىيارەت ئىستاتىستىكىسىنى خاتىرىلەيدۇ: بەت يولى، كەلگەن تور بېكەت (بولسا)، بەت تىلى، ۋە ئېكراننىڭ تېلېفونغا ئوخشايدىغانلىقى ياكى كومپيۇتېرغا ئوخشايدىغانلىقى.",
+      "ئىزدەشنى ئىشلەتسىڭىز، ئىزدەش تېكستى (ئەڭ كۆپ بولغاندا 100 ھەرپ) ۋە نەتىجە سانىمۇ خاتىرىلىنىشى مۇمكىن، تور بېكەت ياخشىلىنىش ئۈچۈن.",
+      "بۇ سانلىق مەلۇمات ئۆز ساندانىمىزغا ئەۋەتىلىدۇ، ئۇنى Supabase ساقلەيدۇ. ئوقۇرمەن ئارخىپى تۈزۈش ۋە ئېلان ئۈچۈن ئىشلىتىلمەيدۇ.",
+      "ھەر قانداق تور تەلىپىدىكىدەك، مۇلازىمېتىر IP ئادرېسىڭىزنى كۆرۈشى مۇمكىن. بىز ئۇنى سىزنى پەرقلەندۈرۈش ئۈچۈن ئىشلىتمەيمىز.",
+      "Android ئەپىدە بۇ زىيارەت خاتىرىسى يوق."
+    ],
+    "device_h": "ئۈسكۈنىدە قالىدىغانلىرى",
+    "device": [
+      "تىل، تېكست چوڭلۇقى ۋە كېچە ھالىتى مۇشۇ ئۈسكۈنىدە قالىدۇ.",
+      "تاللىغان تەپسىر، تەرجىمە، ئىئراب ۋە غەرىب كىتابى مۇشۇ ئۈسكۈنىدە قالىدۇ.",
+      "خەتكۈچ ۋە خاتىرىلەر پەقەت مۇشۇ ئۈسكۈنىدە قالىدۇ.",
+      "ئۇلار مۇلازىمېتىرغا ئەۋەتىلمەيدۇ."
+    ],
+    "search_h": "ئىزدەش",
+    "search": [
+      "ئىزدەش پەقەت مۇشۇ تور بېكەتتىكى قۇرئان تېكستى، تەرجىمىلەر ۋە تەپسىرلەرگە قارايدۇ.",
+      "سوئال ئەزەربەيجان، تۈرك، ئىنگلىز ياكى روس تىلىدا بولسا، جاۋاب شۇ تىلنىڭ تەرجىمىسىدىن كېلىدۇ.",
+      "سوئال سىرتقى مودېلگە ئەۋەتىلمەيدۇ."
+    ],
+    "internet_h": "تور ۋە قىرائەت",
+    "internet": [
+      "تور بەت، تەپسىر، تەرجىمە، ئىئراب، ئاز ئۇچرايدىغان سۆزلەر ۋە ئاۋازنى ئېچىش ئۈچۈن ئىشلىتىلىدۇ.",
+      "ئاۋاز EveryAyah مۇلازىمىتى ئارقىلىق ئېچىلىدۇ.",
+      "ئۇلىنىش HTTPS بىلەن بولىدۇ.",
+      "بۇ ئۇلىنىشتىن ئوقۇرمەن ئارخىپى تۈزۈلمەيدۇ."
+    ],
+    "app_h": "Mushafuk نىڭ Android ئەپى",
+    "app": [
+      "ئەپتىكى تەسھىھ (قىرائەتنى تەكشۈرۈش) ئىقتىدارى مىكروفوننى پەقەت مىكروفون كۇنۇپكىسىنى باسقاندا ئىشلىتىدۇ.",
+      "سۆز تېلېفوننىڭ ئۆزىدە تونۇلىدۇ؛ ئاۋاز ھەرگىز يۈكلەنمەيدۇ ۋە ساقلانمايدۇ. مىكروفوننى توختاتسىڭىز ئاڭلاش تۈگەيدۇ. ئىجازەتنى ھەر ۋاقىت تېلېفون تەڭشىكىدىن قايتۇرۇۋالسىڭىز بولىدۇ.",
+      "سۆز مودېلى (تەخمىنەن 69 مېگابايت) پەقەت سىز سورىغاندا بىر قېتىم HTTPS ئارقىلىق GitHub (raw.githubusercontent.com) دىن، ياكى زاپاس سۈپىتىدە quran.mushafuk.online دىن چۈشۈرۈلىدۇ، ھەمدە ئەپتە تەڭشەك ← ھىفزدىن ئۆچۈرگىلى بولىدۇ.",
+      "تەپسىر ياكى تەرجىمە چۈشۈرگەندە، ھۆججەتلەر HTTPS ئارقىلىق nihomaho9-ui.github.io دىن ئېلىنىدۇ. مەدىنە بەت خەت نۇسخىلىرى (تەخمىنەن 95 مېگابايت) بىر قېتىم HTTPS ئارقىلىق jsDelivr ياكى GitHub دىن چۈشۈرۈلۈپ، ئاندىن ئۈسكۈنىدە قالىدۇ، ئەپ تورسىز ئىشلىسۇن دەپ.",
+      "ئاشۇ مۇلازىمېتىرلارغا پەقەت ئادەتتىكى تېخنىكىلىق سانلىق مەلۇمات (مەسىلەن IP ئادرېس) كۆرۈنىدۇ؛ بىز ئۇنى تاپشۇرۇۋالمايمىز، سىز ھەققىدە ھېچ نەرسە ئەۋەتىلمەيدۇ.",
+      "ئاخىرقى بەت، خەتكۈچ، تەڭشەكلەر، چۈشۈرۈلگەن تەپسىر ۋە تەرجىمىلەر، قىرائەت تەكشۈرۈش تارىخى ۋە سۆز مودېلى پەقەت ئۈسكۈنىدە قالىدۇ.",
+      "ئەپ مىكروفون ئىجازىتىنى پەقەت تەسھىھ ھالىتىدە مىكروفوننى تۇنجى قېتىم ئاچقاندا سورىيدۇ. كامېرا، ئورۇن، ئالاقىداشلار ياكى ھۆججەت زىيارىتى سورىمايدۇ.",
+      "ئەپتە ھېسابات يوق، ئېلان ۋە ئانالىز مۇ يوق."
+    ],
+    "children_h": "بالىلار",
+    "children": [
+      "تور بېكەت بارلىق ياشقا تەۋە. بىز قەستەن بالىلارنىڭ ئىسمى ياكى ئالاقە تەپسىلاتىنى توپلىمايمىز.",
+      "مەزمۇن قۇرئان، ئېلان يوق."
+    ],
+    "contact_h": "ئالاقە",
+    "contact_name": "Nibras Code.",
+    "email_label": "ئېلخەت",
+    "site_label": "تور بېكەت",
+    "terms_label": "شەرتلەر",
+    "sources_label": "مەنبەلەر"
+  },
+  {
+    "code": "ur",
+    "html_lang": "ur",
+    "dir": "rtl",
+    "label": "اردو",
+    "btn": "UR",
+    "title": "رازداری کی پالیسی — Mushafuk.online",
+    "description": "Mushafuk.online حساب نہیں مانگتا اور اشتہار نہیں دکھاتا۔ نوٹس آلہ پر رہتے ہیں۔ سائٹ صرف بنیادی وزٹ کے اعدادوشمار لکھتی ہے۔",
+    "kicker": "رازداری",
+    "h1": "رازداری کی پالیسی",
+    "updated": "آخری تازہ کاری: 24 نومبر 2026۔",
+    "intro1": "Mushafuk.online مدینہ کے مصحف کو صفحہ بہ صفحہ پڑھنے کے لیے ہے۔",
+    "intro2": "سائٹ Nibras Code شائع کرتا ہے۔",
+    "nav_quran": "قرآن",
+    "nav_tafsir": "تفسیر",
+    "nav_tr": "تراجم",
+    "nav_about": "ہمارے بارے میں",
+    "nav_questions": "سوالات",
+    "nav_privacy": "رازداری",
+    "not_collect_h": "ہم کیا جمع نہیں کرتے",
+    "not_collect": [
+      "کوئی حساب نہیں ہے۔",
+      "ہم آپ کا نام، ای میل، فون، مقام، روابط یا آلے کی شناخت نہیں لیتے۔",
+      "کوئی اشتہار نہیں ہیں۔",
+      "ہم آپ کا ڈیٹا فروخت نہیں کرتے اور نہ اسے مشتہروں کے ساتھ بانٹتے ہیں۔"
+    ],
+    "stats_h": "سائٹ کے اعدادوشمار",
+    "stats": [
+      "mushafuk.online پر سائٹ بنیادی وزٹ کے اعدادوشمار لکھتی ہے: صفحے کا پتہ، حوالہ دینے والی ویب سائٹ (اگر ہو)، صفحے کی زبان، اور یہ کہ سکرین فون جیسی لگتی ہے یا کمپیوٹر جیسی۔",
+      "اگر آپ تلاش استعمال کریں تو تلاش کا متن (زیادہ سے زیادہ 100 حروف) اور نتائج کی تعداد بھی لکھی جا سکتی ہے، تاکہ سائٹ بہتر ہو۔",
+      "یہ ہمارے اپنے ڈیٹابیس کو بھیجا جاتا ہے، جس کی میزبانی Supabase کرتا ہے۔ اسے قاری کی پروفائل بنانے یا اشتہار کے لیے استعمال نہیں کیا جاتا۔",
+      "کسی بھی ویب درخواست کی طرح سرور آپ کا IP پتہ دیکھ سکتا ہے۔ ہم اسے آپ کی شناخت کے لیے استعمال نہیں کرتے۔",
+      "اینڈرائیڈ ایپ میں یہ وزٹ ریکارڈ نہیں ہے۔"
+    ],
+    "device_h": "آلہ پر کیا رہتا ہے",
+    "device": [
+      "زبان، متن کا سائز اور رات کا موڈ اسی آلے پر رہتے ہیں۔",
+      "آپ کی منتخب تفسیر، ترجمہ، اعراب اور غریب کی کتاب اسی آلے پر رہتی ہے۔",
+      "بک مارک اور نوٹس صرف اسی آلے پر رہتے ہیں۔",
+      "وہ سرور پر نہیں بھیجے جاتے۔"
+    ],
+    "search_h": "تلاش",
+    "search": [
+      "تلاش صرف اسی سائٹ پر موجود قرآن کے متن، تراجم اور تفاسیر کو دیکھتی ہے۔",
+      "اگر سوال آذربائیجانی، ترکی، انگریزی یا روسی میں ہو تو جواب اسی زبان کے ترجمے سے آتا ہے۔",
+      "سوال کسی بیرونی ماڈل کو نہیں بھیجا جاتا۔"
+    ],
+    "internet_h": "انٹرنیٹ اور تلاوت",
+    "internet": [
+      "انٹرنیٹ صفحہ، تفسیر، ترجمہ، اعراب، نادر الفاظ اور آواز کھولنے کے لیے استعمال ہوتا ہے۔",
+      "آواز EveryAyah خدمت کے ذریعے کھلتی ہے۔",
+      "رابطہ HTTPS سے ہوتا ہے۔",
+      "اس رابطے سے قاری کی پروفائل نہیں بنائی جاتی。"
+    ],
+    "app_h": "Mushafuk اینڈرائیڈ ایپ",
+    "app": [
+      "ایپ میں تصحیح (تلاوت کی پڑتال) کی خصوصیت مائیکروفون تبھی استعمال کرتی ہے جب آپ مائیکروفون کا بٹن دبائیں۔",
+      "آواز فون پر ہی پہچانی جاتی ہے؛ آڈیو کبھی اپ لوڈ یا محفوظ نہیں ہوتی۔ مائیکروفون بند کرتے ہی سننا ختم ہو جاتا ہے۔ آپ فون کی ترتیبات سے کسی بھی وقت اجازت واپس لے سکتے ہیں۔",
+      "کلام کا ماڈل (تقریباً 69 ایم بی) صرف آپ کی درخواست پر ایک بار HTTPS سے GitHub (raw.githubusercontent.com) سے، یا متبادل کے طور پر quran.mushafuk.online سے ڈاؤن لوڈ ہوتا ہے، اور ایپ میں ترتیبات ← حفظ سے حذف کیا جا سکتا ہے۔",
+      "جب آپ تفسیر یا تراجم ڈاؤن لوڈ کرتے ہیں تو فائلیں HTTPS سے nihomaho9-ui.github.io سے آتی ہیں۔ مدینہ کے صفحہ کے فانٹ (تقریباً 95 ایم بی) ایک بار HTTPS سے jsDelivr یا GitHub سے ڈاؤن لوڈ ہوتے ہیں، پھر آلے پر رہتے ہیں تاکہ ایپ آف لائن چل سکے۔",
+      "ان میزبانوں کو صرف عام تکنیکی مواد (جیسے IP پتہ) نظر آتا ہے؛ ہم اسے وصول نہیں کرتے، اور آپ کے بارے میں کچھ نہیں بھیجا جاتا۔",
+      "آخری صفحہ، بک مارک، ترتیبات، ڈاؤن لوڈ شدہ تفسیر و تراجم، تلاوت کی پڑتال کی تاریخ اور کلام کا ماڈل صرف آلے پر رہتے ہیں۔",
+      "ایپ مائیکروفون کی اجازت صرف اس وقت مانگتی ہے جب آپ تصحیح کے موڈ میں پہلی بار مائیکروفون چالو کرتے ہیں۔ کیمرہ، مقام، روابط یا فائلوں تک رسائی نہیں مانگی جاتی۔",
+      "ایپ میں کوئی حساب نہیں ہے، اور نہ اشتہار ہیں نہ تجزیہ۔"
+    ],
+    "children_h": "بچے",
+    "children": [
+      "سائٹ ہر عمر کے لیے ہے۔ ہم جان بوجھ کر بچوں کے نام یا رابطے کی تفصیلات جمع نہیں کرتے۔",
+      "مواد قرآن ہے، اور کوئی اشتہار نہیں ہیں۔"
+    ],
+    "contact_h": "رابطہ",
+    "contact_name": "Nibras Code.",
+    "email_label": "ای میل",
+    "site_label": "ویب سائٹ",
+    "terms_label": "شرائط",
+    "sources_label": "مصادر"
+  },
+  {
+    "code": "uz",
+    "html_lang": "uz",
+    "dir": "ltr",
+    "label": "Oʻzbekcha",
+    "btn": "UZ",
+    "title": "Maxfiylik siyosati — Mushafuk.online",
+    "description": "Mushafuk.online hisob so‘ramaydi va reklama ko‘rsatmaydi. Qaydlar qurilmada qoladi. Sayt faqat asosiy tashrif statistikasini yozadi.",
+    "kicker": "Maxfiylik",
+    "h1": "Maxfiylik siyosati",
+    "updated": "Oxirgi yangilanish: 24-noyabr, 2026.",
+    "intro1": "Mushafuk.online Madina mushafini sahifama-sahifa o‘qish uchun.",
+    "intro2": "Saytni Nibras Code nashr etadi.",
+    "nav_quran": "Qur'on",
+    "nav_tafsir": "Tafsir",
+    "nav_tr": "Tarjimalar",
+    "nav_about": "Biz haqimizda",
+    "nav_questions": "Savollar",
+    "nav_privacy": "Maxfiylik",
+    "not_collect_h": "Nimani yig‘maymiz",
+    "not_collect": [
+      "Hisob yo‘q.",
+      "Ism, elektron pochta, telefon, joy, kontaktlar yoki qurilma identifikatori olinmaydi.",
+      "Reklama yo‘q.",
+      "Ma’lumotlaringizni sotmaymiz va reklama beruvchilar bilan bo‘lishmaymiz."
+    ],
+    "stats_h": "Sayt statistikasi",
+    "stats": [
+      "mushafuk.online sayti asosiy tashrif statistikasini yozadi: sahifa yo‘li, kelgan sayt (bo‘lsa), sahifa tili va ekran telefonga o‘xshashmi yoki kompyuterga.",
+      "Qidiruvdan foydalansangiz, qidiruv matni (ko‘pi bilan 100 belgi) va natijalar soni ham yozilishi mumkin, sayt yaxshilansin deb.",
+      "Bu ma’lumot o‘z ma’lumotlar bazamizga yuboriladi, uni Supabase joylashtiradi. O‘quvchi profili tuzilmaydi va reklama uchun ishlatilmaydi.",
+      "Har qanday veb so‘rovida bo‘lgani kabi, server IP manzilingizni ko‘rishi mumkin. Biz uni sizni aniqlash uchun ishlatmaymiz.",
+      "Android ilovasida bu tashrif yozuvi yo‘q."
+    ],
+    "device_h": "Qurilmada qoladiganlar",
+    "device": [
+      "Til, matn o‘lchami va tungi rejim shu qurilmada qoladi.",
+      "Tanlagan tafsir, tarjima, i‘rob va g‘arib kitobi shu qurilmada qoladi.",
+      "Xatcho‘plar va qaydlar faqat shu qurilmada qoladi.",
+      "Ular serverga yuborilmaydi."
+    ],
+    "search_h": "Qidiruv",
+    "search": [
+      "Qidiruv faqat shu saytdagi Qur’on matni, tarjimalar va tafsirlarga qarab ko‘radi.",
+      "Savol ozarbayjon, turk, ingliz yoki rus tilida bo‘lsa, javob o‘sha til tarjimasidan keladi.",
+      "Savol tashqi modelga yuborilmaydi."
+    ],
+    "internet_h": "Internet va tilovat",
+    "internet": [
+      "Internet sahifa, tafsir, tarjima, i‘rob, nodir so‘zlar va tovushni ochish uchun ishlatiladi.",
+      "Tovush EveryAyah xizmati orqali ochiladi.",
+      "Aloqa HTTPS orqali ketadi.",
+      "Bu aloqadan o‘quvchi profili yig‘ilmaydi."
+    ],
+    "app_h": "Mushafuk Android ilovasi",
+    "app": [
+      "Ilovadagi Tasheeh (tilovatni tekshirish) mikrofonni faqat siz mikrofon tugmasini bosganingizda ishlatadi.",
+      "Nutq telefonda taniladi; tovush hech qaerga yuklanmaydi va saqlanmaydi. Mikrofonni to‘xtatsangiz, tinglash tugaydi. Ruxsatni istalgan vaqtda telefon sozlamalaridan qaytarib olishingiz mumkin.",
+      "Nutq modeli (taxminan 69 MB) faqat siz so‘raganingizda bir marta HTTPS orqali GitHub’dan (raw.githubusercontent.com), zaxira sifatida esa quran.mushafuk.online’dan yuklab olinadi va ilovada Sozlamalar → Hifz bo‘limidan o‘chirilishi mumkin.",
+      "Tafsir yoki tarjima yuklaganingizda fayllar nihomaho9-ui.github.io’dan HTTPS orqali olinadi. Madina sahifa shriftlari (taxminan 95 MB) bir marta HTTPS orqali jsDelivr yoki GitHub’dan yuklab olinadi, keyin qurilmada qoladi, toki ilova oflayn ishlasin.",
+      "O‘sha hostlarga faqat odatiy texnik ma’lumot (masalan, IP manzil) ko‘rinadi; biz uni olmaymiz va siz haqingizda hech narsa yuborilmaydi.",
+      "Oxirgi sahifa, xatcho‘plar, sozlamalar, yuklab olingan tafsir va tarjimalar, tilovat tekshiruvi tarixi va nutq modeli faqat qurilmada qoladi.",
+      "Ilova mikrofon ruxsatini faqat Tasheeh rejimida mikrofonni birinchi marta yoqqaningizda so‘raydi. Kamera, joy, kontaktlar yoki fayl ruxsati so‘ralmaydi.",
+      "Ilovada hisob yo‘q, reklama va tahlil ham yo‘q."
+    ],
+    "children_h": "Bolalar",
+    "children": [
+      "Sayt barcha yoshlar uchun. Biz ataylab bolalarning ismi yoki aloqa ma’lumotlarini yig‘maymiz.",
+      "Mazmun Qur’ondir va reklama yo‘q."
+    ],
+    "contact_h": "Aloqa",
+    "contact_name": "Nibras Code.",
+    "email_label": "Pochta",
+    "site_label": "Veb-sayt",
+    "terms_label": "Shartlar",
+    "sources_label": "Manbalar"
+  }
+]

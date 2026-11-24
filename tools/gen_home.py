@@ -155,7 +155,7 @@ DATA = {
         "footer": [
             ("/en/faq.html", "Questions"),
             ("/en/sources.html", "Sources"),
-            ("/en/privacy.html", "Confidentialité"),
+            ("/fr/privacy.html", "Confidentialité"),
             ("/en/terms.html", "Conditions"),
         ],
     },
@@ -224,7 +224,7 @@ DATA = {
         "footer": [
             ("/en/faq.html", "Pertanyaan"),
             ("/en/sources.html", "Sumber"),
-            ("/en/privacy.html", "Privasi"),
+            ("/id/privacy.html", "Privasi"),
             ("/en/terms.html", "Ketentuan"),
         ],
     },
@@ -292,7 +292,7 @@ DATA = {
         "footer": [
             ("/en/faq.html", "প্রশ্ন"),
             ("/en/sources.html", "উৎস"),
-            ("/en/privacy.html", "গোপনীয়তা"),
+            ("/bn/privacy.html", "গোপনীয়তা"),
             ("/en/terms.html", "শর্তাবলি"),
         ],
     },
@@ -357,7 +357,7 @@ DATA = {
         "footer": [
             ("/en/faq.html", "Soalan"),
             ("/en/sources.html", "Sumber"),
-            ("/en/privacy.html", "Privasi"),
+            ("/ms/privacy.html", "Privasi"),
             ("/en/terms.html", "Syarat"),
         ],
     },
@@ -427,7 +427,7 @@ DATA = {
         "footer": [
             ("/en/faq.html", "سوالات"),
             ("/en/sources.html", "مصادر"),
-            ("/en/privacy.html", "رازداری"),
+            ("/ur/privacy.html", "رازداری"),
             ("/en/terms.html", "شرائط"),
         ],
     },
