@@ -515,7 +515,7 @@ def build(lang: str, d: dict) -> str:
         f'<meta name="twitter:card" content="summary_large_image">'
         f'<meta name="description" content="{esc_attr(d["desc"])}">'
         f'<link rel="icon" href="../icon.png">'
-        f'<link rel="stylesheet" href="../home.css?v=14">'
+        f'<link rel="stylesheet" href="../home.css?v=15">'
         f'<link rel="canonical" href="https://mushafuk.online/{lang}/">'
         f"{hreflang}</head><body class=\"h\"><header class=\"top\"><div class=\"bar\">"
         f'<div class="row"><a class="logo" href="./" dir="ltr"><img src="../icon.png" alt="">'
