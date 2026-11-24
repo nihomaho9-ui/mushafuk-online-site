@@ -1759,12 +1759,12 @@ if (document.currentScript) { const fl = document.createElement("link"); fl.rel 
     document.head.appendChild(st);
   }
   function place(){
-    var bar=document.querySelector("body>header, header.bar, header.tr-bar, header.nav .in");
-    if(!bar||bar.querySelector("a.qm-home"))return;
-    if(!bar.querySelector("a#back, a.x, a.home-brand, a.logo"))return;
-    css();
-    var old=bar.querySelector("a.home-brand");
+    if(document.querySelector("a.qm-home"))return;
+    var old=document.querySelector("a.home-brand");
     if(old&&old.parentNode)old.parentNode.removeChild(old);
+    var x=document.querySelector("a#back, header.bar a.x, header.tr-bar a.x, header.nav a.logo, a.x");
+    if(!x||!x.parentNode)return;
+    css();
     var lbl=label();
     var home=document.createElement("a");
     home.className="qm-home";
@@ -1772,10 +1772,9 @@ if (document.currentScript) { const fl = document.createElement("link"); fl.rel 
     home.setAttribute("aria-label",lbl);
     home.title=lbl;
     home.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.2 12 4l8 7.2"/><path d="M7 10.2V20h10V10.2"/><path d="M10 20v-6h4v6"/></svg><span class="qm-home-lbl">'+lbl+"</span>";
-    var x=bar.querySelector("a#back, a.x, a.logo");
-    if(x&&x.nextSibling)bar.insertBefore(home,x.nextSibling);
-    else if(x)bar.appendChild(home);
-    else bar.insertBefore(home,bar.firstChild);
+    var parent=x.parentNode;
+    if(x.nextSibling)parent.insertBefore(home,x.nextSibling);
+    else parent.appendChild(home);
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",place);
   else place();
