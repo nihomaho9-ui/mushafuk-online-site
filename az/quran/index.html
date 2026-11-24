@@ -1019,7 +1019,7 @@
         return keys.length ? { n, keys } : null;
       };
 
-      let startX = null;
+      let startX = null, startY = null, startT = 0;
       // long-press (~450 ms) on an ayah opens its tafsir / translation; moving the finger cancels it
       let holdT = 0, holdXY = null, held = false;
       const cancelHold = () => { clearTimeout(holdT); holdT = 0; };
@@ -1039,6 +1039,8 @@
           QM.openAyah(s, a);
         }, 450);
         startX = e.clientX;
+        startY = e.clientY;
+        startT = performance.now();
         try { board.setPointerCapture(e.pointerId); } catch (err) {}
       });
       board.addEventListener("pointermove", (e) => {
@@ -1078,12 +1080,14 @@
           if (ay) QM.tapAyah(ay.dataset.k);
           return;
         }
-        const dx = e.clientX - startX;
+        const dx = e.clientX - startX, dy = e.clientY - startY, dt = performance.now() - startT;
+        const w = (board && board.clientWidth) || innerWidth;
         startX = null;
-        if (dx > 36) show(pageNo + 1);
-        else if (dx < -36) show(pageNo - 1);
+        const dir = (window.QM_shouldTurnPage || function (dx, dy, dt, w) { return (dt < 800 && Math.abs(dx) >= Math.max(60, w * 0.15) && Math.abs(dx) > 1.5 * Math.abs(dy)) ? (dx > 0 ? 1 : -1) : 0; })(dx, dy, dt, w);
+        if (dir) show(pageNo + dir);
       });
-      board.addEventListener("pointercancel", () => { startX = null; cancelHold(); });
+      board.addEventListener("pointercancel", () => { startX = null; startY = null; cancelHold(); });
+      document.addEventListener("touchstart", (e) => { if (e.touches.length > 1) startX = null; }, true);
       window.addEventListener("resize", fit);
       const AYAHS = "7,286,200,176,120,165,206,75,129,109,123,111,43,52,99,128,111,110,98,135,112,78,118,64,77,227,93,88,69,60,34,30,73,54,45,83,182,88,75,85,54,53,89,59,37,35,38,29,18,45,60,49,62,55,78,96,29,22,24,13,14,11,11,18,12,12,30,52,52,44,28,28,20,56,40,31,50,40,46,42,29,19,36,25,22,17,19,26,30,20,15,21,11,8,8,19,5,8,8,11,11,8,3,9,5,4,7,3,6,3,5,4,5,6".split(",").map(Number);
       const MADANI = new Set([2, 3, 4, 5, 8, 9, 13, 22, 24, 33, 47, 48, 49, 55, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 76, 98, 99, 110]);
@@ -1454,7 +1458,7 @@
       Promise.all([fetch("./yazi-pages.json").then((r) => r.json()), fetch("./yazi-words.json").then((r) => r.json()).catch(() => null)]).then(([json, wb]) => { words = wb; pages = json; loadNames().then(function(){ glyphInk.clear(); try { fit(); } catch (e) {} }); const qp = +(window.__PAGE||new URLSearchParams(location.search).get("page")); if (qp >= 1 && qp <= 604) openAt(qp); });
     </script>
     <script>try{localStorage.setItem("qm.lang","az");var p=JSON.parse(localStorage.getItem("qm.prefs")||"{}");if(!p.tr)p.tr="az.musayev";localStorage.setItem("qm.prefs",JSON.stringify(p));}catch(e){}</script>
-    <script src="./lib.js?v=40"></script>
+    <script src="./lib.js?v=41"></script>
     <script src="./audio.js?v=11"></script>
   <style>#qtext{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:normal;border:0}#qtext p{margin:.35rem 0}#qtext h2{font-size:1rem}</style><noscript><style>html,body{height:auto!important;overflow:auto!important;display:block!important}#qtext{position:static;width:auto;height:auto;margin:0 auto;padding:1.25rem 1rem 3rem;overflow:visible;clip:auto;max-width:42rem;font:1.2rem/2 Amiri,'Noto Naskh Arabic',serif}</style></noscript><article id="qtext" lang="ar" dir="rtl"><p>بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ﴿1﴾</p><p>ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ﴿2﴾</p><p>ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ﴿3﴾</p><p>مَـٰلِكِ يَوْمِ ٱلدِّينِ ﴿4﴾</p><p>إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿5﴾</p><p>ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ ﴿6﴾</p><p>صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ ﴿7﴾</p><h2>Surələrin siyahısı</h2><ol><li><a href="/az/page/1/">Fatihə</a></li><li><a href="/az/page/2/">Bəqərə</a></li><li><a href="/az/page/50/">Ali-İmran</a></li><li><a href="/az/page/77/">Nisa</a></li><li><a href="/az/page/106/">Maidə</a></li><li><a href="/az/page/128/">Ənam</a></li><li><a href="/az/page/151/">Əraf</a></li><li><a href="/az/page/177/">Ənfal</a></li><li><a href="/az/page/187/">Tövbə</a></li><li><a href="/az/page/208/">Yunus</a></li><li><a href="/az/page/221/">Hud</a></li><li><a href="/az/page/235/">Yusuf</a></li><li><a href="/az/page/249/">Rəd</a></li><li><a href="/az/page/255/">İbrahim</a></li><li><a href="/az/page/262/">Hicr</a></li><li><a href="/az/page/267/">Nəhl</a></li><li><a href="/az/page/282/">İsra</a></li><li><a href="/az/page/293/">Kəhf</a></li><li><a href="/az/page/305/">Məryəm</a></li><li><a href="/az/page/312/">Taha</a></li><li><a href="/az/page/322/">Ənbiya</a></li><li><a href="/az/page/332/">Həcc</a></li><li><a href="/az/page/342/">Muminun</a></li><li><a href="/az/page/350/">Nur</a></li><li><a href="/az/page/359/">Furqan</a></li><li><a href="/az/page/367/">Şuəra</a></li><li><a href="/az/page/377/">Nəml</a></li><li><a href="/az/page/385/">Qəsəs</a></li><li><a href="/az/page/396/">Ankəbut</a></li><li><a href="/az/page/404/">Rum</a></li><li><a href="/az/page/411/">Loğman</a></li><li><a href="/az/page/415/">Səcdə</a></li><li><a href="/az/page/418/">Əhzab</a></li><li><a href="/az/page/428/">Səba</a></li><li><a href="/az/page/434/">Fatir</a></li><li><a href="/az/page/440/">Yasin</a></li><li><a href="/az/page/446/">Saffat</a></li><li><a href="/az/page/453/">Sad</a></li><li><a href="/az/page/458/">Zumər</a></li><li><a href="/az/page/467/">Ğafir</a></li><li><a href="/az/page/477/">Fussilət</a></li><li><a href="/az/page/483/">Şura</a></li><li><a href="/az/page/489/">Zuxruf</a></li><li><a href="/az/page/496/">Duxan</a></li><li><a href="/az/page/499/">Casiyə</a></li><li><a href="/az/page/502/">Əhqaf</a></li><li><a href="/az/page/507/">Muhəmməd</a></li><li><a href="/az/page/511/">Fəth</a></li><li><a href="/az/page/515/">Hucurat</a></li><li><a href="/az/page/518/">Qaf</a></li><li><a href="/az/page/520/">Zariyat</a></li><li><a href="/az/page/523/">Tur</a></li><li><a href="/az/page/526/">Nəcm</a></li><li><a href="/az/page/528/">Qəmər</a></li><li><a href="/az/page/531/">Rəhman</a></li><li><a href="/az/page/534/">Vaqiə</a></li><li><a href="/az/page/537/">Hədid</a></li><li><a href="/az/page/542/">Mucadələ</a></li><li><a href="/az/page/545/">Həşr</a></li><li><a href="/az/page/549/">Mumtəhinə</a></li><li><a href="/az/page/551/">Saff</a></li><li><a href="/az/page/553/">Cumə</a></li><li><a href="/az/page/554/">Munafiqun</a></li><li><a href="/az/page/556/">Təğabun</a></li><li><a href="/az/page/558/">Talaq</a></li><li><a href="/az/page/560/">Təhrim</a></li><li><a href="/az/page/562/">Mulk</a></li><li><a href="/az/page/564/">Qələm</a></li><li><a href="/az/page/566/">Haqqə</a></li><li><a href="/az/page/568/">Məaric</a></li><li><a href="/az/page/570/">Nuh</a></li><li><a href="/az/page/572/">Cin</a></li><li><a href="/az/page/574/">Muzzəmmil</a></li><li><a href="/az/page/575/">Muddəssir</a></li><li><a href="/az/page/577/">Qiyamə</a></li><li><a href="/az/page/578/">İnsan</a></li><li><a href="/az/page/580/">Mursəlat</a></li><li><a href="/az/page/582/">Nəbə</a></li><li><a href="/az/page/583/">Naziat</a></li><li><a href="/az/page/585/">Əbəsə</a></li><li><a href="/az/page/586/">Təkvir</a></li><li><a href="/az/page/587/">İnfitar</a></li><li><a href="/az/page/587/">Mutəffifin</a></li><li><a href="/az/page/589/">İnşiqaq</a></li><li><a href="/az/page/590/">Buruc</a></li><li><a href="/az/page/591/">Tariq</a></li><li><a href="/az/page/591/">Əla</a></li><li><a href="/az/page/592/">Ğaşiyə</a></li><li><a href="/az/page/593/">Fəcr</a></li><li><a href="/az/page/594/">Bələd</a></li><li><a href="/az/page/595/">Şəms</a></li><li><a href="/az/page/595/">Leyl</a></li><li><a href="/az/page/596/">Duha</a></li><li><a href="/az/page/596/">İnşirah</a></li><li><a href="/az/page/597/">Tin</a></li><li><a href="/az/page/597/">Ələq</a></li><li><a href="/az/page/598/">Qədr</a></li><li><a href="/az/page/598/">Bəyyinə</a></li><li><a href="/az/page/599/">Zəlzələ</a></li><li><a href="/az/page/599/">Adiyat</a></li><li><a href="/az/page/600/">Qariə</a></li><li><a href="/az/page/600/">Təkasur</a></li><li><a href="/az/page/601/">Əsr</a></li><li><a href="/az/page/601/">Huməzə</a></li><li><a href="/az/page/601/">Fil</a></li><li><a href="/az/page/602/">Qureyş</a></li><li><a href="/az/page/602/">Maun</a></li><li><a href="/az/page/602/">Kövsər</a></li><li><a href="/az/page/603/">Kafirun</a></li><li><a href="/az/page/603/">Nəsr</a></li><li><a href="/az/page/603/">Məsəd</a></li><li><a href="/az/page/604/">İxlas</a></li><li><a href="/az/page/604/">Fələq</a></li><li><a href="/az/page/604/">Nas</a></li></ol></article></body>
 </html>

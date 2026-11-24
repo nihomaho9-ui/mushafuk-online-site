@@ -1019,7 +1019,7 @@
         return keys.length ? { n, keys } : null;
       };
 
-      let startX = null;
+      let startX = null, startY = null, startT = 0;
       // long-press (~450 ms) on an ayah opens its tafsir / translation; moving the finger cancels it
       let holdT = 0, holdXY = null, held = false;
       const cancelHold = () => { clearTimeout(holdT); holdT = 0; };
@@ -1039,6 +1039,8 @@
           QM.openAyah(s, a);
         }, 450);
         startX = e.clientX;
+        startY = e.clientY;
+        startT = performance.now();
         try { board.setPointerCapture(e.pointerId); } catch (err) {}
       });
       board.addEventListener("pointermove", (e) => {
@@ -1078,12 +1080,14 @@
           if (ay) QM.tapAyah(ay.dataset.k);
           return;
         }
-        const dx = e.clientX - startX;
+        const dx = e.clientX - startX, dy = e.clientY - startY, dt = performance.now() - startT;
+        const w = (board && board.clientWidth) || innerWidth;
         startX = null;
-        if (dx > 36) show(pageNo + 1);
-        else if (dx < -36) show(pageNo - 1);
+        const dir = (window.QM_shouldTurnPage || function (dx, dy, dt, w) { return (dt < 800 && Math.abs(dx) >= Math.max(60, w * 0.15) && Math.abs(dx) > 1.5 * Math.abs(dy)) ? (dx > 0 ? 1 : -1) : 0; })(dx, dy, dt, w);
+        if (dir) show(pageNo + dir);
       });
-      board.addEventListener("pointercancel", () => { startX = null; cancelHold(); });
+      board.addEventListener("pointercancel", () => { startX = null; startY = null; cancelHold(); });
+      document.addEventListener("touchstart", (e) => { if (e.touches.length > 1) startX = null; }, true);
       window.addEventListener("resize", fit);
       const AYAHS = "7,286,200,176,120,165,206,75,129,109,123,111,43,52,99,128,111,110,98,135,112,78,118,64,77,227,93,88,69,60,34,30,73,54,45,83,182,88,75,85,54,53,89,59,37,35,38,29,18,45,60,49,62,55,78,96,29,22,24,13,14,11,11,18,12,12,30,52,52,44,28,28,20,56,40,31,50,40,46,42,29,19,36,25,22,17,19,26,30,20,15,21,11,8,8,19,5,8,8,11,11,8,3,9,5,4,7,3,6,3,5,4,5,6".split(",").map(Number);
       const MADANI = new Set([2, 3, 4, 5, 8, 9, 13, 22, 24, 33, 47, 48, 49, 55, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 76, 98, 99, 110]);
@@ -1454,7 +1458,7 @@
       Promise.all([fetch("./yazi-pages.json").then((r) => r.json()), fetch("./yazi-words.json").then((r) => r.json()).catch(() => null)]).then(([json, wb]) => { words = wb; pages = json; loadNames().then(function(){ glyphInk.clear(); try { fit(); } catch (e) {} }); const qp = +(window.__PAGE||new URLSearchParams(location.search).get("page")); if (qp >= 1 && qp <= 604) openAt(qp); });
     </script>
     <script>try{localStorage.setItem("qm.lang","ru");var p=JSON.parse(localStorage.getItem("qm.prefs")||"{}");if(!p.tr)p.tr="ru.kuliev";localStorage.setItem("qm.prefs",JSON.stringify(p));}catch(e){}</script>
-    <script src="./lib.js?v=40"></script>
+    <script src="./lib.js?v=41"></script>
     <script src="./audio.js?v=11"></script>
   <style>#qtext{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:normal;border:0}#qtext p{margin:.35rem 0}#qtext h2{font-size:1rem}#qtext nav.seo-crawl{display:flex;flex-wrap:wrap;gap:.5rem 1rem;justify-content:center;margin:1.25rem 0 0;padding:.75rem 0 0;border-top:1px solid rgba(0,0,0,.08);font:600 .95rem/1.4 system-ui,sans-serif}#qtext nav.seo-crawl a{color:#0b6b4f;text-decoration:none}</style><noscript><style>html,body{height:auto!important;overflow:auto!important;display:block!important}#qtext{position:static;width:auto;height:auto;margin:0 auto;padding:1.25rem 1rem 3rem;overflow:visible;clip:auto;max-width:42rem;font:1.2rem/2 Amiri,'Noto Naskh Arabic',serif}</style></noscript><article id="qtext" lang="ar" dir="rtl"><p>وَيَقُولُ ٱلَّذِينَ ءَامَنُوا۟ لَوْلَا نُزِّلَتْ سُورَةٌ ۖ فَإِذَآ أُنزِلَتْ سُورَةٌ مُّحْكَمَةٌ وَذُكِرَ فِيهَا ٱلْقِتَالُ ۙ رَأَيْتَ ٱلَّذِينَ فِى قُلُوبِهِم مَّرَضٌ يَنظُرُونَ إِلَيْكَ نَظَرَ ٱلْمَغْشِىِّ عَلَيْهِ مِنَ ٱلْمَوْتِ ۖ فَأَوْلَىٰ لَهُمْ ﴿20﴾</p><p>طَاعَةٌ وَقَوْلٌ مَّعْرُوفٌ ۚ فَإِذَا عَزَمَ ٱلْأَمْرُ فَلَوْ صَدَقُوا۟ ٱللَّهَ لَكَانَ خَيْرًا لَّهُمْ ﴿21﴾</p><p>فَهَلْ عَسَيْتُمْ إِن تَوَلَّيْتُمْ أَن تُفْسِدُوا۟ فِى ٱلْأَرْضِ وَتُقَطِّعُوٓا۟ أَرْحَامَكُمْ ﴿22﴾</p><p>أُو۟لَـٰٓئِكَ ٱلَّذِينَ لَعَنَهُمُ ٱللَّهُ فَأَصَمَّهُمْ وَأَعْمَىٰٓ أَبْصَـٰرَهُمْ ﴿23﴾</p><p>أَفَلَا يَتَدَبَّرُونَ ٱلْقُرْءَانَ أَمْ عَلَىٰ قُلُوبٍ أَقْفَالُهَآ ﴿24﴾</p><p>إِنَّ ٱلَّذِينَ ٱرْتَدُّوا۟ عَلَىٰٓ أَدْبَـٰرِهِم مِّنۢ بَعْدِ مَا تَبَيَّنَ لَهُمُ ٱلْهُدَى ۙ ٱلشَّيْطَـٰنُ سَوَّلَ لَهُمْ وَأَمْلَىٰ لَهُمْ ﴿25﴾</p><p>ذَٰلِكَ بِأَنَّهُمْ قَالُوا۟ لِلَّذِينَ كَرِهُوا۟ مَا نَزَّلَ ٱللَّهُ سَنُطِيعُكُمْ فِى بَعْضِ ٱلْأَمْرِ ۖ وَٱللَّهُ يَعْلَمُ إِسْرَارَهُمْ ﴿26﴾</p><p>فَكَيْفَ إِذَا تَوَفَّتْهُمُ ٱلْمَلَـٰٓئِكَةُ يَضْرِبُونَ وُجُوهَهُمْ وَأَدْبَـٰرَهُمْ ﴿27﴾</p><p>ذَٰلِكَ بِأَنَّهُمُ ٱتَّبَعُوا۟ مَآ أَسْخَطَ ٱللَّهَ وَكَرِهُوا۟ رِضْوَٰنَهُۥ فَأَحْبَطَ أَعْمَـٰلَهُمْ ﴿28﴾</p><p>أَمْ حَسِبَ ٱلَّذِينَ فِى قُلُوبِهِم مَّرَضٌ أَن لَّن يُخْرِجَ ٱللَّهُ أَضْغَـٰنَهُمْ ﴿29﴾</p><nav class="seo-crawl" aria-label="Иараб"><a rel="prev" href="/ru/irab/page/508/">‹</a><a class="hub" href="/ru/irab/">Иараб</a><a rel="next" href="/ru/irab/page/510/">›</a></nav></article><script>(function w(i){if(window.QM&&window.QM_PAGE&&window.QM_PAGE(509)){QM.openFull("ir",null,509);return}if(i<200)setTimeout(function(){w(i+1)},100)})(0)</script></body>
 </html>

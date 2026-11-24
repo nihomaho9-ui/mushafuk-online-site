@@ -47,7 +47,7 @@ for lg,c in L.items():
     h=re.sub(r'<link rel="canonical" href="[^"]*">','',h)
     h=h.replace('<base href="/">','<base href="/">'+f'<link rel="canonical" href="{url}">',1)
     h=re.sub(r'<link rel="alternate" hreflang[^>]*>','',h)
-    h=re.sub(r'lib\.js\?v=\d+','lib.js?v=20',h)
+    h=re.sub(r'lib\.js\?v=\d+','lib.js?v=41',h)
     tid=TRID[lg]
     pre_js=f'<script>try{{var q=JSON.parse(localStorage.getItem("qm.prefs")||"{{}}");q.tr="{tid}";q.tab="tr";localStorage.setItem("qm.prefs",JSON.stringify(q));}}catch(e){{}}</script>'
     h=h.replace('<base href="/">','<base href="/">'+pre_js,1)

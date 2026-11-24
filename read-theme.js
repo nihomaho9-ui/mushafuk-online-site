@@ -146,20 +146,24 @@
     var next = null, prev = null, as = pn.querySelectorAll("a[href]");
     for (var i = 0; i < as.length; i++) { var t = (as[i].textContent || "").trim(); if (/التالي/.test(t)) next = as[i].href; else if (/السابق/.test(t)) prev = as[i].href; }
     if (!next && !prev) return;
-    var x = null, y = null, lock = null, dx = 0;
+    var x = null, y = null, t0 = 0, lock = null, lastX = 0, lastY = 0;
     function selecting() { try { var s = window.getSelection(); return s && String(s).length > 0; } catch (e) { return false; } }
     document.addEventListener("touchstart", function (e) {
       var t = e.target; if (e.touches.length !== 1 || (t && t.closest && t.closest("a,button,input,textarea,select,#qm-theme-root"))) { x = null; return; }
-      x = e.touches[0].clientX; y = e.touches[0].clientY; lock = null; dx = 0;
+      x = e.touches[0].clientX; y = e.touches[0].clientY; t0 = performance.now(); lock = null; lastX = x; lastY = y;
     }, { passive: true });
     document.addEventListener("touchmove", function (e) {
-      if (x == null) return; var ddx = e.touches[0].clientX - x, ddy = e.touches[0].clientY - y; dx = ddx;
-      if (!lock && (Math.abs(ddx) > 8 || Math.abs(ddy) > 8)) lock = Math.abs(ddx) > Math.abs(ddy) * 1.3 ? "x" : "y";
+      if (e.touches.length !== 1) { x = null; lock = null; return; }
+      if (x == null) return; lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+      var ddx = lastX - x, ddy = lastY - y;
+      if (!lock && (Math.abs(ddx) > 8 || Math.abs(ddy) > 8)) lock = Math.abs(ddx) > Math.abs(ddy) * 1.5 ? "x" : "y";
     }, { passive: true });
-    document.addEventListener("touchend", function () {
-      if (x == null) return; var was = lock, d = dx; x = null; lock = null;
-      if (was !== "x" || Math.abs(d) < 48 || selecting()) return;
-      var u = d > 0 ? next : prev; if (u) location.assign(u);
+    document.addEventListener("touchend", function (e) {
+      if (x == null) return; var was = lock, dx = lastX - x, dy = lastY - y, dt = performance.now() - t0; x = null; lock = null;
+      if (e.touches && e.touches.length) return;
+      if (was === "y") return;
+      var dir = window.QM_shouldTurnPage ? window.QM_shouldTurnPage(dx, dy, dt, window.innerWidth) : ((dt < 800 && !selecting() && Math.abs(dx) >= Math.max(60, window.innerWidth * 0.15) && Math.abs(dx) > 1.5 * Math.abs(dy)) ? (dx > 0 ? 1 : -1) : 0);
+      var u = dir > 0 ? next : dir < 0 ? prev : null; if (u) location.assign(u);
     }, { passive: true });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();

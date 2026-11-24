@@ -973,9 +973,9 @@ if (document.currentScript) { const fl = document.createElement("link"); fl.rel 
     const goPrev = () => { if (pv.disabled) return; const f = e ? e.from : a; f > 1 ? openAyah(s, f - 1) : openAyah(s - 1, AYAHS[s - 2]); };
     const goNext = () => { if (nx.disabled) return; const t = e ? e.to : a; t < max ? openAyah(s, t + 1) : openAyah(s + 1, 1); };
     pv.onclick = goPrev; nx.onclick = goNext;
-    let sx = null, sy = 0;
-    sheet.onpointerdown = (ev) => { if (ev.target.closest("button, select")) return; sx = ev.clientX; sy = ev.clientY; };
-    sheet.onpointerup = (ev) => { if (sx == null) return; const dx = ev.clientX - sx, dy = ev.clientY - sy; sx = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) (dx > 0 ? goNext : goPrev)(); };
+    let sx = null, sy = 0, st = 0;
+    sheet.onpointerdown = (ev) => { if (ev.target.closest("button, select")) return; sx = ev.clientX; sy = ev.clientY; st = performance.now(); };
+    sheet.onpointerup = (ev) => { if (sx == null) return; const dx = ev.clientX - sx, dy = ev.clientY - sy, dt = performance.now() - (st || 0); sx = null; if (window.QM_shouldTurnPage ? QM_shouldTurnPage(dx, dy, dt, sheet.clientWidth || innerWidth) : (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5 && dt < 800)) (dx > 0 ? goNext : goPrev)(); };
     nav.append(pv, nx); head.append(nav);
     sheet.append(head);
     if (qa) sheet.append(qa);
@@ -1285,22 +1285,35 @@ if (document.currentScript) { const fl = document.createElement("link"); fl.rel 
   }
   settleTurn();
   warmMushaf();
+
+  // Deliberate horizontal swipe only: not a tap, long-press, vertical scroll, or pinch.
+  window.QM_shouldTurnPage = function (dx, dy, dt, width) {
+    if (dt != null && dt >= 800) return 0;
+    var min = Math.max(60, (width || 0) * 0.15);
+    if (Math.abs(dx) < min) return 0;
+    if (Math.abs(dx) <= 1.5 * Math.abs(dy || 0)) return 0;
+    try { var s = window.getSelection(); if (s && String(s).length) return 0; } catch (e) {}
+    return dx > 0 ? 1 : -1;
+  };
+
   // A horizontal finger swipe on any real mushaf page opens the next page's address.
   let finger = null;
   const fingerStart = (x, y, target) => {
     if (target && target.closest && target.closest("a,button,input,textarea,select,label")) { finger = null; return; }
-    finger = { x: x, y: y, target: target };
+    finger = { x: x, y: y, target: target, t: performance.now() };
   };
-  const fingerEnd = (x, y) => {
+  const fingerEnd = (x, y, ev) => {
     if (!finger) return;
     const target = finger.target;
-    const dx = x - finger.x, dy = y - finger.y;
+    const dx = x - finger.x, dy = y - finger.y, dt = performance.now() - finger.t;
     finger = null;
+    if (ev && ev.touches && ev.touches.length) return;
     if (target && target.closest && target.closest("#page,#gate,.qm-full")) return;
-    if (Math.abs(dx) < 36 || Math.abs(dx) < Math.abs(dy)) return;
+    const dir = window.QM_shouldTurnPage(dx, dy, dt, innerWidth);
+    if (!dir) return;
     const m = location.pathname.match(/\/page\/(\d+)\/?$/);
     if (!m) return;
-    const n = +m[1] + (dx > 0 ? 1 : -1);
+    const n = +m[1] + dir;
     if (n < 1 || n > 604) return;
     const full = document.querySelector(".qm-full");
     if (full && !full.hidden && mushafTurnHref(n) && full.dataset.kind && full.dataset.kind !== "tf") {
@@ -1309,8 +1322,8 @@ if (document.currentScript) { const fl = document.createElement("link"); fl.rel 
     window.__qmTurnDir = dx > 0 ? 1 : -1;
     QM_TURN(n);
   };
-  document.addEventListener("touchstart", (e) => { if (e.touches.length !== 1) return; fingerStart(e.touches[0].clientX, e.touches[0].clientY, e.target); }, { capture: true, passive: true });
-  document.addEventListener("touchend", (e) => { if (!e.changedTouches.length) return; fingerEnd(e.changedTouches[0].clientX, e.changedTouches[0].clientY); }, { capture: true, passive: true });
+  document.addEventListener("touchstart", (e) => { if (e.touches.length !== 1) { finger = null; return; } fingerStart(e.touches[0].clientX, e.touches[0].clientY, e.target); }, { capture: true, passive: true });
+  document.addEventListener("touchend", (e) => { if (!e.changedTouches.length) return; fingerEnd(e.changedTouches[0].clientX, e.changedTouches[0].clientY, e); }, { capture: true, passive: true });
   document.addEventListener("pointerdown", (e) => { if (e.pointerType === "touch") return; fingerStart(e.clientX, e.clientY, e.target); }, true);
   document.addEventListener("pointerup", (e) => { if (e.pointerType === "touch") return; fingerEnd(e.clientX, e.clientY); }, true);
   async function openFull(kind, focusKey, pageN, enterFrom) {
@@ -1376,17 +1389,18 @@ if (document.currentScript) { const fl = document.createElement("link"); fl.rel 
     }
     // page change by finger swipe only (same direction as the mushaf: swipe right = next page); the page follows the finger
     let d = null;
-    body.onpointerdown = (ev) => { if (ev.target.closest("button")) return; d = { x: ev.clientX, y: ev.clientY, mode: null, dx: 0 }; };
+    body.onpointerdown = (ev) => { if (ev.target.closest("button,a,input,textarea,select,label")) return; if (ev.isPrimary === false) return; d = { x: ev.clientX, y: ev.clientY, mode: null, t: performance.now() }; };
     body.onpointermove = (ev) => {
       if (!d) return; const dx = ev.clientX - d.x, dy = ev.clientY - d.y;
-      if (!d.mode) { if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return; d.mode = Math.abs(dx) > Math.abs(dy) * 1.2 ? "x" : "y"; }
-      if (d.mode !== "x") return;
-      d.dx = dx;
+      if (!d.mode) { if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return; d.mode = Math.abs(dx) > Math.abs(dy) * 1.5 ? "x" : "y"; }
     };
-    const end = () => {
-      const g = d; d = null; if (!g || g.mode !== "x") return;
-      const n = pg.n + (g.dx > 0 ? 1 : -1);
-      if (Math.abs(g.dx) > 32 && n >= 1 && n <= 604) {
+    const end = (ev) => {
+      const g = d; d = null; if (!g || g.mode === "y") return;
+      const dx = ev ? ev.clientX - g.x : 0, dy = ev ? ev.clientY - g.y : 0;
+      const dir = window.QM_shouldTurnPage(dx, dy, performance.now() - g.t, body.clientWidth || innerWidth);
+      if (!dir) return;
+      const n = pg.n + dir;
+      if (n >= 1 && n <= 604) {
         if (mushafTurnHref(n) && kind !== "tf") { try { sessionStorage.setItem("qm.reopen", kind); } catch (e) {} }
         if (!(window.QM_TURN && QM_TURN(n))) openFull(kind, null, n);
       }

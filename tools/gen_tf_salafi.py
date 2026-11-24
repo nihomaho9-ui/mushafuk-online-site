@@ -108,7 +108,7 @@ def build(bid, slug, name, by):
             f'<main id="tf"><p class="src">{E(name)} — {E(by)}</p>'
             f'<p class="ay" dir="rtl" lang="ar">{E(ay)} ﴿{ar(a)}﴾</p>'
             f'<div class="tx" lang="ar">{body}</div>{pn}</main>'
-            f'<script src="/tafsir/turn.js?v=4" data-next="{E(nxt)}" data-prev="{E(prev)}"></script>'
+            f'<script src="/tafsir/turn.js?v=5" data-next="{E(nxt)}" data-prev="{E(prev)}"></script>'
             "</body></html>"
         )
         # ayah HTML is not written: GitHub Pages rejected the extra size.
