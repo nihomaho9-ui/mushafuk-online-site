@@ -72,7 +72,7 @@ for r in books:
                 '(function(){var n=%d,id=%s;try{var q=JSON.parse(localStorage.getItem("qm.prefs")||"{}");'
                 'q.tr=id;q.tab="tr";localStorage.setItem("qm.prefs",JSON.stringify(q));}catch(e){}'
                 'window.__PAGE=n;fetch("%s"+n+"/index.html").then(function(r){return r.text()}).then(function(h){'
-                'h=h.replace(/lib\\.js\\?v=\\d+/,"lib.js?v=41");'
+                'h=h.replace(/lib\\.js\\?v=\\d+/,"lib.js?v=42");'
                 'h=h.replace("</body>","<script>(function w(i){if(window.QM&&window.QM_PAGE&&window.QM_PAGE("+n+"))'
                 '{QM.openFull(\\"tr\\",null,"+n+");return}if(i<200)setTimeout(function(){w(i+1)},100)})(0)<\\/script></body>");'
                 'document.open();document.write(h);document.close();});})();'
