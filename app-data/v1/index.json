@@ -1,7 +1,34 @@
 {
   "version": 1,
   "base": "https://mushafuk.online/app-data/v1/",
-  "note": "Gzip packs for Mushafuk Tərcümə. Translations are not bundled in the APK. Arabic Uthmani text is bundled (Tanzil, CC BY 3.0, unaltered).",
+  "note": "Gzip packs for Quran Tərcümə. Translations are not bundled in the APK. Arabic Uthmani text is bundled (Tanzil, CC BY 3.0). To swap a language's default translation: upload the new {id}.json.gz, append its entry to translations, and set defaults[lang] to the new id (and default:true on that entry, default:false on the old one). Do not delete old packs unless explicitly approved. The app reads this live file on launch.",
+  "defaults": {
+    "az": "az.musayev",
+    "ru": "ru.kuliev",
+    "tr": "turkish_shahin",
+    "en": "english_saheeh",
+    "uz": "uzbek_mansour",
+    "tg": "tajik_arifi",
+    "ky": "kyrgyz_hakimov",
+    "ug": "uyghur_saleh",
+    "ps": "pashto_rwwad",
+    "ku": "kurdish_bamoki",
+    "hi": "hindi_omari",
+    "ta": "tamil_omar",
+    "fr": "french_rashid",
+    "de": "german_bubenheim",
+    "nl": "dutch_center",
+    "es": "spanish_garcia",
+    "pt": "portuguese_nasr",
+    "ha": "hausa_gummi",
+    "so": "somali_yacob",
+    "ja": "japanese_saeedsato",
+    "ur": "urdu_junagarhi",
+    "fa": "persian_ih",
+    "id": "indonesian_complex",
+    "bn": "bengali_zakaria",
+    "zh": "chinese_makin"
+  },
   "translations": [
     {
       "id": "az.musayev",
@@ -14,7 +41,8 @@
       "file": "az.musayev.json.gz",
       "bytes": 278165,
       "raw_bytes": 943819,
-      "sha256": "af743f4009c47d26a60216b137667a605581c847e2aefc13952158a1b56457e1"
+      "sha256": "af743f4009c47d26a60216b137667a605581c847e2aefc13952158a1b56457e1",
+      "default": true
     },
     {
       "id": "ru.kuliev",
@@ -27,7 +55,8 @@
       "file": "ru.kuliev.json.gz",
       "bytes": 323526,
       "raw_bytes": 1430693,
-      "sha256": "047368aa8218b1c52d334d706118f992530197952dff9685a0cbab2c1e44fcb4"
+      "sha256": "047368aa8218b1c52d334d706118f992530197952dff9685a0cbab2c1e44fcb4",
+      "default": true
     },
     {
       "id": "turkish_shahin",
@@ -40,7 +69,8 @@
       "file": "turkish_shahin.json.gz",
       "bytes": 312347,
       "raw_bytes": 936158,
-      "sha256": "42c3750788c362173253a13012c3c8f225042feb67a176f3e5c8fa8b20d1e11c"
+      "sha256": "42c3750788c362173253a13012c3c8f225042feb67a176f3e5c8fa8b20d1e11c",
+      "default": true
     },
     {
       "id": "english_saheeh",
@@ -53,7 +83,8 @@
       "file": "english_saheeh.json.gz",
       "bytes": 333316,
       "raw_bytes": 1074112,
-      "sha256": "fb1725df51c1da966dd55dbd7a3e89ca359bfaebdabf092fbcb9f0ad43537d1d"
+      "sha256": "fb1725df51c1da966dd55dbd7a3e89ca359bfaebdabf092fbcb9f0ad43537d1d",
+      "default": true
     },
     {
       "id": "uzbek_mansour",
@@ -66,7 +97,8 @@
       "file": "uzbek_mansour.json.gz",
       "bytes": 541321,
       "raw_bytes": 2540733,
-      "sha256": "e6994feaaef8da40a8027c71d77a9b271928089d6425509aa880b287b7dff2d9"
+      "sha256": "e6994feaaef8da40a8027c71d77a9b271928089d6425509aa880b287b7dff2d9",
+      "default": true
     },
     {
       "id": "tajik_arifi",
@@ -79,7 +111,8 @@
       "file": "tajik_arifi.json.gz",
       "bytes": 402325,
       "raw_bytes": 1809060,
-      "sha256": "52faed84e2ec3864c41a443dbea359e6d1c81092a47a6e781b1ebb99468dcfe1"
+      "sha256": "52faed84e2ec3864c41a443dbea359e6d1c81092a47a6e781b1ebb99468dcfe1",
+      "default": true
     },
     {
       "id": "kyrgyz_hakimov",
@@ -92,7 +125,8 @@
       "file": "kyrgyz_hakimov.json.gz",
       "bytes": 563523,
       "raw_bytes": 2398281,
-      "sha256": "332e06fde7e22a336af30614543998ae4959e60e4327c827f06b79aaf5cbf482"
+      "sha256": "332e06fde7e22a336af30614543998ae4959e60e4327c827f06b79aaf5cbf482",
+      "default": true
     },
     {
       "id": "uyghur_saleh",
@@ -105,7 +139,8 @@
       "file": "uyghur_saleh.json.gz",
       "bytes": 431117,
       "raw_bytes": 2129495,
-      "sha256": "519ce98a3c3e3539b21be0c725f8a59519b901ccfc575b15224183f76fdba8d9"
+      "sha256": "519ce98a3c3e3539b21be0c725f8a59519b901ccfc575b15224183f76fdba8d9",
+      "default": true
     },
     {
       "id": "pashto_rwwad",
@@ -118,7 +153,8 @@
       "file": "pashto_rwwad.json.gz",
       "bytes": 340044,
       "raw_bytes": 1378423,
-      "sha256": "6c7abedc5f881dc4fa4d3fc5ff1112f7c094b87b4cf78be79fc6903544a4b703"
+      "sha256": "6c7abedc5f881dc4fa4d3fc5ff1112f7c094b87b4cf78be79fc6903544a4b703",
+      "default": true
     },
     {
       "id": "kurdish_bamoki",
@@ -131,7 +167,8 @@
       "file": "kurdish_bamoki.json.gz",
       "bytes": 386707,
       "raw_bytes": 1672500,
-      "sha256": "aeb24c51e1b2b3ee0e68f96c047f7022472ad34d3297cfffb9a4de2310d6332d"
+      "sha256": "aeb24c51e1b2b3ee0e68f96c047f7022472ad34d3297cfffb9a4de2310d6332d",
+      "default": true
     },
     {
       "id": "hindi_omari",
@@ -144,7 +181,8 @@
       "file": "hindi_omari.json.gz",
       "bytes": 557596,
       "raw_bytes": 3200479,
-      "sha256": "1f0d77d12f0dc4973d53ba03a9d480fccf22d9001edfd3c9fa94518b3a65f546"
+      "sha256": "1f0d77d12f0dc4973d53ba03a9d480fccf22d9001edfd3c9fa94518b3a65f546",
+      "default": true
     },
     {
       "id": "tamil_omar",
@@ -157,7 +195,8 @@
       "file": "tamil_omar.json.gz",
       "bytes": 493477,
       "raw_bytes": 3529210,
-      "sha256": "0d4a8d5d5652e1df673bd4f3393ce5f3c1da3d1b422856cb335008098b796851"
+      "sha256": "0d4a8d5d5652e1df673bd4f3393ce5f3c1da3d1b422856cb335008098b796851",
+      "default": true
     },
     {
       "id": "french_rashid",
@@ -170,7 +209,8 @@
       "file": "french_rashid.json.gz",
       "bytes": 380667,
       "raw_bytes": 1218603,
-      "sha256": "d719de8cd55f1e3563209b1f4e9a29258f5e7f1bf8206287fa396c33952b2fda"
+      "sha256": "d719de8cd55f1e3563209b1f4e9a29258f5e7f1bf8206287fa396c33952b2fda",
+      "default": true
     },
     {
       "id": "german_bubenheim",
@@ -183,7 +223,8 @@
       "file": "german_bubenheim.json.gz",
       "bytes": 294267,
       "raw_bytes": 958690,
-      "sha256": "e810d5984d93d674a0fd833c37feefc22ae8456c4df2506fa8c515538370a858"
+      "sha256": "e810d5984d93d674a0fd833c37feefc22ae8456c4df2506fa8c515538370a858",
+      "default": true
     },
     {
       "id": "dutch_center",
@@ -196,7 +237,8 @@
       "file": "dutch_center.json.gz",
       "bytes": 330033,
       "raw_bytes": 1074579,
-      "sha256": "157f88276a3386b901564c4658a537892edbadb7a5567103b40c4f8ca9efc4e6"
+      "sha256": "157f88276a3386b901564c4658a537892edbadb7a5567103b40c4f8ca9efc4e6",
+      "default": true
     },
     {
       "id": "spanish_garcia",
@@ -209,7 +251,8 @@
       "file": "spanish_garcia.json.gz",
       "bytes": 391793,
       "raw_bytes": 1182377,
-      "sha256": "e629b30f15eebd9aaf3ce6670daa42eff71f6c61b0850cdb2e1b27e24839314d"
+      "sha256": "e629b30f15eebd9aaf3ce6670daa42eff71f6c61b0850cdb2e1b27e24839314d",
+      "default": true
     },
     {
       "id": "portuguese_nasr",
@@ -222,7 +265,8 @@
       "file": "portuguese_nasr.json.gz",
       "bytes": 374970,
       "raw_bytes": 1169345,
-      "sha256": "c69455603cc43dd1fc40119ac10609c3caf5e5d8d6d60249d6d7cc636455e616"
+      "sha256": "c69455603cc43dd1fc40119ac10609c3caf5e5d8d6d60249d6d7cc636455e616",
+      "default": true
     },
     {
       "id": "hausa_gummi",
@@ -235,7 +279,8 @@
       "file": "hausa_gummi.json.gz",
       "bytes": 368028,
       "raw_bytes": 1242712,
-      "sha256": "1da59b6b6fa019fbbcd79e4ea8e46d52fe484884abc376ff2a65e2ba8fb8f99d"
+      "sha256": "1da59b6b6fa019fbbcd79e4ea8e46d52fe484884abc376ff2a65e2ba8fb8f99d",
+      "default": true
     },
     {
       "id": "somali_yacob",
@@ -248,7 +293,8 @@
       "file": "somali_yacob.json.gz",
       "bytes": 380669,
       "raw_bytes": 1117898,
-      "sha256": "996e8090390b4ac4f836a2677f974618c8e70eabf9cfe15b36c81441687e4849"
+      "sha256": "996e8090390b4ac4f836a2677f974618c8e70eabf9cfe15b36c81441687e4849",
+      "default": true
     },
     {
       "id": "japanese_saeedsato",
@@ -261,7 +307,8 @@
       "file": "japanese_saeedsato.json.gz",
       "bytes": 668906,
       "raw_bytes": 2618041,
-      "sha256": "7322451126b15ea3991332e41cbadfcde5d6afbfeddfcf83bae02e0353b559d6"
+      "sha256": "7322451126b15ea3991332e41cbadfcde5d6afbfeddfcf83bae02e0353b559d6",
+      "default": true
     },
     {
       "id": "urdu_junagarhi",
@@ -274,7 +321,8 @@
       "file": "urdu_junagarhi.json.gz",
       "bytes": 1492220,
       "raw_bytes": 5832616,
-      "sha256": "de1d83d7602460f63c407b3265bbc5ad63cd8915e354c51d1d0f395f7821ec52"
+      "sha256": "de1d83d7602460f63c407b3265bbc5ad63cd8915e354c51d1d0f395f7821ec52",
+      "default": true
     },
     {
       "id": "persian_ih",
@@ -287,7 +335,8 @@
       "file": "persian_ih.json.gz",
       "bytes": 391061,
       "raw_bytes": 1586664,
-      "sha256": "135959d736c56a4bf1a8f9cf20bd3fa8f6645779ace3a2104d28f3acfe3b1444"
+      "sha256": "135959d736c56a4bf1a8f9cf20bd3fa8f6645779ace3a2104d28f3acfe3b1444",
+      "default": true
     },
     {
       "id": "indonesian_complex",
@@ -300,7 +349,8 @@
       "file": "indonesian_complex.json.gz",
       "bytes": 387012,
       "raw_bytes": 1439918,
-      "sha256": "a55de8dd0d24e9f138dbd8801a8ff838549da61396a0c15be1cd0d446e778706"
+      "sha256": "a55de8dd0d24e9f138dbd8801a8ff838549da61396a0c15be1cd0d446e778706",
+      "default": true
     },
     {
       "id": "bengali_zakaria",
@@ -313,7 +363,8 @@
       "file": "bengali_zakaria.json.gz",
       "bytes": 2400130,
       "raw_bytes": 13583912,
-      "sha256": "c94ce7d2c390960138f8fd94f433a1967ab6e09078e1c308a7924219b4e8e672"
+      "sha256": "c94ce7d2c390960138f8fd94f433a1967ab6e09078e1c308a7924219b4e8e672",
+      "default": true
     },
     {
       "id": "chinese_makin",
@@ -326,7 +377,8 @@
       "file": "chinese_makin.json.gz",
       "bytes": 253605,
       "raw_bytes": 754097,
-      "sha256": "b984306fa7f7b695ab02fbe9c6d9d597fabd1987b7c7f1066e155411a0b72ead"
+      "sha256": "b984306fa7f7b695ab02fbe9c6d9d597fabd1987b7c7f1066e155411a0b72ead",
+      "default": true
     }
   ]
 }
